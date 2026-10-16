@@ -1,6 +1,7 @@
 {
   "name": "restaurant-frontend",
   "version": "0.1.0",
+  "author":"Monami Jerome",
   "private": true,
   "type": "module",
   "description": "Vue 3 (Options API) frontend of the restaurant table, queue and ordering system.",
