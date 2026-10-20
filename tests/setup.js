@@ -12,6 +12,21 @@ if (typeof window !== 'undefined') {
     })
   }
 
+  // jsdom does not implement the native <dialog> methods either. This stand-in mimics the parts
+  // the application relies on: the `open` attribute and the `close` event.
+  const dialog = window.HTMLDialogElement?.prototype
+  if (dialog && !dialog.showModal) {
+    dialog.showModal = function showModal() {
+      this.setAttribute('open', '')
+    }
+    dialog.show = dialog.showModal
+    dialog.close = function close() {
+      if (!this.hasAttribute('open')) return
+      this.removeAttribute('open')
+      this.dispatchEvent(new Event('close'))
+    }
+  }
+
   afterEach(() => {
     window.localStorage.clear()
     document.documentElement.removeAttribute('data-theme')
