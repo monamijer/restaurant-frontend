@@ -1,0 +1,67 @@
+{
+  "styleguide": {
+    "title": "Système de design",
+    "lead": "Tous les composants de l'application, dans les deux thèmes et les deux langues.",
+    "sections": {
+      "preferences": "Préférences",
+      "buttons": "Boutons",
+      "fields": "Champs",
+      "badges": "Badges",
+      "feedback": "Retours visuels",
+      "toasts": "Notifications",
+      "dialogs": "Fenêtres de dialogue"
+    },
+    "preferencesText": "Changez ici le thème et la langue. Les deux choix sont mémorisés.",
+    "buttons": {
+      "primary": "Principal",
+      "secondary": "Secondaire",
+      "ghost": "Discret",
+      "danger": "Danger",
+      "small": "Petit",
+      "large": "Grand",
+      "loading": "Chargement",
+      "disabled": "Désactivé"
+    },
+    "fields": {
+      "email": "Adresse e-mail",
+      "emailHint": "Nous ne la partageons jamais.",
+      "password": "Mot de passe",
+      "phone": "Téléphone",
+      "phoneError": "Saisissez un numéro de téléphone valide.",
+      "notes": "Remarques"
+    },
+    "badges": {
+      "neutral": "Neutre",
+      "success": "Confirmée",
+      "warning": "En attente",
+      "danger": "Annulée",
+      "info": "En préparation"
+    },
+    "feedback": {
+      "spinner": "Indicateur",
+      "skeleton": "Espace réservé au chargement",
+      "emptyTitle": "Rien à afficher pour l'instant",
+      "emptyText": "Dès qu'il y aura quelque chose à montrer, cela apparaîtra sur cette page.",
+      "emptyAction": "Créer le premier"
+    },
+    "toasts": {
+      "success": "Afficher un succès",
+      "error": "Afficher une erreur",
+      "info": "Afficher une information",
+      "successMessage": "Enregistré avec succès.",
+      "errorMessage": "Une erreur est survenue.",
+      "infoMessage": "Votre table est presque prête."
+    },
+    "dialogs": {
+      "openModal": "Ouvrir une fenêtre",
+      "modalTitle": "Titre de la fenêtre",
+      "modalBody": "Une fenêtre native : Échap la ferme, le focus reste à l'intérieur puis revient au bouton.",
+      "openConfirm": "Ouvrir une confirmation",
+      "confirmTitle": "Annuler cette réservation ?",
+      "confirmMessage": "Cette action est irréversible.",
+      "confirmAction": "Oui, l'annuler",
+      "keep": "La garder",
+      "confirmed": "Réservation annulée."
+    }
+  }
+}

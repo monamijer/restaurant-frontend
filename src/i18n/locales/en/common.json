@@ -1,0 +1,23 @@
+{
+  "common": {
+    "appName": "Restaurant",
+    "loading": "Loading…",
+    "close": "Close",
+    "dismiss": "Dismiss notification",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "retry": "Try again",
+    "showPassword": "Show",
+    "hidePassword": "Hide",
+    "optional": "optional"
+  },
+  "theme": {
+    "switchToDark": "Switch to dark theme",
+    "switchToLight": "Switch to light theme"
+  },
+  "locale": {
+    "label": "Language",
+    "en": "English",
+    "fr": "Français"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "common": {
+    "appName": "Restaurant",
+    "loading": "Chargement…",
+    "close": "Fermer",
+    "dismiss": "Masquer la notification",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "retry": "Réessayer",
+    "showPassword": "Afficher",
+    "hidePassword": "Masquer",
+    "optional": "facultatif"
+  },
+  "theme": {
+    "switchToDark": "Passer au thème sombre",
+    "switchToLight": "Passer au thème clair"
+  },
+  "locale": {
+    "label": "Langue",
+    "en": "English",
+    "fr": "Français"
+  }
+}

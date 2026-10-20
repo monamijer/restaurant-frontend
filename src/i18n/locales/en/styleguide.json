@@ -1,0 +1,67 @@
+{
+  "styleguide": {
+    "title": "Design system",
+    "lead": "Every component of the application, in both themes and both languages.",
+    "sections": {
+      "preferences": "Preferences",
+      "buttons": "Buttons",
+      "fields": "Fields",
+      "badges": "Badges",
+      "feedback": "Feedback",
+      "toasts": "Notifications",
+      "dialogs": "Dialogs"
+    },
+    "preferencesText": "Switch the theme and the language here. Both choices are remembered.",
+    "buttons": {
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "ghost": "Ghost",
+      "danger": "Danger",
+      "small": "Small",
+      "large": "Large",
+      "loading": "Loading",
+      "disabled": "Disabled"
+    },
+    "fields": {
+      "email": "Email address",
+      "emailHint": "We never share it.",
+      "password": "Password",
+      "phone": "Phone",
+      "phoneError": "Enter a valid phone number.",
+      "notes": "Notes"
+    },
+    "badges": {
+      "neutral": "Neutral",
+      "success": "Confirmed",
+      "warning": "Pending",
+      "danger": "Cancelled",
+      "info": "Preparing"
+    },
+    "feedback": {
+      "spinner": "Spinner",
+      "skeleton": "Loading placeholder",
+      "emptyTitle": "Nothing here yet",
+      "emptyText": "When there is something to show, it will appear on this page.",
+      "emptyAction": "Create the first one"
+    },
+    "toasts": {
+      "success": "Show a success",
+      "error": "Show an error",
+      "info": "Show an info",
+      "successMessage": "Saved successfully.",
+      "errorMessage": "Something went wrong.",
+      "infoMessage": "Your table is almost ready."
+    },
+    "dialogs": {
+      "openModal": "Open a dialog",
+      "modalTitle": "Dialog title",
+      "modalBody": "This is a native dialog: Escape closes it, focus stays inside and returns to the button afterwards.",
+      "openConfirm": "Open a confirmation",
+      "confirmTitle": "Cancel this reservation?",
+      "confirmMessage": "This cannot be undone.",
+      "confirmAction": "Yes, cancel it",
+      "keep": "Keep it",
+      "confirmed": "Reservation cancelled."
+    }
+  }
+}
