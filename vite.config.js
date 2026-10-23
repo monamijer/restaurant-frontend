@@ -8,7 +8,6 @@ export default defineConfig({
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },
   server: {
-    // The backend only allows this origin (CORS_ALLOWED_ORIGINS), so never drift to another port.
     port: 5173,
     strictPort: true,
   },
