@@ -1,0 +1,25 @@
+{
+  "layout": { "skipToContent": "Aller au contenu" },
+  "nav": {
+    "label": "Navigation principale",
+    "home": "Accueil",
+    "account": "Mon compte",
+    "staff": "Espace équipe",
+    "admin": "Administration"
+  },
+  "header": {
+    "menu": "Menu",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "login": "Connexion",
+    "register": "Créer un compte",
+    "logout": "Se déconnecter",
+    "signedInAs": "Connecté en tant que {name}"
+  },
+  "footer": {
+    "hours": "Horaires",
+    "hoursValue": "Tous les jours, de {open} à {close}",
+    "hoursUnknown": "Les horaires ne sont pas disponibles pour le moment.",
+    "rights": "Tous droits réservés."
+  }
+}

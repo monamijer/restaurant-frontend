@@ -1,0 +1,13 @@
+{
+  "errors": {
+    "unknown": "Une erreur est survenue. Veuillez réessayer.",
+    "unexpected": "Une erreur inattendue est survenue.",
+    "network": "Connexion impossible. Vérifiez votre réseau, puis réessayez.",
+    "timeout": "Le serveur met trop de temps à répondre. Réessayez dans un instant.",
+    "server": "Le serveur a rencontré un problème. Réessayez plus tard.",
+    "throttled": "Trop de tentatives. Patientez un moment avant de réessayer.",
+    "authentication": "Veuillez vous connecter pour continuer.",
+    "permission": "Vous n'avez pas le droit d'effectuer cette action.",
+    "notFound": "Élément introuvable."
+  }
+}

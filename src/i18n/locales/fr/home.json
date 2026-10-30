@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Accueil",
+    "eyebrow": "Table, file d'attente et commande en ligne",
+    "heading": "Bienvenue chez {name}",
+    "lead": "Réservez votre table, rejoignez la file d'attente ou commandez en ligne, sans attendre.",
+    "ctaLogin": "Se connecter",
+    "ctaRegister": "Créer un compte",
+    "ctaSpace": "Accéder à mon espace",
+    "hoursTitle": "Nous sommes ouverts",
+    "serverDown": "Impossible de joindre le serveur du restaurant.",
+    "serverDownHint": "Vérifiez que le serveur est démarré, puis réessayez."
+  }
+}

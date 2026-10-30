@@ -1,0 +1,30 @@
+{
+  "account": {
+    "title": "My account",
+    "heading": "Hello, {name}",
+    "details": "Your details",
+    "email": "Email",
+    "phone": "Phone",
+    "role": "Role",
+    "memberSince": "Member since",
+    "notProvided": "Not provided",
+    "roles": { "client": "Customer", "staff": "Staff", "admin": "Administrator" },
+    "comingSoon": "Profile editing, reservations and orders arrive in the next step."
+  },
+  "area": {
+    "staffTitle": "Staff area",
+    "adminTitle": "Administration",
+    "comingTitle": "Coming soon",
+    "comingText": "This area will be built in a later step of the project."
+  },
+  "forbidden": {
+    "title": "Access denied",
+    "text": "Your account is not allowed to open this page.",
+    "back": "Back to home"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you are looking for does not exist or has moved.",
+    "back": "Back to home"
+  }
+}

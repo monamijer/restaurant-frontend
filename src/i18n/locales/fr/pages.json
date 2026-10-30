@@ -1,0 +1,30 @@
+{
+  "account": {
+    "title": "Mon compte",
+    "heading": "Bonjour, {name}",
+    "details": "Vos informations",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "role": "Rôle",
+    "memberSince": "Membre depuis",
+    "notProvided": "Non renseigné",
+    "roles": { "client": "Client", "staff": "Équipe", "admin": "Administrateur" },
+    "comingSoon": "La modification du profil, les réservations et les commandes arrivent dans la prochaine étape."
+  },
+  "area": {
+    "staffTitle": "Espace équipe",
+    "adminTitle": "Administration",
+    "comingTitle": "Bientôt disponible",
+    "comingText": "Cet espace sera construit dans une prochaine étape du projet."
+  },
+  "forbidden": {
+    "title": "Accès refusé",
+    "text": "Votre compte n'a pas le droit d'ouvrir cette page.",
+    "back": "Retour à l'accueil"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "back": "Retour à l'accueil"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Home",
+    "eyebrow": "Tables, queue and online ordering",
+    "heading": "Welcome to {name}",
+    "lead": "Book a table, join the queue or order online, without the wait.",
+    "ctaLogin": "Sign in",
+    "ctaRegister": "Create account",
+    "ctaSpace": "Go to my area",
+    "hoursTitle": "We are open",
+    "serverDown": "The restaurant's server cannot be reached.",
+    "serverDownHint": "Check that the server is running, then try again."
+  }
+}

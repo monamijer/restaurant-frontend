@@ -1,0 +1,13 @@
+{
+  "errors": {
+    "unknown": "Something went wrong. Please try again.",
+    "unexpected": "An unexpected error occurred.",
+    "network": "Cannot connect. Check your network, then try again.",
+    "timeout": "The server is taking too long to answer. Try again in a moment.",
+    "server": "The server ran into a problem. Please try again later.",
+    "throttled": "Too many attempts. Wait a moment before trying again.",
+    "authentication": "Please sign in to continue.",
+    "permission": "You are not allowed to do this.",
+    "notFound": "Item not found."
+  }
+}
