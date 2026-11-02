@@ -1,0 +1,50 @@
+{
+  "menu": {
+    "title": "Menu",
+    "eyebrow": "Tout droit sorti de la cuisine",
+    "heading": "Notre carte",
+    "lead": "Parcourez les plats, filtrez par catégorie et voyez ce qui est disponible en ce moment.",
+    "search": "Rechercher dans la carte",
+    "searchPlaceholder": "Un plat, un ingrédient…",
+    "categories": "Catégories",
+    "allCategories": "Tout",
+    "sortBy": "Trier par",
+    "sort": {
+      "nameAsc": "Nom (A à Z)",
+      "priceAsc": "Prix croissant",
+      "priceDesc": "Prix décroissant",
+      "prepAsc": "Les plus rapides"
+    },
+    "availableOnly": "Plats disponibles uniquement",
+    "clearFilters": "Effacer les filtres",
+    "results": "{count} plat | {count} plats",
+    "loadingResults": "Chargement de la carte…",
+    "featured": "À l'honneur",
+    "unavailable": "Indisponible",
+    "prepTime": "Environ {minutes} min",
+    "emptyTitle": "Aucun plat ne correspond",
+    "emptyText": "Essayez une autre recherche ou effacez les filtres.",
+    "errorTitle": "Impossible de charger la carte.",
+    "errorText": "Vérifiez que le serveur est démarré, puis réessayez.",
+    "pagination": {
+      "label": "Pagination",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "status": "Page {page} sur {total}"
+    },
+    "item": {
+      "back": "Retour à la carte",
+      "category": "Catégorie",
+      "preparation": "Préparation",
+      "preparationValue": "Environ {minutes} minutes",
+      "calories": "Calories",
+      "caloriesValue": "{count} kcal",
+      "allergens": "Allergènes",
+      "noAllergens": "Aucun déclaré",
+      "notFoundTitle": "Ce plat n'existe pas",
+      "notFoundText": "Il a peut-être été retiré de la carte.",
+      "errorTitle": "Impossible de charger le plat."
+    },
+    "viewMenu": "Voir la carte"
+  }
+}

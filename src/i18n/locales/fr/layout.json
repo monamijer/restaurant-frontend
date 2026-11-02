@@ -3,6 +3,7 @@
   "nav": {
     "label": "Navigation principale",
     "home": "Accueil",
+    "menu": "Carte",
     "account": "Mon compte",
     "staff": "Espace équipe",
     "admin": "Administration"

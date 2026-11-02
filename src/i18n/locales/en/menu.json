@@ -1,0 +1,50 @@
+{
+  "menu": {
+    "title": "Menu",
+    "eyebrow": "Fresh from the kitchen",
+    "heading": "Our menu",
+    "lead": "Browse the dishes, filter by category and see what is available right now.",
+    "search": "Search the menu",
+    "searchPlaceholder": "A dish, an ingredient…",
+    "categories": "Categories",
+    "allCategories": "All",
+    "sortBy": "Sort by",
+    "sort": {
+      "nameAsc": "Name (A to Z)",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low",
+      "prepAsc": "Fastest to prepare"
+    },
+    "availableOnly": "Available dishes only",
+    "clearFilters": "Clear filters",
+    "results": "{count} dish | {count} dishes",
+    "loadingResults": "Loading the menu…",
+    "featured": "Featured",
+    "unavailable": "Unavailable",
+    "prepTime": "About {minutes} min",
+    "emptyTitle": "No dish matches",
+    "emptyText": "Try another search or clear the filters.",
+    "errorTitle": "The menu could not be loaded.",
+    "errorText": "Check that the server is running, then try again.",
+    "pagination": {
+      "label": "Pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "status": "Page {page} of {total}"
+    },
+    "item": {
+      "back": "Back to the menu",
+      "category": "Category",
+      "preparation": "Preparation",
+      "preparationValue": "About {minutes} minutes",
+      "calories": "Calories",
+      "caloriesValue": "{count} kcal",
+      "allergens": "Allergens",
+      "noAllergens": "None declared",
+      "notFoundTitle": "This dish does not exist",
+      "notFoundText": "It may have been removed from the menu.",
+      "errorTitle": "The dish could not be loaded."
+    },
+    "viewMenu": "View the menu"
+  }
+}
