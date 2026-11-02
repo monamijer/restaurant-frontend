@@ -15,6 +15,7 @@
             {{ $t('home.ctaRegister') }}
           </BaseButton>
         </template>
+        <BaseButton size="lg" variant="ghost" :to="{ name: 'menu' }">{{ $t('menu.viewMenu') }}</BaseButton>
       </div>
     </section>
 
