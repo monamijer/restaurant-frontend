@@ -11,6 +11,7 @@ import { i18n, translate } from './i18n'
 import { createAppRouter } from './router'
 import { sessionExpiredHandler } from './router/expiry'
 import { configureApi } from './services/api'
+import { CART_KEY, useCartStore } from './store/cart'
 import { useToastStore } from './store/toasts'
 import { useUiStore } from './store/ui'
 
@@ -29,5 +30,10 @@ app.config.errorHandler = (error) => {
   console.error(error)
   useToastStore().error(translate('errors.unexpected'))
 }
+
+// Another tab changed the cart: show the same one here.
+window.addEventListener('storage', (event) => {
+  if (event.key === CART_KEY || event.key === null) useCartStore().reload()
+})
 
 app.mount('#app')

@@ -31,6 +31,19 @@ const routes = [
     meta: { layout: 'main', titleKey: 'menu.title' },
   },
   {
+    path: '/cart',
+    name: 'cart',
+    component: () => import('@/views/CartView.vue'),
+    meta: { layout: 'main', titleKey: 'cart.title' },
+  },
+  {
+    path: '/checkout',
+    name: 'checkout',
+    // Placeholder until the ordering step is built.
+    component: () => import('@/views/AreaPlaceholderView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'cart.checkoutTitle' },
+  },
+  {
     path: '/login',
     name: 'login',
     component: () => import('@/views/auth/LoginView.vue'),
