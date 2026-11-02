@@ -14,6 +14,7 @@ export const useRestaurantStore = defineStore('restaurant', {
 
   getters: {
     name: (state) => state.settings?.name || FALLBACK_NAME,
+    taxRate: (state) => state.settings?.tax_rate ?? null,
     opensAt: (state) => formatClock(state.settings?.opening_time),
     closesAt: (state) => formatClock(state.settings?.closing_time),
     hasHours: (state) => Boolean(state.settings?.opening_time && state.settings?.closing_time),
