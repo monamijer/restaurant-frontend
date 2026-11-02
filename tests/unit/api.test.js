@@ -55,6 +55,7 @@ describe('failures', () => {
   })
 
   it('report a missing network clearly', async () => {
+    vi.spyOn(console, 'warn').mockImplementation(() => {})
     fakeServer(() => Promise.reject(Object.assign(new Error('Network Error'), { isAxiosError: true, code: 'ERR_NETWORK' })))
 
     const error = await api.get('/menu-items/').catch((e) => e)

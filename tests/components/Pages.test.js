@@ -14,7 +14,7 @@ describe('HomeView', () => {
     const { wrapper } = await mountAt(HomeView, '/')
 
     expect(wrapper.get('h1').text()).toBe('Welcome to Restaurant')
-    expect(wrapper.findAll('a').map((link) => link.attributes('href'))).toEqual(['/login', '/register'])
+    expect(wrapper.findAll('a').map((link) => link.attributes('href'))).toEqual(['/login', '/register', '/menu'])
   })
 
   it.each([
