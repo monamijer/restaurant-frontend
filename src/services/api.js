@@ -91,6 +91,14 @@ api.interceptors.response.use(
       }
       return api(config)
     }
+
+    if (import.meta.env.DEV && !response) {
+      // A browser reports a blocked cross-origin call (CORS) exactly like a dead server.
+      console.warn(
+        `[api] No answer from ${API_BASE_URL}. If the backend is running, make sure CORS_ALLOWED_ORIGINS ` +
+          `in its .env contains ${window.location.origin}, then restart the backend.`,
+      )
+    }
     throw toApiError(error)
   },
 )
