@@ -4,6 +4,7 @@ import { ROLES } from '@/utils/roles'
 // customer and staff pages here; the backend remains the real gatekeeper of every page.
 export const NAV_ITEMS = [
   { name: 'home', labelKey: 'nav.home', route: { name: 'home' } },
+  { name: 'menu', labelKey: 'nav.menu', route: { name: 'menu' } },
   {
     name: 'account',
     labelKey: 'nav.account',

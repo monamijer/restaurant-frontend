@@ -19,6 +19,18 @@ const routes = [
     meta: { layout: 'main', titleKey: 'home.title' },
   },
   {
+    path: '/menu',
+    name: 'menu',
+    component: () => import('@/views/MenuView.vue'),
+    meta: { layout: 'main', titleKey: 'menu.title' },
+  },
+  {
+    path: '/menu/:id(\\d+)',
+    name: 'menu-item',
+    component: () => import('@/views/MenuItemView.vue'),
+    meta: { layout: 'main', titleKey: 'menu.title' },
+  },
+  {
     path: '/login',
     name: 'login',
     component: () => import('@/views/auth/LoginView.vue'),

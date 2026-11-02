@@ -19,7 +19,9 @@ export function createAppRouter(history) {
   router.beforeEach(authGuard)
   router.afterEach((to, from) => {
     applyDocumentTitle(to)
-    if (from.name) focusMainContent() // Not on the very first page load.
+    // Not on the first page load, and not when only the query changes (typing in a filter
+    // must not pull the focus out of the field).
+    if (from.name && to.path !== from.path) focusMainContent()
   })
 
   return router
