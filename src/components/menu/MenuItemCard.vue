@@ -35,12 +35,15 @@
         <BaseBadge v-if="!item.is_available" tone="danger">{{ $t('menu.unavailable') }}</BaseBadge>
         <span v-else class="dish__time">{{ $t('menu.prepTime', { minutes: item.preparation_time }) }}</span>
       </div>
+
+      <AddToCartButton :item="item" />
     </div>
   </article>
 </template>
 
 <script>
 import { mapState } from 'pinia'
+import AddToCartButton from '@/components/cart/AddToCartButton.vue'
 import BaseBadge from '@/components/common/BaseBadge.vue'
 import { CURRENCY } from '@/config'
 import { useUiStore } from '@/store/ui'
@@ -48,7 +51,7 @@ import { formatMoney } from '@/utils/format'
 
 export default {
   name: 'MenuItemCard',
-  components: { BaseBadge },
+  components: { AddToCartButton, BaseBadge },
   props: {
     item: { type: Object, required: true },
   },

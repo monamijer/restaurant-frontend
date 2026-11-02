@@ -48,6 +48,10 @@
         <p class="dish-page__price">{{ price }}</p>
         <p class="dish-page__description">{{ item.description }}</p>
 
+        <div class="dish-page__buy">
+          <AddToCartButton :item="item" size="lg" />
+        </div>
+
         <dl class="dish-page__facts">
           <div>
             <dt>{{ $t('menu.item.category') }}</dt>
@@ -78,6 +82,7 @@
 
 <script>
 import { mapState } from 'pinia'
+import AddToCartButton from '@/components/cart/AddToCartButton.vue'
 import BaseBadge from '@/components/common/BaseBadge.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
 import BaseSkeleton from '@/components/common/BaseSkeleton.vue'
@@ -90,7 +95,7 @@ import { formatMoney } from '@/utils/format'
 
 export default {
   name: 'MenuItemView',
-  components: { BaseBadge, BaseButton, BaseSkeleton, EmptyState },
+  components: { AddToCartButton, BaseBadge, BaseButton, BaseSkeleton, EmptyState },
   data() {
     return { item: null, loading: true, notFound: false, failed: false }
   },
@@ -177,6 +182,10 @@ export default {
 
 .dish-page__description {
   max-width: 40rem;
+}
+
+.dish-page__buy {
+  max-width: 20rem;
 }
 
 .dish-page__facts {
