@@ -1,0 +1,51 @@
+{
+  "checkout": {
+    "title": "Checkout",
+    "eyebrow": "One last step",
+    "heading": "Place your order",
+    "type": "How would you like your order?",
+    "types": { "dine_in": "Eat here", "takeaway": "Takeaway", "delivery": "Delivery" },
+    "typeHints": {
+      "dine_in": "Served at your table.",
+      "takeaway": "Collect it at the restaurant.",
+      "delivery": "Brought to your address."
+    },
+    "table": {
+      "seated": "You are at table {number}.",
+      "change": "Not your table?",
+      "needed": "Scan the QR code on your table, or enter its code below.",
+      "codeLabel": "Table code or link",
+      "codeHint": "Paste the link or the code printed under the QR code.",
+      "use": "Use this code",
+      "invalid": "This table code is not valid. Check it or ask a member of staff."
+    },
+    "address": "Delivery address",
+    "phone": "Contact phone",
+    "phoneHint": "So the restaurant can reach you if needed.",
+    "notes": "Notes for the restaurant",
+    "notesHint": "Anything else we should know?",
+    "yourOrder": "Your order",
+    "submit": "Place order",
+    "placed": "Order #{id} placed.",
+    "emptyTitle": "There is nothing to order",
+    "emptyText": "Your cart is empty. Add a few dishes first.",
+    "emptyAction": "Browse the menu",
+    "problemsTitle": "Some dishes can no longer be ordered",
+    "removeProblems": "Remove these dishes",
+    "backToCart": "Back to the cart"
+  },
+  "scan": {
+    "title": "Your table",
+    "checking": "Checking the code…",
+    "success": "You are at table {number}",
+    "successText": "Browse the menu and order straight to your table.",
+    "invalidTitle": "This code does not work",
+    "invalidText": "The QR code may be old or damaged. Please ask a member of staff.",
+    "menu": "Browse the menu",
+    "cart": "Go to my cart"
+  },
+  "table": {
+    "banner": "You are at table {number}",
+    "leave": "Leave this table"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "checkout": {
+    "title": "Commande",
+    "eyebrow": "Dernière étape",
+    "heading": "Passer la commande",
+    "type": "Comment souhaitez-vous votre commande ?",
+    "types": { "dine_in": "Sur place", "takeaway": "À emporter", "delivery": "Livraison" },
+    "typeHints": {
+      "dine_in": "Servie à votre table.",
+      "takeaway": "À récupérer au restaurant.",
+      "delivery": "Apportée à votre adresse."
+    },
+    "table": {
+      "seated": "Vous êtes à la table {number}.",
+      "change": "Ce n'est pas votre table ?",
+      "needed": "Scannez le QR code de votre table, ou saisissez son code ci-dessous.",
+      "codeLabel": "Code ou lien de la table",
+      "codeHint": "Collez le lien ou le code imprimé sous le QR code.",
+      "use": "Utiliser ce code",
+      "invalid": "Ce code de table n'est pas valide. Vérifiez-le ou demandez à un membre de l'équipe."
+    },
+    "address": "Adresse de livraison",
+    "phone": "Téléphone de contact",
+    "phoneHint": "Pour que le restaurant puisse vous joindre si besoin.",
+    "notes": "Remarques pour le restaurant",
+    "notesHint": "Autre chose à nous signaler ?",
+    "yourOrder": "Votre commande",
+    "submit": "Passer la commande",
+    "placed": "Commande n° {id} passée.",
+    "emptyTitle": "Il n'y a rien à commander",
+    "emptyText": "Votre panier est vide. Ajoutez d'abord quelques plats.",
+    "emptyAction": "Parcourir la carte",
+    "problemsTitle": "Certains plats ne peuvent plus être commandés",
+    "removeProblems": "Retirer ces plats",
+    "backToCart": "Retour au panier"
+  },
+  "scan": {
+    "title": "Votre table",
+    "checking": "Vérification du code…",
+    "success": "Vous êtes à la table {number}",
+    "successText": "Parcourez la carte et commandez directement à votre table.",
+    "invalidTitle": "Ce code ne fonctionne pas",
+    "invalidText": "Le QR code est peut-être ancien ou abîmé. Demandez à un membre de l'équipe.",
+    "menu": "Parcourir la carte",
+    "cart": "Aller à mon panier"
+  },
+  "table": {
+    "banner": "Vous êtes à la table {number}",
+    "leave": "Quitter cette table"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "orders": {
+    "title": "Mes commandes",
+    "heading": "Mes commandes",
+    "emptyTitle": "Aucune commande pour l'instant",
+    "emptyText": "Quand vous passerez une commande, vous pourrez la suivre ici.",
+    "emptyAction": "Parcourir la carte",
+    "errorTitle": "Impossible de charger vos commandes.",
+    "number": "Commande n° {id}",
+    "items": "{count} article | {count} articles",
+    "status": {
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "preparing": "En préparation",
+      "ready": "Prête",
+      "completed": "Terminée",
+      "cancelled": "Annulée"
+    },
+    "types": { "dine_in": "Sur place", "takeaway": "À emporter", "delivery": "Livraison" }
+  },
+  "order": {
+    "title": "Commande",
+    "heading": "Commande n° {id}",
+    "placedAt": "Passée {date}",
+    "table": "Table {number}",
+    "deliveryTo": "Livraison à",
+    "phone": "Téléphone de contact",
+    "notes": "Remarques",
+    "progress": "Avancement",
+    "items": "Vos plats",
+    "each": "{price} l'unité",
+    "subtotal": "Sous-total",
+    "tax": "TVA ({rate} %)",
+    "total": "Total",
+    "cancelledNote": "Cette commande a été annulée.",
+    "cancel": "Annuler la commande",
+    "cancelTitle": "Annuler cette commande ?",
+    "cancelMessage": "Le restaurant sera prévenu. Cette action est irréversible.",
+    "cancelConfirm": "Oui, l'annuler",
+    "cancelKeep": "Garder la commande",
+    "cancelled": "Commande annulée.",
+    "notFoundTitle": "Commande introuvable",
+    "notFoundText": "Elle n'existe pas ou appartient à un autre compte.",
+    "errorTitle": "Impossible de charger la commande.",
+    "back": "Mes commandes",
+    "live": "Cette page se met à jour toute seule."
+  },
+  "payment": {
+    "title": "Paiement",
+    "method": "Mode de paiement",
+    "methods": { "cash": "Espèces", "card": "Carte", "mobile_money": "Mobile money" },
+    "methodHints": {
+      "cash": "Payez au restaurant. Un membre de l'équipe confirme votre paiement.",
+      "card": "Payez maintenant par carte.",
+      "mobile_money": "Payez maintenant avec mobile money."
+    },
+    "demoNote": "Mode démonstration : les paiements par carte et mobile money sont simulés.",
+    "declineOption": "Simuler un paiement refusé",
+    "pay": "Payer {amount}",
+    "paid": "Payée",
+    "paidAt": "Payée {date}",
+    "reference": "Référence {reference}",
+    "pendingCash": "En attente de la confirmation de votre paiement en espèces par le restaurant.",
+    "changeMethod": "Choisir un autre mode",
+    "declined": "Votre paiement a été refusé. Vous pouvez réessayer ou choisir un autre mode.",
+    "received": "Paiement reçu. Merci !",
+    "cashRegistered": "Paiement en espèces enregistré. Merci de régler au restaurant.",
+    "status": { "pending": "En attente", "paid": "Payé", "failed": "Refusé", "refunded": "Remboursé" }
+  }
+}
