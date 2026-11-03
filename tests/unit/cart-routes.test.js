@@ -39,3 +39,27 @@ describe('cart routes', () => {
     expect(document.title).toBe('Cart · Restaurant')
   })
 })
+
+describe('ordering routes', () => {
+  it('lets anyone scan a table code', async () => {
+    expect((await visit('/scan?t=abc')).name).toBe('scan')
+  })
+
+  it.each(['/orders', '/orders/42'])('keeps %s for signed-in users and brings visitors back after sign in', async (path) => {
+    const route = await visit(path)
+
+    expect(route.name).toBe('login')
+    expect(route.query.redirect).toBe(path)
+  })
+
+  it('opens a customer order page to signed-in users', async () => {
+    const route = await visit('/orders/42', USERS.client)
+
+    expect(route.name).toBe('order')
+    expect(route.params.id).toBe('42')
+  })
+
+  it('treats an order address that is not a number as a missing page', async () => {
+    expect((await visit('/orders/abc', USERS.client)).name).toBe('not-found')
+  })
+})

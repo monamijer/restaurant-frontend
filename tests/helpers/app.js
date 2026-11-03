@@ -5,14 +5,18 @@ import { applyLocale, i18n } from '@/i18n'
 import { createAppRouter } from '@/router'
 import { useAuthStore } from '@/store/auth'
 
-/** Mount a component inside the real router, stores and translations, as `user` (or signed out). */
-export async function mountAt(component, path = '/', { user = null, props = {} } = {}) {
+/**
+ * Mount a component inside the real router, stores and translations, as `user` (or signed out).
+ * `before` runs once the stores exist and before the component is created, to prepare their state.
+ */
+export async function mountAt(component, path = '/', { user = null, props = {}, before } = {}) {
   const pinia = createPinia()
   setActivePinia(pinia)
   applyLocale('en')
   const auth = useAuthStore()
   auth.user = user
   auth.restored = true
+  before?.()
 
   const router = createAppRouter(createMemoryHistory())
   await router.push(path)

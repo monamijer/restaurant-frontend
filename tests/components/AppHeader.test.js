@@ -19,9 +19,9 @@ describe('AppHeader', () => {
   })
 
   it.each([
-    ['client', ['Home', 'Menu', 'My account']],
-    ['staff', ['Home', 'Menu', 'My account', 'Staff area']],
-    ['admin', ['Home', 'Menu', 'My account', 'Staff area', 'Administration']],
+    ['client', ['Home', 'Menu', 'My orders', 'My account']],
+    ['staff', ['Home', 'Menu', 'My orders', 'My account', 'Staff area']],
+    ['admin', ['Home', 'Menu', 'My orders', 'My account', 'Staff area', 'Administration']],
   ])('shows a %s only the pages their role allows', async (role, expected) => {
     const { wrapper } = await mountAt(AppHeader, '/', { user: USERS[role] })
 

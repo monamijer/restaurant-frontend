@@ -10,15 +10,15 @@ describe('navigation', () => {
   })
 
   it('adds the account for customers', () => {
-    expect(names('client')).toEqual(['home', 'menu', 'account'])
+    expect(names('client')).toEqual(['home', 'menu', 'orders', 'account'])
   })
 
   it('adds the staff area for staff', () => {
-    expect(names('staff')).toEqual(['home', 'menu', 'account', 'staff'])
+    expect(names('staff')).toEqual(['home', 'menu', 'orders', 'account', 'staff'])
   })
 
   it('offers administrators everything', () => {
-    expect(names('admin')).toEqual(['home', 'menu', 'account', 'staff', 'admin'])
+    expect(names('admin')).toEqual(['home', 'menu', 'orders', 'account', 'staff', 'admin'])
   })
 })
 

@@ -32,6 +32,7 @@ if (typeof window !== 'undefined') {
 
   afterEach(() => {
     window.localStorage.clear()
+    window.sessionStorage.clear()
     document.documentElement.removeAttribute('data-theme')
   })
 }
