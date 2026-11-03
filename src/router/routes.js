@@ -39,9 +39,26 @@ const routes = [
   {
     path: '/checkout',
     name: 'checkout',
-    // Placeholder until the ordering step is built.
-    component: () => import('@/views/AreaPlaceholderView.vue'),
-    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'cart.checkoutTitle' },
+    component: () => import('@/views/CheckoutView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'checkout.title' },
+  },
+  {
+    path: '/scan',
+    name: 'scan',
+    component: () => import('@/views/ScanView.vue'),
+    meta: { layout: 'main', titleKey: 'scan.title' },
+  },
+  {
+    path: '/orders',
+    name: 'orders',
+    component: () => import('@/views/OrdersView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'orders.title' },
+  },
+  {
+    path: '/orders/:id(\\d+)',
+    name: 'order',
+    component: () => import('@/views/OrderView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'order.title' },
   },
   {
     path: '/login',

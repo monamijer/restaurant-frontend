@@ -2,6 +2,7 @@
   <div class="shell">
     <a class="skip-link" href="#main">{{ $t('layout.skipToContent') }}</a>
     <AppHeader />
+    <TableBanner />
     <main id="main" class="shell__main" tabindex="-1">
       <router-view v-slot="{ Component, route }">
         <transition name="page" mode="out-in">
@@ -16,10 +17,11 @@
 <script>
 import AppFooter from '@/components/layout/AppFooter.vue'
 import AppHeader from '@/components/layout/AppHeader.vue'
+import TableBanner from '@/components/layout/TableBanner.vue'
 
 export default {
   name: 'MainLayout',
-  components: { AppFooter, AppHeader },
+  components: { AppFooter, AppHeader, TableBanner },
 }
 </script>
 

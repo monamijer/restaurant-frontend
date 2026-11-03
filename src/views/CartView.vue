@@ -96,47 +96,25 @@ import QuantityStepper from '@/components/cart/QuantityStepper.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
 import ConfirmDialog from '@/components/common/ConfirmDialog.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
-import { CURRENCY, MAX_NOTE_LENGTH } from '@/config'
+import { MAX_NOTE_LENGTH } from '@/config'
+import cartMoney from '@/mixins/cartMoney'
 import { useCartStore } from '@/store/cart'
-import { useRestaurantStore } from '@/store/restaurant'
 import { useToastStore } from '@/store/toasts'
-import { useUiStore } from '@/store/ui'
-import { formatMoney } from '@/utils/format'
-import { centsToAmount, estimateTaxCents, toCents } from '@/utils/money'
+import { centsToAmount, toCents } from '@/utils/money'
 
 export default {
   name: 'CartView',
   components: { BaseButton, ConfirmDialog, EmptyState, QuantityStepper },
+  mixins: [cartMoney],
   data() {
     return { confirmOpen: false, maxNote: MAX_NOTE_LENGTH }
   },
   computed: {
-    ...mapState(useCartStore, ['lines', 'isEmpty', 'subtotal', 'subtotalCents', 'lineTotal']),
-    ...mapState(useRestaurantStore, ['taxRate']),
-    ...mapState(useUiStore, ['locale']),
-    showTax() {
-      return this.taxRate !== null && Number(this.taxRate) > 0
-    },
-    taxCents() {
-      return this.showTax ? estimateTaxCents(this.subtotalCents, this.taxRate) : 0
-    },
-    taxAmount() {
-      return centsToAmount(this.taxCents)
-    },
-    taxPercent() {
-      return String(Number(this.taxRate)) // "10.00" is shown as "10"
-    },
-    estimatedTotal() {
-      return centsToAmount(this.subtotalCents + this.taxCents)
-    },
+    ...mapState(useCartStore, ['lines', 'isEmpty', 'lineTotal']),
   },
   methods: {
     ...mapActions(useCartStore, ['setQuantity', 'setNote', 'remove', 'clear']),
     ...mapActions(useToastStore, ['info']),
-
-    money(amount) {
-      return formatMoney(amount, CURRENCY, this.locale)
-    },
 
     toAmount(price) {
       return centsToAmount(toCents(price))

@@ -6,6 +6,12 @@ export const NAV_ITEMS = [
   { name: 'home', labelKey: 'nav.home', route: { name: 'home' } },
   { name: 'menu', labelKey: 'nav.menu', route: { name: 'menu' } },
   {
+    name: 'orders',
+    labelKey: 'nav.orders',
+    route: { name: 'orders' },
+    roles: [ROLES.CLIENT, ROLES.STAFF, ROLES.ADMIN],
+  },
+  {
     name: 'account',
     labelKey: 'nav.account',
     route: { name: 'client-account' },
