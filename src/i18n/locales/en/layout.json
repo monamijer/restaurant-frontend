@@ -1,5 +1,7 @@
 {
-  "layout": { "skipToContent": "Skip to content" },
+  "layout": {
+    "skipToContent": "Skip to content"
+  },
   "nav": {
     "label": "Main navigation",
     "home": "Home",
@@ -7,7 +9,9 @@
     "orders": "My orders",
     "account": "My account",
     "staff": "Staff area",
-    "admin": "Administration"
+    "admin": "Administration",
+    "queue": "Queue",
+    "reservations": "Reservations"
   },
   "header": {
     "menu": "Menu",

@@ -1,0 +1,28 @@
+{
+  "invoices": {
+    "title": "Invoices",
+    "heading": "My invoices",
+    "emptyTitle": "No invoices yet",
+    "emptyText": "An invoice is issued as soon as an order is paid.",
+    "errorTitle": "Your invoices could not be loaded.",
+    "number": "Invoice {number}",
+    "issued": "Issued {date}",
+    "order": "Order #{id}",
+    "download": "Download PDF",
+    "downloadLabel": "Download invoice {number} as a PDF",
+    "downloadFailed": "The invoice could not be downloaded. Please try again."
+  },
+  "notifications": {
+    "title": "Notifications",
+    "heading": "Notifications",
+    "bellLabel": "Notifications: {count} unread | Notifications: {count} unread",
+    "bellNone": "Notifications",
+    "emptyTitle": "Nothing new",
+    "emptyText": "Updates about your orders, reservations and place in the queue appear here.",
+    "errorTitle": "Your notifications could not be loaded.",
+    "markRead": "Mark as read",
+    "markAllRead": "Mark all as read",
+    "unread": "Unread",
+    "allRead": "All notifications marked as read."
+  }
+}

@@ -8,8 +8,19 @@
     "role": "Role",
     "memberSince": "Member since",
     "notProvided": "Not provided",
-    "roles": { "client": "Customer", "staff": "Staff", "admin": "Administrator" },
-    "comingSoon": "Profile editing, reservations and orders arrive in the next step."
+    "roles": {
+      "client": "Customer",
+      "staff": "Staff",
+      "admin": "Administrator"
+    },
+    "comingSoon": "Profile editing, reservations and orders arrive in the next step.",
+    "links": {
+      "heading": "Shortcuts",
+      "orders": "My orders",
+      "reservations": "My reservations",
+      "invoices": "My invoices",
+      "notifications": "Notifications"
+    }
   },
   "area": {
     "staffTitle": "Staff area",

@@ -1,0 +1,28 @@
+{
+  "invoices": {
+    "title": "Factures",
+    "heading": "Mes factures",
+    "emptyTitle": "Aucune facture pour l'instant",
+    "emptyText": "Une facture est émise dès qu'une commande est payée.",
+    "errorTitle": "Impossible de charger vos factures.",
+    "number": "Facture {number}",
+    "issued": "Émise {date}",
+    "order": "Commande n° {id}",
+    "download": "Télécharger le PDF",
+    "downloadLabel": "Télécharger la facture {number} en PDF",
+    "downloadFailed": "Impossible de télécharger la facture. Veuillez réessayer."
+  },
+  "notifications": {
+    "title": "Notifications",
+    "heading": "Notifications",
+    "bellLabel": "Notifications : {count} non lue | Notifications : {count} non lues",
+    "bellNone": "Notifications",
+    "emptyTitle": "Rien de nouveau",
+    "emptyText": "Les nouvelles de vos commandes, réservations et de votre place dans la file apparaissent ici.",
+    "errorTitle": "Impossible de charger vos notifications.",
+    "markRead": "Marquer comme lue",
+    "markAllRead": "Tout marquer comme lu",
+    "unread": "Non lue",
+    "allRead": "Toutes les notifications ont été marquées comme lues."
+  }
+}

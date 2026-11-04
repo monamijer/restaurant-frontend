@@ -8,8 +8,19 @@
     "role": "Rôle",
     "memberSince": "Membre depuis",
     "notProvided": "Non renseigné",
-    "roles": { "client": "Client", "staff": "Équipe", "admin": "Administrateur" },
-    "comingSoon": "La modification du profil, les réservations et les commandes arrivent dans la prochaine étape."
+    "roles": {
+      "client": "Client",
+      "staff": "Équipe",
+      "admin": "Administrateur"
+    },
+    "comingSoon": "La modification du profil, les réservations et les commandes arrivent dans la prochaine étape.",
+    "links": {
+      "heading": "Raccourcis",
+      "orders": "Mes commandes",
+      "reservations": "Mes réservations",
+      "invoices": "Mes factures",
+      "notifications": "Notifications"
+    }
   },
   "area": {
     "staffTitle": "Espace équipe",
