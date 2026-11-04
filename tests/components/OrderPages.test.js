@@ -3,6 +3,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import PaymentPanel from '@/components/orders/PaymentPanel.vue'
 import OrderTimeline from '@/components/orders/OrderTimeline.vue'
 import TableBanner from '@/components/layout/TableBanner.vue'
+import { invoiceService } from '@/services/invoiceService'
 import { orderService } from '@/services/orderService'
 import { paymentService } from '@/services/paymentService'
 import { useTableStore } from '@/store/table'
@@ -151,6 +152,7 @@ describe('OrderView', () => {
   function load({ order = makeOrder(), payments = [] } = {}) {
     vi.spyOn(orderService, 'get').mockResolvedValue(order)
     vi.spyOn(paymentService, 'forOrder').mockResolvedValue(payments)
+    vi.spyOn(invoiceService, 'forOrder').mockResolvedValue(null)
     return mountAt(OrderView, '/orders/42', { user: USERS.client })
   }
 

@@ -50,3 +50,59 @@ export function makePayment(overrides = {}) {
 }
 
 export const page = (results, count = results.length) => ({ count, next: null, previous: null, results })
+
+export const SETTINGS = {
+  name: 'Chez Test',
+  timezone: 'UTC',
+  tax_rate: '10.00',
+  opening_time: '09:00:00',
+  closing_time: '22:00:00',
+  min_reservation_minutes: 60,
+  max_reservation_minutes: 180,
+  slot_step_minutes: 30,
+}
+
+export function makeReservation(overrides = {}) {
+  return {
+    id: 5,
+    customer: 1,
+    table: 3,
+    table_number: 3,
+    date: '2026-10-10',
+    time: '19:00',
+    starts_at: '2026-10-10T19:00:00Z',
+    ends_at: '2026-10-10T20:30:00Z',
+    duration_minutes: 90,
+    party_size: 4,
+    status: 'confirmed',
+    notes: '',
+    expires_at: null,
+    ...overrides,
+  }
+}
+
+export function makeTicket(overrides = {}) {
+  return {
+    id: 4,
+    party_size: 2,
+    phone: '',
+    status: 'waiting',
+    position: 3,
+    estimated_wait_minutes: 20,
+    quoted_wait_minutes: 25,
+    created_at: '2026-10-10T17:00:00Z',
+    ...overrides,
+  }
+}
+
+export function makeInvoice(overrides = {}) {
+  return {
+    id: 1,
+    order: 42,
+    invoice_number: 'INV-2026-000001',
+    total: '34.10',
+    currency: 'USD',
+    issued_at: '2026-10-10T17:06:00Z',
+    ...overrides,
+  }
+}

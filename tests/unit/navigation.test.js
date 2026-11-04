@@ -6,19 +6,19 @@ const names = (role) => navItemsFor(role).map((item) => item.name)
 
 describe('navigation', () => {
   it('offers visitors only the public pages', () => {
-    expect(names(null)).toEqual(['home', 'menu'])
+    expect(names(null)).toEqual(['home', 'menu', 'queue'])
   })
 
   it('adds the account for customers', () => {
-    expect(names('client')).toEqual(['home', 'menu', 'orders', 'account'])
+    expect(names('client')).toEqual(['home', 'menu', 'queue', 'reservations', 'orders', 'account'])
   })
 
   it('adds the staff area for staff', () => {
-    expect(names('staff')).toEqual(['home', 'menu', 'orders', 'account', 'staff'])
+    expect(names('staff')).toEqual(['home', 'menu', 'queue', 'reservations', 'orders', 'account', 'staff'])
   })
 
   it('offers administrators everything', () => {
-    expect(names('admin')).toEqual(['home', 'menu', 'orders', 'account', 'staff', 'admin'])
+    expect(names('admin')).toEqual(['home', 'menu', 'queue', 'reservations', 'orders', 'account', 'staff', 'admin'])
   })
 })
 

@@ -1,9 +1,21 @@
 import { flushPromises, mount } from '@vue/test-utils'
 import { createPinia, setActivePinia } from 'pinia'
+import { afterEach } from 'vitest'
 import { createMemoryHistory } from 'vue-router'
 import { applyLocale, i18n } from '@/i18n'
 import { createAppRouter } from '@/router'
 import { useAuthStore } from '@/store/auth'
+
+// Every component mounted here is unmounted when its test ends. A component left alive would
+// keep reacting to late answers and, each time it re-rendered, make its own Pinia the active
+// one, so a later test reading the stores would look at the wrong instance.
+const mounted = []
+
+afterEach(() => {
+  for (const wrapper of mounted.splice(0)) {
+    if (!wrapper.__unmounted) wrapper.unmount()
+  }
+})
 
 /**
  * Mount a component inside the real router, stores and translations, as `user` (or signed out).
@@ -27,6 +39,13 @@ export async function mountAt(component, path = '/', { user = null, props = {}, 
     attachTo: document.body,
     global: { plugins: [pinia, i18n, router] },
   })
+  const unmount = wrapper.unmount.bind(wrapper)
+  wrapper.unmount = () => {
+    wrapper.__unmounted = true
+    unmount()
+  }
+  mounted.push(wrapper)
+
   await flushPromises()
   return { wrapper, router, auth }
 }

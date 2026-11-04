@@ -63,3 +63,28 @@ describe('ordering routes', () => {
     expect((await visit('/orders/abc', USERS.client)).name).toBe('not-found')
   })
 })
+
+describe('booking, queue, invoice and notification routes', () => {
+  it('lets anyone look at the queue', async () => {
+    expect((await visit('/queue')).name).toBe('queue')
+  })
+
+  it.each(['/reservations', '/reservations/new', '/invoices', '/notifications'])(
+    'keeps %s for signed-in users and brings visitors back after sign in',
+    async (path) => {
+      const route = await visit(path)
+
+      expect(route.name).toBe('login')
+      expect(route.query.redirect).toBe(path)
+    },
+  )
+
+  it.each([
+    ['/reservations', 'reservations'],
+    ['/reservations/new', 'reservation-new'],
+    ['/invoices', 'invoices'],
+    ['/notifications', 'notifications'],
+  ])('opens %s to a signed-in customer', async (path, name) => {
+    expect((await visit(path, USERS.client)).name).toBe(name)
+  })
+})

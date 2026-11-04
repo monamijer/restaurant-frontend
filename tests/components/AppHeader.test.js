@@ -11,7 +11,7 @@ describe('AppHeader', () => {
   it('invites a visitor to sign in or register', async () => {
     const { wrapper } = await mountAt(AppHeader, '/')
 
-    expect(links(wrapper)).toEqual(['Home', 'Menu'])
+    expect(links(wrapper)).toEqual(['Home', 'Menu', 'Queue'])
     const actions = wrapper.get('.header__actions').text()
     expect(actions).toContain('Sign in')
     expect(actions).toContain('Create account')
@@ -19,9 +19,9 @@ describe('AppHeader', () => {
   })
 
   it.each([
-    ['client', ['Home', 'Menu', 'My orders', 'My account']],
-    ['staff', ['Home', 'Menu', 'My orders', 'My account', 'Staff area']],
-    ['admin', ['Home', 'Menu', 'My orders', 'My account', 'Staff area', 'Administration']],
+    ['client', ['Home', 'Menu', 'Queue', 'Reservations', 'My orders', 'My account']],
+    ['staff', ['Home', 'Menu', 'Queue', 'Reservations', 'My orders', 'My account', 'Staff area']],
+    ['admin', ['Home', 'Menu', 'Queue', 'Reservations', 'My orders', 'My account', 'Staff area', 'Administration']],
   ])('shows a %s only the pages their role allows', async (role, expected) => {
     const { wrapper } = await mountAt(AppHeader, '/', { user: USERS[role] })
 
