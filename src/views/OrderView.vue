@@ -85,6 +85,11 @@
 
           <PaymentPanel v-if="!cancelled" :order="order" :payments="payments" @changed="refresh" />
 
+          <section v-if="invoice" class="invoice-box" aria-labelledby="invoice-title">
+            <h2 id="invoice-title" class="order__title">{{ $t('invoices.title') }}</h2>
+            <InvoiceCard :invoice="invoice" />
+          </section>
+
           <BaseButton v-if="canCancel" variant="ghost" @click="confirmOpen = true">{{ $t('order.cancel') }}</BaseButton>
         </aside>
       </div>
@@ -111,9 +116,11 @@ import BaseButton from '@/components/common/BaseButton.vue'
 import BaseSkeleton from '@/components/common/BaseSkeleton.vue'
 import ConfirmDialog from '@/components/common/ConfirmDialog.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
+import InvoiceCard from '@/components/orders/InvoiceCard.vue'
 import OrderTimeline from '@/components/orders/OrderTimeline.vue'
 import PaymentPanel from '@/components/orders/PaymentPanel.vue'
 import { CURRENCY } from '@/config'
+import { invoiceService } from '@/services/invoiceService'
 import { orderService } from '@/services/orderService'
 import { paymentService } from '@/services/paymentService'
 import { useToastStore } from '@/store/toasts'
@@ -126,11 +133,12 @@ export const POLL_INTERVAL_MS = 10000
 
 export default {
   name: 'OrderView',
-  components: { BaseBadge, BaseButton, BaseSkeleton, ConfirmDialog, EmptyState, OrderTimeline, PaymentPanel },
+  components: { BaseBadge, BaseButton, BaseSkeleton, ConfirmDialog, EmptyState, InvoiceCard, OrderTimeline, PaymentPanel },
   data() {
     return {
       order: null,
       payments: [],
+      invoice: null,
       loading: true,
       notFound: false,
       failed: false,
@@ -192,6 +200,20 @@ export default {
       const [order, payments] = await Promise.all([orderService.get(id), paymentService.forOrder(id)])
       this.order = order
       this.payments = payments
+      await this.fetchInvoice()
+    },
+
+    /** An invoice exists only once the order is paid; failing to find it never hides the order. */
+    async fetchInvoice() {
+      if (!this.hasPaid) {
+        this.invoice = null
+        return
+      }
+      try {
+        this.invoice = await invoiceService.forOrder(this.order.id)
+      } catch {
+        // The order stays visible; the invoice shows up on the next refresh.
+      }
     },
 
     async load() {
@@ -338,6 +360,13 @@ export default {
   font-size: var(--text-lg);
   font-weight: 700;
   border-top: 1px solid var(--color-border);
+}
+
+.invoice-box {
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
 }
 
 .order__side {

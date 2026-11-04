@@ -27,20 +27,26 @@
       </dl>
     </section>
 
-    <p class="muted">{{ $t('account.comingSoon') }}</p>
+    <nav class="account__links" :aria-label="$t('account.links.heading')">
+      <BaseButton variant="secondary" :to="{ name: 'orders' }">{{ $t('account.links.orders') }}</BaseButton>
+      <BaseButton variant="secondary" :to="{ name: 'reservations' }">{{ $t('account.links.reservations') }}</BaseButton>
+      <BaseButton variant="secondary" :to="{ name: 'invoices' }">{{ $t('account.links.invoices') }}</BaseButton>
+      <BaseButton variant="secondary" :to="{ name: 'notifications' }">{{ $t('account.links.notifications') }}</BaseButton>
+    </nav>
   </div>
 </template>
 
 <script>
 import { mapActions, mapState } from 'pinia'
 import BaseBadge from '@/components/common/BaseBadge.vue'
+import BaseButton from '@/components/common/BaseButton.vue'
 import { useAuthStore } from '@/store/auth'
 import { useUiStore } from '@/store/ui'
 import { formatDateTime } from '@/utils/format'
 
 export default {
   name: 'AccountView',
-  components: { BaseBadge },
+  components: { BaseBadge, BaseButton },
   computed: {
     ...mapState(useAuthStore, ['user']),
     ...mapState(useUiStore, ['locale']),
@@ -80,6 +86,12 @@ export default {
 .account__card-title {
   margin-bottom: var(--space-4);
   font-size: var(--text-xl);
+}
+
+.account__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
 }
 
 .account__list {

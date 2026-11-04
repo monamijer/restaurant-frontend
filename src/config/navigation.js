@@ -5,6 +5,13 @@ import { ROLES } from '@/utils/roles'
 export const NAV_ITEMS = [
   { name: 'home', labelKey: 'nav.home', route: { name: 'home' } },
   { name: 'menu', labelKey: 'nav.menu', route: { name: 'menu' } },
+  { name: 'queue', labelKey: 'nav.queue', route: { name: 'queue' } },
+  {
+    name: 'reservations',
+    labelKey: 'nav.reservations',
+    route: { name: 'reservations' },
+    roles: [ROLES.CLIENT, ROLES.STAFF, ROLES.ADMIN],
+  },
   {
     name: 'orders',
     labelKey: 'nav.orders',

@@ -61,6 +61,36 @@ const routes = [
     meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'order.title' },
   },
   {
+    path: '/queue',
+    name: 'queue',
+    component: () => import('@/views/QueueView.vue'),
+    meta: { layout: 'main', titleKey: 'queue.title' },
+  },
+  {
+    path: '/reservations',
+    name: 'reservations',
+    component: () => import('@/views/ReservationsView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'reservations.title' },
+  },
+  {
+    path: '/reservations/new',
+    name: 'reservation-new',
+    component: () => import('@/views/ReservationNewView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'reservations.new.title' },
+  },
+  {
+    path: '/invoices',
+    name: 'invoices',
+    component: () => import('@/views/InvoicesView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'invoices.title' },
+  },
+  {
+    path: '/notifications',
+    name: 'notifications',
+    component: () => import('@/views/NotificationsView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'notifications.title' },
+  },
+  {
     path: '/login',
     name: 'login',
     component: () => import('@/views/auth/LoginView.vue'),

@@ -36,6 +36,7 @@
         </nav>
 
         <div class="header__actions">
+          <NotificationBell v-if="isAuthenticated" />
           <CartLink />
           <LocaleSwitcher />
           <ThemeToggle />
@@ -57,6 +58,7 @@
 <script>
 import { mapActions, mapState } from 'pinia'
 import CartLink from '@/components/cart/CartLink.vue'
+import NotificationBell from '@/components/layout/NotificationBell.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
 import LocaleSwitcher from '@/components/common/LocaleSwitcher.vue'
 import ThemeToggle from '@/components/common/ThemeToggle.vue'
@@ -67,7 +69,7 @@ import { useToastStore } from '@/store/toasts'
 
 export default {
   name: 'AppHeader',
-  components: { BaseButton, CartLink, LocaleSwitcher, ThemeToggle },
+  components: { BaseButton, CartLink, LocaleSwitcher, NotificationBell, ThemeToggle },
   data() {
     return { open: false }
   },
@@ -230,7 +232,7 @@ export default {
   color: var(--color-text-muted);
 }
 
-@media (min-width: 56em) {
+@media (min-width: 72em) {
   .header__menu-button {
     display: none;
   }
