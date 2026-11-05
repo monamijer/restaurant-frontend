@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "ariaLabel": "Staff area navigation",
+    "home": "Dashboard",
+    "orders": "Orders",
+    "newOrder": "New order"
+  },
+  "common": {
+    "refresh": "Refresh",
+    "retry": "Retry",
+    "live": "Live",
+    "updatedAt": "Updated {time}",
+    "noData": "No data"
+  },
+  "home": {
+    "title": "Staff dashboard",
+    "subtitle": "A quick view of today at the restaurant.",
+    "loading": "Loading today data",
+    "failed": "Could not load the dashboard.",
+    "cards": {
+      "tables": "Tables occupied",
+      "tablesHint": "{total} tables",
+      "queue": "Queue",
+      "queueHint": "Estimated wait {minutes} min",
+      "orders": "Orders today",
+      "ordersHint": "Open orders {open}",
+      "payments": "Payments today",
+      "paymentsHint": "Pending {pending}"
+    },
+    "shortcutsTitle": "Shortcuts",
+    "shortcuts": {
+      "orders": "Open the order board",
+      "newOrder": "Create a walk-in order"
+    }
+  },
+  "orders": {
+    "title": "Order board",
+    "subtitle": "Follow and move orders forward.",
+    "loading": "Loading orders",
+    "failed": "Could not load orders.",
+    "empty": "No order matches these filters.",
+    "filters": {
+      "status": "Status",
+      "type": "Type",
+      "active": "Active only",
+      "all": "All",
+      "activeYes": "Active",
+      "clear": "Clear filters"
+    },
+    "columns": {
+      "id": "Order",
+      "createdAt": "Created",
+      "customer": "Customer",
+      "type": "Type",
+      "status": "Status",
+      "total": "Total",
+      "actions": "Actions"
+    },
+    "open": "Open",
+    "countLabel": "{count} orders"
+  },
+  "order": {
+    "title": "Order #{id}",
+    "back": "Back to the board",
+    "loading": "Loading order",
+    "failed": "Could not load this order.",
+    "notFound": "Order not found.",
+    "summaryTitle": "Summary",
+    "itemsTitle": "Items",
+    "items": {
+      "quantity": "Qty {count}",
+      "note": "Note: {note}",
+      "noNote": "No special instruction"
+    },
+    "totals": {
+      "subtotal": "Subtotal",
+      "tax": "Tax ({rate} %)",
+      "total": "Total"
+    },
+    "meta": {
+      "type": "Type",
+      "table": "Table",
+      "customer": "Customer",
+      "phone": "Phone",
+      "address": "Delivery address",
+      "createdAt": "Created",
+      "updatedAt": "Updated",
+      "notes": "Notes"
+    },
+    "actionsTitle": "Next actions",
+    "actionsHint": "Only transitions allowed by the server are shown.",
+    "noActions": "No action available for this status.",
+    "advanceTo": "Mark as {status}",
+    "confirmCash": "Confirm cash payment",
+    "confirmCashQuestion": "Confirm that the cash payment for this order has been received?",
+    "cancelled": "This order is cancelled.",
+    "invoice": "Download invoice",
+    "invoiceMissing": "No invoice yet: the order is not fully paid."
+  },
+  "newOrder": {
+    "title": "New walk-in order",
+    "subtitle": "Orders taken at the counter or at a table.",
+    "loading": "Loading the menu",
+    "failed": "Could not load the menu.",
+    "fields": {
+      "orderType": "Order type",
+      "table": "Table",
+      "tablePlaceholder": "Select a table",
+      "notes": "Notes",
+      "search": "Search a dish",
+      "addToOrder": "Add",
+      "quantity": "Quantity"
+    },
+    "types": {
+      "dine_in": "Dine in",
+      "takeaway": "Takeaway",
+      "delivery": "Delivery"
+    },
+    "cartTitle": "Order lines",
+    "cartEmpty": "Add at least one dish.",
+    "remove": "Remove",
+    "submit": "Create order",
+    "success": "Order created.",
+    "tableRequired": "Choose a table for a dine-in order.",
+    "itemsRequired": "Add at least one dish.",
+    "validation": {
+      "orderType": "Choose an order type.",
+      "table": "A table is required for dine-in.",
+      "items": "Add at least one dish."
+    }
+  }
+}

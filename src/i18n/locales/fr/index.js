@@ -10,6 +10,7 @@ import menu from './menu.json'
 import orders from './orders.json'
 import pages from './pages.json'
 import reservations from './reservations.json'
+import staff from './staff.json'
 import styleguide from './styleguide.json'
 
 export default {
@@ -25,5 +26,6 @@ export default {
   ...orders,
   ...reservations,
   ...billing,
+  ...staff,
   ...styleguide,
 }

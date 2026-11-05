@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "ariaLabel": "Navigation de l espace personnel",
+    "home": "Tableau de bord",
+    "orders": "Commandes",
+    "newOrder": "Nouvelle commande"
+  },
+  "common": {
+    "refresh": "Rafraichir",
+    "retry": "Reessayer",
+    "live": "Direct",
+    "updatedAt": "Mis a jour a {time}",
+    "noData": "Aucune donnee"
+  },
+  "home": {
+    "title": "Tableau de bord du personnel",
+    "subtitle": "Vue rapide de la journee au restaurant.",
+    "loading": "Chargement des donnees du jour",
+    "failed": "Impossible de charger le tableau de bord.",
+    "cards": {
+      "tables": "Tables occupees",
+      "tablesHint": "{total} tables",
+      "queue": "File d attente",
+      "queueHint": "Attente estimee {minutes} min",
+      "orders": "Commandes du jour",
+      "ordersHint": "Commandes ouvertes {open}",
+      "payments": "Paiements du jour",
+      "paymentsHint": "En attente {pending}"
+    },
+    "shortcutsTitle": "Raccourcis",
+    "shortcuts": {
+      "orders": "Ouvrir le tableau des commandes",
+      "newOrder": "Creer une commande au comptoir"
+    }
+  },
+  "orders": {
+    "title": "Tableau des commandes",
+    "subtitle": "Suivre et faire avancer les commandes.",
+    "loading": "Chargement des commandes",
+    "failed": "Impossible de charger les commandes.",
+    "empty": "Aucune commande ne correspond a ces filtres.",
+    "filters": {
+      "status": "Statut",
+      "type": "Type",
+      "active": "Actives uniquement",
+      "all": "Toutes",
+      "activeYes": "Actives",
+      "clear": "Effacer les filtres"
+    },
+    "columns": {
+      "id": "Commande",
+      "createdAt": "Creee",
+      "customer": "Client",
+      "type": "Type",
+      "status": "Statut",
+      "total": "Total",
+      "actions": "Actions"
+    },
+    "open": "Ouvrir",
+    "countLabel": "{count} commandes"
+  },
+  "order": {
+    "title": "Commande n {id}",
+    "back": "Retour au tableau",
+    "loading": "Chargement de la commande",
+    "failed": "Impossible de charger cette commande.",
+    "notFound": "Commande introuvable.",
+    "summaryTitle": "Resume",
+    "itemsTitle": "Articles",
+    "items": {
+      "quantity": "Qte {count}",
+      "note": "Note : {note}",
+      "noNote": "Aucune instruction particuliere"
+    },
+    "totals": {
+      "subtotal": "Sous-total",
+      "tax": "Taxe ({rate} %)",
+      "total": "Total"
+    },
+    "meta": {
+      "type": "Type",
+      "table": "Table",
+      "customer": "Client",
+      "phone": "Telephone",
+      "address": "Adresse de livraison",
+      "createdAt": "Creee",
+      "updatedAt": "Mise a jour",
+      "notes": "Notes"
+    },
+    "actionsTitle": "Actions suivantes",
+    "actionsHint": "Seules les transitions autorisees par le serveur sont affichees.",
+    "noActions": "Aucune action disponible pour ce statut.",
+    "advanceTo": "Marquer comme {status}",
+    "confirmCash": "Confirmer le paiement en especes",
+    "confirmCashQuestion": "Confirmer que le paiement en especes de cette commande a ete recu ?",
+    "cancelled": "Cette commande est annulee.",
+    "invoice": "Telecharger la facture",
+    "invoiceMissing": "Pas encore de facture : la commande n est pas entierement payee."
+  },
+  "newOrder": {
+    "title": "Nouvelle commande au comptoir",
+    "subtitle": "Commandes prises au comptoir ou a une table.",
+    "loading": "Chargement du menu",
+    "failed": "Impossible de charger le menu.",
+    "fields": {
+      "orderType": "Type de commande",
+      "table": "Table",
+      "tablePlaceholder": "Choisir une table",
+      "notes": "Notes",
+      "search": "Rechercher un plat",
+      "addToOrder": "Ajouter",
+      "quantity": "Quantite"
+    },
+    "types": {
+      "dine_in": "Sur place",
+      "takeaway": "A emporter",
+      "delivery": "Livraison"
+    },
+    "cartTitle": "Lignes de commande",
+    "cartEmpty": "Ajoutez au moins un plat.",
+    "remove": "Retirer",
+    "submit": "Creer la commande",
+    "success": "Commande creee.",
+    "tableRequired": "Choisissez une table pour une commande sur place.",
+    "itemsRequired": "Ajoutez au moins un plat.",
+    "validation": {
+      "orderType": "Choisissez un type de commande.",
+      "table": "Une table est requise pour une commande sur place.",
+      "items": "Ajoutez au moins un plat."
+    }
+  }
+}
