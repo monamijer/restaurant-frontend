@@ -31,6 +31,49 @@
     "hours": "Opening hours",
     "hoursValue": "Every day, {open} to {close}",
     "hoursUnknown": "Opening hours are not available right now.",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "socialLabel": "Follow us",
+    "currencyLabel": "Currency",
+    "currencyValue": "USD",
+    "countryLabel": "Country",
+    "countryValue": "Burundi",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "columns": {
+      "about": {
+        "title": "About Maisha",
+        "links": {
+          "story": "Our story",
+          "menu": "The menu",
+          "reservations": "Book a table"
+        }
+      },
+      "features": {
+        "title": "Features",
+        "links": {
+          "orders": "My orders",
+          "queue": "The queue",
+          "invoices": "Invoices",
+          "notifications": "Notifications"
+        }
+      },
+      "help": {
+        "title": "Help",
+        "links": {
+          "account": "My account",
+          "contact": "Contact us",
+          "faq": "FAQ"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "links": {
+          "privacy": "Privacy policy",
+          "terms": "Terms of service",
+          "cookies": "Cookies"
+        }
+      }
+    }
   }
 }

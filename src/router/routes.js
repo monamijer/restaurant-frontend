@@ -246,6 +246,18 @@ const routes = [
     component: () => import('@/views/errors/ForbiddenView.vue'),
     meta: { layout: 'main', titleKey: 'forbidden.title' },
   },
+  {
+    path: '/privacy',
+    name: 'privacy',
+    component: () => import('@/views/AreaPlaceholderView.vue'),
+    meta: { layout: 'main', titleKey: 'footer.privacy' },
+  },
+  {
+    path: '/terms',
+    name: 'terms',
+    component: () => import('@/views/AreaPlaceholderView.vue'),
+    meta: { layout: 'main', titleKey: 'footer.terms' },
+  },
   // The living style guide exists in development only.
   ...(import.meta.env.DEV
     ? [
