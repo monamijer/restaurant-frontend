@@ -5,7 +5,8 @@
       "home": "Dashboard",
       "orders": "Orders",
       "newOrder": "New order",
-      "reservations": "Reservations"
+      "reservations": "Reservations",
+      "queue": "Queue"
     },
     "common": {
       "refresh": "Refresh",
@@ -154,6 +155,38 @@
         "noShow": "No-show",
         "cancel": "Cancel"
       }
+    },
+    "queue": {
+      "title": "Queue",
+      "subtitle": "Call the next party and seat them.",
+      "loading": "Loading the queue",
+      "failed": "Could not load the queue.",
+      "empty": "No ticket matches these filters.",
+      "countLabel": "{count} tickets",
+      "callNext": "Call next",
+      "called": "The next party has been called.",
+      "updated": "Ticket updated.",
+      "positionLabel": "Position {position}",
+      "waitLabel": "~ {minutes} min",
+      "filters": {
+        "status": "Status",
+        "active": "Active only",
+        "all": "All",
+        "apply": "Apply",
+        "clear": "Clear"
+      },
+      "actions": {
+        "call": "Call",
+        "seat": "Seat",
+        "noShow": "No-show",
+        "cancel": "Cancel"
+      },
+      "noShowTitle": "Mark as no-show?",
+      "noShowMessage": "The ticket leaves the queue. This cannot be undone.",
+      "noShowConfirm": "Yes, mark as no-show",
+      "cancelTitle": "Cancel this ticket?",
+      "cancelMessage": "The guest loses their place. This cannot be undone.",
+      "cancelConfirm": "Yes, cancel it"
     }
   }
 }
