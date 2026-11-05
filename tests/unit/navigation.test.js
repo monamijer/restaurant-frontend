@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { navItemsFor } from '@/config/navigation'
+import { navItemsFor, publicNavItems } from '@/config/navigation'
 import { isBlank, isEmail } from '@/utils/validation'
 
 const names = (role) => navItemsFor(role).map((item) => item.name)
@@ -35,5 +35,11 @@ describe('validation', () => {
     expect(isBlank('   ')).toBe(true)
     expect(isBlank(undefined)).toBe(true)
     expect(isBlank('x')).toBe(false)
+  })
+
+  it('returns only the public items', () => {
+    const items = publicNavItems()
+    const names = items.map((item) => item.name)
+    expect(names).toEqual(['home', 'menu', 'queue'])
   })
 })
