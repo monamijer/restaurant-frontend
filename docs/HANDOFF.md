@@ -139,8 +139,14 @@ codes only after the final `SECRET_KEY` is set (QR tokens are signed with it).
 | Frontend 7.2 | Cart (persistent, cross-tab). Done. |
 | Frontend 7.3 | Scan table QR, checkout, payment, live order tracking, order list. Done. |
 | Frontend 7.4 | Reservations, queue, invoices (PDF), notifications. Done. |
-| Last verified totals | 47 test files / 620 tests, lint clean, build OK (user reported it works). |
-| NOT DONE | Phase 8 (staff + admin screens), 6.5 docs (README + ADRs), Phase 9 integration pass, Phase 10 deployment docs. `/staff` and `/admin` currently render `AreaPlaceholderView` ("Coming soon"). |
+| Frontend 8.1 | Staff: dashboard, order board, order detail, cash payment confirmation, invoice download, walk-in order. Done. |
+| Frontend 8.2 | Staff floor: reservations with their actions, queue management, tables with QR download and regenerate. Done. |
+| Frontend 8.3 | Admin: home, categories, menu with image upload, settings, users, dashboard, reports with CSV. Done. |
+| Frontend 8.4 | Profile and change-password pages for every role. Done. |
+| Phase 9 | Integration pass: every staff and admin route tested for each role and for an anonymous visitor. Done. |
+| Phase 10 | README, five ADRs, HANDOFF updated, manual demo checklist. Done. |
+| Last verified totals | 76 test files / 719 tests + 1 skipped (76th file is `integration-nav.test.js`, 5 tests). Lint clean, build OK. |
+| NOT DONE | Deployment: nothing was ever deployed. See the manual checklist and the deployment notes below. |
 
 ---
 
@@ -397,34 +403,35 @@ and `-surface` variants, `--color-accent`, `--color-primary`, `--color-on-primar
 
 ---
 
-## 11. Roadmap (what to build next)
+## 11. Roadmap
 
-Before Phase 8: read backend `docs/api.md` for the staff endpoints. Replace the placeholder
-components of `staff-home` and `admin-home`, ADD child/sibling routes with names prefixed `staff-`
-or `admin-` (for example `staff-orders` at `/staff/orders`), with `meta.requiresAuth: true`,
-`meta.roles: ['staff','admin']` (or `['admin']`), `meta.layout: 'main'`, and a `titleKey`. Add the
-staff links to a secondary navigation INSIDE the staff area (a small `StaffNav` component) rather
-than growing the header further. Create new service files (`staffOrderService.js`, ...) instead of
-editing the customer services. New i18n namespaces: `staff.json`, `admin.json`.
+Everything below is done. What remains is deployment, which is out of the
+frontend-only scope and is documented in section 13.
 
-- **8.1 Staff: orders and payments.** Staff home with counters; order board filtered by status and
-  type with live refresh (polling like `OrderView`); order detail; advance the status with the
-  allowed transitions only (show only valid next actions); confirm a pending cash payment; view
-  and download invoices; create a walk-in order (staff may pass `table` id).
-- **8.2 Staff: floor.** Reservations list (filter by date/status), confirm / reject / mark
-  completed or no-show; queue management (call next, seat, no-show) with live refresh; tables
-  view with status and QR code download (regenerate-qr).
-- **8.3 Admin.** Menu and category management (CRUD, availability toggle, image upload),
-  restaurant settings, user management (`/users/`), dashboard (`/dashboard/stats/`) and reports
-  with CSV export (`/reports/*`). Also: profile editing and change-password screens for all roles
-  (`PATCH /auth/me/`, `POST /auth/change-password/`).
-- **Phase 9 (integration pass)** and **Phase 10 (documentation)**: README for both repos, ADRs in
-  `docs/decisions/` (001 frontend stack and Options API lint rule; 002 authentication and token
-  storage: access token in memory, rotating refresh token in localStorage; 003 state management with
-  Pinia: why a store, what stays local), deployment guide (static hosting needs a fallback to
-  `index.html` for the history router; set `VITE_API_BASE_URL`; backend `CORS_ALLOWED_ORIGINS`,
-  `FRONTEND_URL`, `ALLOWED_HOSTS`, secrets rotation, real SMTP and payment gateway), final end-to-end
-  check of the customer and staff journeys.
+- ~~**8.1 Staff: orders and payments.**~~ Done. `staffOrderService`,
+  `staffPaymentService`, `StaffHomeView`, `StaffOrdersView`, `StaffOrderView`,
+  `StaffOrderNewView`.
+- ~~**8.2 Staff: floor.**~~ Done. `staffReservationService`,
+  `staffQueueService`, `staffTableService`, `StaffReservationsView`,
+  `StaffQueueView`, `StaffTablesView`.
+- ~~**8.3 Admin.**~~ Done. `adminCategoryService`, `adminMenuService`,
+  `adminUserService`, `adminDashboardService`, `adminReportService`,
+  `AdminHomeView`, `AdminCategoriesView`, `AdminMenuView`,
+  `AdminMenuItemNewView`, `AdminMenuItemEditView`, `AdminSettingsView`,
+  `AdminUsersView`, `AdminUserNewView`, `AdminUserEditView`,
+  `AdminDashboardView`, `AdminReportsView`.
+- ~~**8.4 Profile and change-password.**~~ Done. Two extra actions on the auth
+  store, `AccountNav`, `AccountProfileView`, `AccountPasswordView`.
+- ~~**Phase 9 (integration pass).**~~ Done as `tests/unit/integration-nav.test.js`,
+  which walks every staff and admin route for every role.
+- ~~**Phase 10 (documentation).**~~ Done. Five ADRs under `docs/decisions/`,
+  a rewritten `README.md`, this handoff updated, and a manual demo checklist.
+
+When the project is deployed, the remaining work is the one described in the
+old plan: static hosting with an `index.html` fallback for the history router,
+`VITE_API_BASE_URL` in the frontend environment, `CORS_ALLOWED_ORIGINS`,
+`FRONTEND_URL`, `ALLOWED_HOSTS` and a rotated `SECRET_KEY` on the backend,
+real SMTP and a real payment gateway in place of the simulated one.
 
 ---
 
