@@ -1,5 +1,72 @@
 {
   "home": {
+    "hero": {
+      "role": "carousel",
+      "label": "Highlights",
+      "slideRole": "slide",
+      "slideOf": "{index} of {total}",
+      "controls": "Carousel controls",
+      "previous": "Previous slide",
+      "next": "Next slide",
+      "goTo": "Go to slide {index}",
+      "slides": {
+        "book": {
+          "eyebrow": "Table reservations",
+          "title": "A table, whenever you want",
+          "lead": "Pick a date, a party size and a table. The restaurant confirms in a minute.",
+          "cta": "Book a table"
+        },
+        "order": {
+          "eyebrow": "Online ordering",
+          "title": "Order from the menu, pay in a tap",
+          "lead": "Browse the menu, add to cart and check out. Order tracking updates itself.",
+          "cta": "See the menu"
+        },
+        "queue": {
+          "eyebrow": "Walk-in queue",
+          "title": "Your place in line, from your phone",
+          "lead": "Join the queue from anywhere. We hold your place and call you when ready.",
+          "cta": "Join the queue"
+        }
+      }
+    },
+    "spaces": {
+      "title": "One project, three experiences",
+      "lead": "A customer portal, a staff board and an admin console, all on the same API.",
+      "items": {
+        "client": {
+          "title": "For customers",
+          "lead": "Reserve, order, track, pay, download the invoice.",
+          "cta": "Explore the menu"
+        },
+        "staff": {
+          "title": "For the floor",
+          "lead": "Orders, reservations, queue and tables, updated live.",
+          "cta": "Sign in as staff"
+        },
+        "admin": {
+          "title": "For the office",
+          "lead": "Menu, users, settings, KPIs and CSV reports.",
+          "cta": "Sign in as admin"
+        }
+      }
+    },
+    "stack": {
+      "title": "Built with the stack you would choose today",
+      "lead": "Vue 3 with the Options API, Django REST, JWT authentication and a test suite that runs on every change."
+    },
+    "demo": {
+      "title": "Try it with the demo accounts",
+      "lead": "The password is the same for every account.",
+      "passwordHint": "Password: Demo-Passw0rd!",
+      "cta": "Open the demo",
+      "roles": {
+        "admin": "Admin",
+        "staff": "Staff",
+        "client": "Client"
+      }
+    },
+
     "title": "Home",
     "eyebrow": "Tables, queue and online ordering",
     "heading": "Welcome to {name}",
