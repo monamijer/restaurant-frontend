@@ -7,6 +7,7 @@ import common from './common.json'
 import errors from './errors.json'
 import home from './home.json'
 import layout from './layout.json'
+import legal from './legal.json'
 import menu from './menu.json'
 import orders from './orders.json'
 import pages from './pages.json'
@@ -18,6 +19,7 @@ export default {
   ...common,
   ...admin,
   ...layout,
+  ...legal,
   ...home,
   ...auth,
   ...pages,

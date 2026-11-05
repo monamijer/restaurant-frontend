@@ -1,0 +1,67 @@
+{
+  "legal": {
+    "lastUpdated": "Derniere mise a jour le {date}",
+    "notice": "Ceci est un projet de demonstration realise dans le cadre d un travail academique de fin d etudes. Ce n est pas un avis juridique : les textes ci-dessous decrivent les donnees reellement stockees par cette application.",
+    "contactLine": "Questions sur ce document :",
+    "privacy": {
+      "eyebrow": "Confidentialite",
+      "title": "Politique de confidentialite",
+      "sections": {
+        "data": {
+          "title": "1. Donnees collectees",
+          "body": "A la creation d un compte, nous stockons votre adresse email, votre prenom, votre nom, votre telephone et, si vous le souhaitez, une adresse postale. Lors d une commande ou d une reservation, nous stockons aussi ce que vous avez commande, quand et a quelle table."
+        },
+        "purpose": {
+          "title": "2. Pourquoi nous les collectons",
+          "body": "Uniquement pour faire fonctionner le service : vous connecter, prendre et suivre une commande, confirmer une reservation, vous placer dans la file et emettre une facture. Nous ne vendons aucune donnee et nous ne l utilisons pas pour la publicite."
+        },
+        "retention": {
+          "title": "3. Combien de temps nous les gardons",
+          "body": "Votre compte et ses commandes restent en base pendant la duree de la demonstration. Les donnees de demonstration peuvent etre reinitialisees a tout moment avec la commande de seed du backend."
+        },
+        "access": {
+          "title": "4. Qui peut les voir",
+          "body": "Vous voyez vos propres donnees. Le personnel voit les clients et les commandes du restaurant. L administrateur voit tous les comptes, en tant que responsable du systeme."
+        },
+        "cookies": {
+          "title": "5. Cookies et stockage",
+          "body": "Nous n utilisons pas de cookies de suivi. Le navigateur ne stocke que ce qui est necessaire pour rester connecte (un jeton de rafraichissement rotatif) et pour memoriser le theme et la langue."
+        },
+        "rights": {
+          "title": "6. Vos droits",
+          "body": "Vous pouvez modifier votre nom et vos coordonnees depuis la page profil, changer votre mot de passe depuis la page mot de passe, et demander a l administrateur de desactiver votre compte. La desactivation vous deconnecte partout."
+        }
+      }
+    },
+    "terms": {
+      "eyebrow": "Conditions",
+      "title": "Conditions d utilisation",
+      "sections": {
+        "service": {
+          "title": "1. Le service",
+          "body": "Maisha est une application de table, file d attente et commande en ligne. Elle permet aux clients de consulter la carte, reserver une table, rejoindre la file, passer une commande, la payer et telecharger une facture."
+        },
+        "account": {
+          "title": "2. Votre compte",
+          "body": "Gardez votre mot de passe prive. Ne partagez pas votre compte. La desactivation est le seul moyen de fermer un compte : les donnees restent pendant la duree de la demonstration."
+        },
+        "orders": {
+          "title": "3. Commandes et paiements",
+          "body": "Les prix sont calcules par le restaurant et affiches dans le panier a titre estimatif. Les paiements par carte et mobile money sont simules dans cette demonstration : aucun argent reel n est debite."
+        },
+        "ip": {
+          "title": "4. Propriete intellectuelle",
+          "body": "Le code a ete ecrit pour ce projet. Les noms et descriptions de plats proviennent des donnees de demonstration."
+        },
+        "liability": {
+          "title": "5. Responsabilite",
+          "body": "Ceci est une demonstration academique. Le service est fourni tel quel, sans garantie de disponibilite ininterrompue."
+        },
+        "law": {
+          "title": "6. Droit applicable",
+          "body": "A titre indicatif, le projet est realise au Burundi. Ce texte n a pas de valeur juridique : il decrit le fonctionnement de la demonstration."
+        }
+      }
+    }
+  }
+}

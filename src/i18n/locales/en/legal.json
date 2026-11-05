@@ -1,0 +1,67 @@
+{
+  "legal": {
+    "lastUpdated": "Last updated {date}",
+    "notice": "This is a demonstration project built for a final-year academic assignment. It is not legal advice and the texts below describe the data actually stored by this application.",
+    "contactLine": "Questions about this document:",
+    "privacy": {
+      "eyebrow": "Privacy",
+      "title": "Privacy policy",
+      "sections": {
+        "data": {
+          "title": "1. Data we collect",
+          "body": "When you create an account we store your email address, first name, last name, phone number and, optionally, a postal address. When you place an order or book a table we also store what you ordered, when and at which table."
+        },
+        "purpose": {
+          "title": "2. Why we collect it",
+          "body": "Only to run the service: sign you in, take and follow an order, confirm a reservation, put you in the queue and issue an invoice. We never sell data and we do not use it for advertising."
+        },
+        "retention": {
+          "title": "3. How long we keep it",
+          "body": "Your account and its orders stay in the database for the duration of the demonstration. The demo data can be reset at any time with the backend's seed command."
+        },
+        "access": {
+          "title": "4. Who can see it",
+          "body": "You see your own data. Staff see the customers and the orders of the restaurant. The administrator sees every account, as the person in charge of the system."
+        },
+        "cookies": {
+          "title": "5. Cookies and storage",
+          "body": "We do not use tracking cookies. The browser only stores what is needed to keep you signed in (a rotating refresh token) and to remember your theme and language choices."
+        },
+        "rights": {
+          "title": "6. Your rights",
+          "body": "You can change your name and contact details from the profile page, change your password from the password page, and ask the administrator to deactivate your account. Deactivating signs you out everywhere."
+        }
+      }
+    },
+    "terms": {
+      "eyebrow": "Terms",
+      "title": "Terms of service",
+      "sections": {
+        "service": {
+          "title": "1. The service",
+          "body": "Maisha is a table, queue and online ordering application. It lets customers browse the menu, book a table, join the queue, place an order, pay for it and download an invoice."
+        },
+        "account": {
+          "title": "2. Your account",
+          "body": "Keep your password private. Do not share your account. Deactivating an account is the only way to close it: the data is kept for the duration of the demonstration."
+        },
+        "orders": {
+          "title": "3. Orders and payments",
+          "body": "Prices are computed by the restaurant and shown in the cart as an estimate. Card and mobile money payments are simulated in this demonstration: no real money is charged."
+        },
+        "ip": {
+          "title": "4. Intellectual property",
+          "body": "The code was written for this project. The dish names and descriptions come from the demonstration data."
+        },
+        "liability": {
+          "title": "5. Responsibility",
+          "body": "This is an academic demonstration. The service is provided as is, without warranty of uninterrupted availability."
+        },
+        "law": {
+          "title": "6. Applicable law",
+          "body": "For information only, the project is built in Burundi. This text has no legal value; it describes how the demonstration works."
+        }
+      }
+    }
+  }
+}

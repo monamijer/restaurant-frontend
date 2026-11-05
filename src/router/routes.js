@@ -249,14 +249,14 @@ const routes = [
   {
     path: '/privacy',
     name: 'privacy',
-    component: () => import('@/views/AreaPlaceholderView.vue'),
-    meta: { layout: 'main', titleKey: 'footer.privacy' },
+    component: () => import('@/views/legal/PrivacyPolicyView.vue'),
+    meta: { layout: 'main', titleKey: 'legal.privacy.title' },
   },
   {
     path: '/terms',
     name: 'terms',
-    component: () => import('@/views/AreaPlaceholderView.vue'),
-    meta: { layout: 'main', titleKey: 'footer.terms' },
+    component: () => import('@/views/legal/TermsOfServiceView.vue'),
+    meta: { layout: 'main', titleKey: 'legal.terms.title' },
   },
   // The living style guide exists in development only.
   ...(import.meta.env.DEV
