@@ -5,6 +5,8 @@
       <h1>{{ $t('account.heading', { name: user.first_name }) }}</h1>
     </header>
 
+    <AccountNav />
+
     <section class="account__card" aria-labelledby="details-title">
       <h2 id="details-title" class="account__card-title">{{ $t('account.details') }}</h2>
       <dl class="account__list">
@@ -38,6 +40,7 @@
 
 <script>
 import { mapActions, mapState } from 'pinia'
+import AccountNav from '@/components/account/AccountNav.vue'
 import BaseBadge from '@/components/common/BaseBadge.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
 import { useAuthStore } from '@/store/auth'
@@ -46,7 +49,7 @@ import { formatDateTime } from '@/utils/format'
 
 export default {
   name: 'AccountView',
-  components: { BaseBadge, BaseButton },
+  components: { AccountNav, BaseBadge, BaseButton },
   computed: {
     ...mapState(useAuthStore, ['user']),
     ...mapState(useUiStore, ['locale']),

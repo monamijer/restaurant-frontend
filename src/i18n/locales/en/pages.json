@@ -20,6 +20,45 @@
       "reservations": "My reservations",
       "invoices": "My invoices",
       "notifications": "Notifications"
+    },
+    "nav": {
+      "ariaLabel": "Account navigation",
+      "summary": "Summary",
+      "profile": "Profile",
+      "password": "Password"
+    },
+    "profile": {
+      "title": "My profile",
+      "subtitle": "Update your name and contact details.",
+      "saved": "Profile updated.",
+      "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "phone": "Phone",
+        "address": "Address"
+      },
+      "validation": {
+        "firstName": "A first name is required.",
+        "lastName": "A last name is required."
+      }
+    },
+    "password": {
+      "title": "Change my password",
+      "subtitle": "You will stay signed in on this device; every other session is signed out.",
+      "saved": "Password updated.",
+      "fields": {
+        "current": "Current password",
+        "new": "New password",
+        "confirm": "Confirm the new password"
+      },
+      "validation": {
+        "current": "Your current password is required.",
+        "new": "A new password is required.",
+        "tooShort": "The password must be at least {count} characters long.",
+        "sameAsOld": "The new password must be different from the current one.",
+        "confirm": "Please confirm the new password.",
+        "mismatch": "The two passwords do not match."
+      }
     }
   },
   "area": {

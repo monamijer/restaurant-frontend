@@ -20,6 +20,45 @@
       "reservations": "Mes réservations",
       "invoices": "Mes factures",
       "notifications": "Notifications"
+    },
+    "nav": {
+      "ariaLabel": "Navigation du compte",
+      "summary": "Resume",
+      "profile": "Profil",
+      "password": "Mot de passe"
+    },
+    "profile": {
+      "title": "Mon profil",
+      "subtitle": "Mettre a jour le nom et les coordonnees.",
+      "saved": "Profil mis a jour.",
+      "fields": {
+        "firstName": "Prenom",
+        "lastName": "Nom",
+        "phone": "Telephone",
+        "address": "Adresse"
+      },
+      "validation": {
+        "firstName": "Un prenom est requis.",
+        "lastName": "Un nom est requis."
+      }
+    },
+    "password": {
+      "title": "Changer mon mot de passe",
+      "subtitle": "Vous restez connecte sur cet appareil ; les autres sessions sont deconnectees.",
+      "saved": "Mot de passe mis a jour.",
+      "fields": {
+        "current": "Mot de passe actuel",
+        "new": "Nouveau mot de passe",
+        "confirm": "Confirmer le nouveau mot de passe"
+      },
+      "validation": {
+        "current": "Le mot de passe actuel est requis.",
+        "new": "Un nouveau mot de passe est requis.",
+        "tooShort": "Le mot de passe doit faire au moins {count} caracteres.",
+        "sameAsOld": "Le nouveau mot de passe doit differer de l ancien.",
+        "confirm": "Confirmez le nouveau mot de passe.",
+        "mismatch": "Les deux mots de passe ne correspondent pas."
+      }
     }
   },
   "area": {

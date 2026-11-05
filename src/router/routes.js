@@ -121,6 +121,18 @@ const routes = [
     meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'account.title' },
   },
   {
+    path: '/account/profile',
+    name: 'account-profile',
+    component: () => import('@/views/account/AccountProfileView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'account.profile.title' },
+  },
+  {
+    path: '/account/password',
+    name: 'account-password',
+    component: () => import('@/views/account/AccountPasswordView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: ANY_SIGNED_IN, titleKey: 'account.password.title' },
+  },
+  {
     path: '/staff',
     name: 'staff-home',
     component: () => import('@/views/staff/StaffHomeView.vue'),
