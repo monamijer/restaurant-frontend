@@ -145,6 +145,12 @@ const routes = [
     meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'staff.queue.title' },
   },
   {
+    path: '/staff/tables',
+    name: 'staff-tables',
+    component: () => import('@/views/staff/StaffTablesView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'staff.tables.title' },
+  },
+  {
     path: '/staff/orders/new',
     name: 'staff-order-new',
     component: () => import('@/views/staff/StaffOrderNewView.vue'),

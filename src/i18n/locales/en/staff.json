@@ -6,7 +6,8 @@
       "orders": "Orders",
       "newOrder": "New order",
       "reservations": "Reservations",
-      "queue": "Queue"
+      "queue": "Queue",
+      "tables": "Tables"
     },
     "common": {
       "refresh": "Refresh",
@@ -187,6 +188,37 @@
       "cancelTitle": "Cancel this ticket?",
       "cancelMessage": "The guest loses their place. This cannot be undone.",
       "cancelConfirm": "Yes, cancel it"
+    },
+    "tables": {
+      "title": "Tables",
+      "subtitle": "Set each table status and print its QR code.",
+      "failed": "Could not load the tables.",
+      "empty": "No table matches these filters.",
+      "countLabel": "{count} tables",
+      "tableNumber": "Table {number}",
+      "capacity": "Up to {count} guests",
+      "changeStatus": "Change the table status",
+      "sheet": "Download the QR sheet (A4)",
+      "qr": "QR code",
+      "regenerate": "Regenerate",
+      "updated": "Table status updated.",
+      "regenerated": "New QR codes generated for table {number}.",
+      "regenerateTitle": "Regenerate the QR code?",
+      "regenerateMessage": "Every code already printed for table {number} will stop working.",
+      "regenerateConfirm": "Yes, regenerate",
+      "filters": {
+        "status": "Status",
+        "location": "Location",
+        "all": "All",
+        "apply": "Apply",
+        "clear": "Clear"
+      },
+      "status": {
+        "available": "Available",
+        "occupied": "Occupied",
+        "reserved": "Reserved",
+        "cleaning": "Cleaning"
+      }
     }
   }
 }
