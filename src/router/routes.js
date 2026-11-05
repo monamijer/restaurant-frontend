@@ -123,8 +123,26 @@ const routes = [
   {
     path: '/staff',
     name: 'staff-home',
+    component: () => import('@/views/staff/StaffHomeView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'staff.home.title' },
+  },
+  {
+    path: '/staff/orders',
+    name: 'staff-orders',
+    component: () => import('@/views/staff/StaffOrdersView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'staff.orders.title' },
+  },
+  {
+    path: '/staff/orders/new',
+    name: 'staff-order-new',
     component: () => import('@/views/AreaPlaceholderView.vue'),
-    meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'area.staffTitle' },
+    meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'staff.newOrder.title' },
+  },
+  {
+    path: '/staff/orders/:id(\\d+)',
+    name: 'staff-order',
+    component: () => import('@/views/AreaPlaceholderView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'staff.order.title' },
   },
   {
     path: '/admin',
