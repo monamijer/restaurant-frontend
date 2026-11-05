@@ -9,7 +9,7 @@ describe('TermsOfServiceView', () => {
     expect(text).toContain('Terms of service')
     expect(text).toContain('1. The service')
     expect(text).toContain('6. Applicable law')
-    expect(text).toContain('demonstration project')
+    expect(text).toContain('Vue.js exam project')
   })
 
   it('has exactly six section headings and one page heading', async () => {

@@ -1,7 +1,7 @@
 {
   "legal": {
     "lastUpdated": "Derniere mise a jour le {date}",
-    "notice": "Ceci est un projet de demonstration realise dans le cadre d un travail academique de fin d etudes. Ce n est pas un avis juridique : les textes ci-dessous decrivent les donnees reellement stockees par cette application.",
+    "notice": "Ceci est un projet d examen Vue.js. Ce n est pas un avis juridique : les textes ci-dessous decrivent les donnees reellement stockees par cette application.",
     "contactLine": "Questions sur ce document :",
     "privacy": {
       "eyebrow": "Confidentialite",

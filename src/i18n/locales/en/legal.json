@@ -1,7 +1,7 @@
 {
   "legal": {
     "lastUpdated": "Last updated {date}",
-    "notice": "This is a demonstration project built for a final-year academic assignment. It is not legal advice and the texts below describe the data actually stored by this application.",
+    "notice": "This is a Vue.js exam project. It is not legal advice and the texts below describe the data actually stored by this application.",
     "contactLine": "Questions about this document:",
     "privacy": {
       "eyebrow": "Privacy",

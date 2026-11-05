@@ -9,7 +9,7 @@ describe('PrivacyPolicyView', () => {
     expect(text).toContain('Privacy policy')
     expect(text).toContain('1. Data we collect')
     expect(text).toContain('6. Your rights')
-    expect(text).toContain('demonstration project')
+    expect(text).toContain('Vue.js exam project')
     expect(text).toContain('hello@maisha.example')
   })
 

@@ -18,8 +18,7 @@ that exists. When something here conflicts with your habits, this file wins.
 
 ## 1. Project and people
 
-- **Project**: "Restaurant Table, Queue & Online Ordering Management System", an academic
-  final-year project, due very soon. Time and the user's AI token budget are tight: be efficient,
+- **Project**: "Restaurant Table, Queue & Online Ordering Management System", a Vue.js exam project, due very soon. Time and the user's AI token budget are tight: be efficient,
   deliver complete files, do not ask unnecessary questions.
 - **User**: Jerome, computer science student in Burundi. He writes mostly in **French**: answer in
   French. All code, identifiers, code comments, file names and commit messages are in **English**.
