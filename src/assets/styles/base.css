@@ -180,6 +180,10 @@ textarea {
 }
 
 /* Page transition used by the layouts. */
+html.no-scroll {
+  overflow: hidden;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: opacity var(--duration-base) var(--ease-out);

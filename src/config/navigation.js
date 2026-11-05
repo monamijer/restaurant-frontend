@@ -32,3 +32,8 @@ export const NAV_ITEMS = [
 export function navItemsFor(role) {
   return NAV_ITEMS.filter((item) => !item.roles || item.roles.includes(role))
 }
+
+/** The public items, shown in the category bar under the header. */
+export function publicNavItems() {
+  return NAV_ITEMS.filter((item) => !item.roles)
+}

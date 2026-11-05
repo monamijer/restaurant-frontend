@@ -20,7 +20,12 @@
     "login": "Connexion",
     "register": "Créer un compte",
     "logout": "Se déconnecter",
-    "signedInAs": "Connecté en tant que {name}"
+    "signedInAs": "Connecté en tant que {name}",
+    "search": "Rechercher dans la carte",
+    "searchPlaceholder": "Rechercher un plat…",
+    "openDrawer": "Ouvrir le menu",
+    "closeDrawer": "Fermer le menu",
+    "drawerTitle": "Menu"
   },
   "footer": {
     "hours": "Horaires",

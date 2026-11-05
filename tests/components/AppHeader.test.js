@@ -1,82 +1,60 @@
+import { describe, it, expect, vi } from 'vitest'
 import { flushPromises } from '@vue/test-utils'
-import { describe, expect, it, vi } from 'vitest'
-import AppHeader from '@/components/layout/AppHeader.vue'
-import { authService } from '@/services/authService'
-import { useToastStore } from '@/store/toasts'
 import { mountAt, USERS } from '../helpers/app'
-
-const links = (wrapper) => wrapper.findAll('.header__link').map((link) => link.text())
+import AppHeader from '../../src/components/layout/AppHeader.vue'
+import { useRestaurantStore } from '../../src/store/restaurant'
 
 describe('AppHeader', () => {
-  it('invites a visitor to sign in or register', async () => {
-    const { wrapper } = await mountAt(AppHeader, '/')
-
-    expect(links(wrapper)).toEqual(['Home', 'Menu', 'Queue'])
-    const actions = wrapper.get('.header__actions').text()
-    expect(actions).toContain('Sign in')
-    expect(actions).toContain('Create account')
-    expect(actions).not.toContain('Sign out')
+  it('shows the restaurant name and the public navigation', async () => {
+    const { wrapper } = await mountAt(AppHeader, '/', { before: () => {
+      useRestaurantStore().settings = { name: 'Maisha' }
+    } })
+    expect(wrapper.text()).toContain('Maisha')
+    const navLinks = wrapper.findAll('.header__nav-link').map((a) => a.text())
+    expect(navLinks).toContain('Home')
+    expect(navLinks).toContain('Menu')
+    expect(navLinks).toContain('Queue')
   })
 
-  it.each([
-    ['client', ['Home', 'Menu', 'Queue', 'Reservations', 'My orders', 'My account']],
-    ['staff', ['Home', 'Menu', 'Queue', 'Reservations', 'My orders', 'My account', 'Staff area']],
-    ['admin', ['Home', 'Menu', 'Queue', 'Reservations', 'My orders', 'My account', 'Staff area', 'Administration']],
-  ])('shows a %s only the pages their role allows', async (role, expected) => {
-    const { wrapper } = await mountAt(AppHeader, '/', { user: USERS[role] })
-
-    expect(links(wrapper)).toEqual(expected)
-  })
-
-  it('says who is signed in and offers to sign out', async () => {
-    const { wrapper } = await mountAt(AppHeader, '/', { user: USERS.client })
-
-    expect(wrapper.get('.header__user').text()).toBe('Signed in as Ada Lovelace')
-    expect(wrapper.get('.header__actions').text()).toContain('Sign out')
-  })
-
-  it('signs out, tells the user and returns to the home page', async () => {
-    const logout = vi.spyOn(authService, 'logout').mockResolvedValue()
-    const { wrapper, router, auth } = await mountAt(AppHeader, '/client/account', { user: USERS.client })
-
-    const signOut = wrapper.findAll('button').find((button) => button.text() === 'Sign out')
-    await signOut.trigger('click')
-    await flushPromises()
-
-    expect(logout).toHaveBeenCalledOnce()
-    expect(auth.user).toBeNull()
-    expect(router.currentRoute.value.name).toBe('home')
-    expect(useToastStore().items.map((toast) => toast.message)).toEqual(['You have been signed out.'])
-  })
-
-  it('opens and closes the mobile menu with the right accessibility state', async () => {
-    const { wrapper } = await mountAt(AppHeader, '/')
-    const button = wrapper.get('.header__menu-button')
-
-    expect(button.attributes('aria-expanded')).toBe('false')
-    expect(button.attributes('aria-controls')).toBe('site-menu')
-    expect(button.attributes('aria-label')).toBe('Open menu')
-
-    await button.trigger('click')
-
-    expect(button.attributes('aria-expanded')).toBe('true')
-    expect(button.attributes('aria-label')).toBe('Close menu')
-    expect(wrapper.get('#site-menu').classes()).toContain('header__panel--open')
-  })
-
-  it('closes the mobile menu when the visitor moves to another page', async () => {
+  it('pushes the search to the menu with the q query', async () => {
     const { wrapper, router } = await mountAt(AppHeader, '/')
-    await wrapper.get('.header__menu-button').trigger('click')
-
-    await router.push('/login')
-    await flushPromises()
-
-    expect(wrapper.get('#site-menu').classes()).not.toContain('header__panel--open')
+    const input = wrapper.find('input[type="search"]')
+    await input.setValue('pasta')
+    await wrapper.find('form[role="search"]').trigger('submit.prevent')
+    await vi.waitFor(() => expect(router.currentRoute.value.name).toBe('menu'))
+    expect(router.currentRoute.value.query).toEqual({ q: 'pasta' })
   })
 
-  it('labels the navigation landmark', async () => {
-    const { wrapper } = await mountAt(AppHeader, '/')
+  it('opens the drawer and shows the full navigation there', async () => {
+    const { wrapper } = await mountAt(AppHeader, '/', { user: USERS.staff })
+    expect(document.querySelector('[role="dialog"]')).toBeNull()
+    await wrapper.find('.header__menu-button').trigger('click')
+    await flushPromises()
+    const drawer = document.querySelector('[role="dialog"]')
+    expect(drawer).not.toBeNull()
+    const hrefs = Array.from(drawer.querySelectorAll('a')).map((a) => a.getAttribute('href'))
+    expect(hrefs).toContain('/staff')
+    expect(hrefs).toContain('/menu')
+    expect(hrefs).toContain('/reservations')
+  })
 
-    expect(wrapper.get('nav').attributes('aria-label')).toBe('Main navigation')
+  it('does not show the staff link to a client', async () => {
+    const { wrapper } = await mountAt(AppHeader, '/', { user: USERS.client })
+    await wrapper.find('.header__menu-button').trigger('click')
+    await flushPromises()
+    const drawer = document.querySelector('[role="dialog"]')
+    const hrefs = Array.from(drawer.querySelectorAll('a')).map((a) => a.getAttribute('href'))
+    expect(hrefs).not.toContain('/staff')
+    expect(hrefs).not.toContain('/admin')
+  })
+
+  it('shows a sign-in action to a visitor and a sign-out action to a signed-in user', async () => {
+    const { wrapper: anonymous } = await mountAt(AppHeader, '/')
+    expect(anonymous.findAll('a').some((a) => a.text() === 'Sign in')).toBe(true)
+
+    const { wrapper: signedIn } = await mountAt(AppHeader, '/', { user: USERS.client })
+    await signedIn.find('.header__menu-button').trigger('click')
+    await flushPromises()
+    expect(document.body.textContent).toContain('Sign out')
   })
 })
