@@ -7,7 +7,8 @@
       "menu": "Menu",
       "settings": "Parametres",
       "users": "Utilisateurs",
-      "dashboard": "Tableau de bord"
+      "dashboard": "Tableau de bord",
+      "reports": "Rapports"
     },
     "home": {
       "title": "Administration",
@@ -235,6 +236,66 @@
         "start": "Du",
         "end": "Au",
         "groupBy": "Grouper par",
+        "apply": "Appliquer",
+        "clear": "Effacer"
+      },
+      "groupBy": {
+        "day": "Jour",
+        "week": "Semaine",
+        "month": "Mois"
+      }
+    },
+    "reports": {
+      "title": "Rapports",
+      "subtitle": "Decouper l activite par periode, regroupement et limite.",
+      "loading": "Chargement du rapport",
+      "failed": "Impossible de charger le rapport.",
+      "empty": "Rien sur cette periode.",
+      "downloadCsv": "Telecharger en CSV",
+      "csvOnly": "Ce rapport est disponible uniquement en telechargement CSV.",
+      "names": {
+        "revenue": "Chiffre d affaires",
+        "order-volume": "Volume de commandes",
+        "top-items": "Plats les plus commandes",
+        "peak-hours": "Heures de pointe",
+        "table-utilization": "Utilisation des tables",
+        "payments": "Journal des paiements"
+      },
+      "columns": {
+        "period": "Periode",
+        "revenue": "Chiffre d affaires",
+        "orders": "Commandes",
+        "average_order_value": "Panier moyen",
+        "total": "Total",
+        "dine_in": "Sur place",
+        "takeaway": "A emporter",
+        "delivery": "Livraison",
+        "cancelled": "Annulees",
+        "menu_item": "Id du plat",
+        "name": "Plat",
+        "quantity": "Quantite",
+        "hour": "Heure",
+        "number": "Table",
+        "capacity": "Places",
+        "reservations": "Reservations",
+        "reserved_minutes": "Minutes reservees",
+        "utilisation_percent": "Utilisation",
+        "dine_in_orders": "Commandes sur place",
+        "orders_value": "Valeur des commandes",
+        "reference": "Reference",
+        "order": "Commande",
+        "method": "Methode",
+        "status": "Statut",
+        "amount": "Montant",
+        "created_at": "Cree",
+        "paid_at": "Paye"
+      },
+      "filters": {
+        "report": "Rapport",
+        "start": "Du",
+        "end": "Au",
+        "groupBy": "Grouper par",
+        "limit": "Limite",
         "apply": "Appliquer",
         "clear": "Effacer"
       },

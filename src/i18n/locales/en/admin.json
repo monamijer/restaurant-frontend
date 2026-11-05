@@ -7,7 +7,8 @@
       "menu": "Menu",
       "settings": "Settings",
       "users": "Users",
-      "dashboard": "Dashboard"
+      "dashboard": "Dashboard",
+      "reports": "Reports"
     },
     "home": {
       "title": "Administration",
@@ -235,6 +236,66 @@
         "start": "From",
         "end": "To",
         "groupBy": "Group by",
+        "apply": "Apply",
+        "clear": "Clear"
+      },
+      "groupBy": {
+        "day": "Day",
+        "week": "Week",
+        "month": "Month"
+      }
+    },
+    "reports": {
+      "title": "Reports",
+      "subtitle": "Slice the activity by period, bucket and limit.",
+      "loading": "Loading the report",
+      "failed": "Could not load the report.",
+      "empty": "Nothing in this period.",
+      "downloadCsv": "Download as CSV",
+      "csvOnly": "This report is only available as a CSV download.",
+      "names": {
+        "revenue": "Revenue",
+        "order-volume": "Order volume",
+        "top-items": "Top dishes",
+        "peak-hours": "Peak hours",
+        "table-utilization": "Table utilisation",
+        "payments": "Payments ledger"
+      },
+      "columns": {
+        "period": "Period",
+        "revenue": "Revenue",
+        "orders": "Orders",
+        "average_order_value": "Average order",
+        "total": "Total",
+        "dine_in": "Eat here",
+        "takeaway": "Takeaway",
+        "delivery": "Delivery",
+        "cancelled": "Cancelled",
+        "menu_item": "Dish id",
+        "name": "Dish",
+        "quantity": "Quantity",
+        "hour": "Hour",
+        "number": "Table",
+        "capacity": "Seats",
+        "reservations": "Reservations",
+        "reserved_minutes": "Booked minutes",
+        "utilisation_percent": "Utilisation",
+        "dine_in_orders": "Dine-in orders",
+        "orders_value": "Orders value",
+        "reference": "Reference",
+        "order": "Order",
+        "method": "Method",
+        "status": "Status",
+        "amount": "Amount",
+        "created_at": "Created",
+        "paid_at": "Paid"
+      },
+      "filters": {
+        "report": "Report",
+        "start": "From",
+        "end": "To",
+        "groupBy": "Group by",
+        "limit": "Limit",
         "apply": "Apply",
         "clear": "Clear"
       },

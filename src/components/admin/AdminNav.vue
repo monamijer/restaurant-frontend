@@ -26,6 +26,7 @@ export default {
         { name: 'admin-menu', labelKey: 'admin.nav.menu' },
         { name: 'admin-settings', labelKey: 'admin.nav.settings' },
         { name: 'admin-users', labelKey: 'admin.nav.users' },
+        { name: 'admin-reports', labelKey: 'admin.nav.reports' },
       ],
     }
   },
