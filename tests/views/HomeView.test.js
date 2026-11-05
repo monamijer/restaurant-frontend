@@ -17,12 +17,21 @@ describe('HomeView (landing)', () => {
     expect(wrapper.text()).toContain('Order from the menu, pay in a tap')
   })
 
-  it('renders the three spaces, the stack and the demo accounts', async () => {
+  it('renders the three steps and the closing call to action', async () => {
     const { wrapper } = await mountAt(HomeView, '/')
-    expect(wrapper.text()).toContain('For customers')
-    expect(wrapper.text()).toContain('For the floor')
-    expect(wrapper.text()).toContain('For the office')
-    expect(wrapper.text()).toContain('Vue 3')
-    expect(wrapper.text()).toContain('admin@demo.example')
+    const steps = wrapper.findAll('.step')
+    expect(steps).toHaveLength(3)
+    expect(wrapper.text()).toContain('Pick your dishes')
+    expect(wrapper.text()).toContain('Order and pay')
+    expect(wrapper.text()).toContain('Follow the kitchen')
+    expect(wrapper.text()).toContain('Hungry already?')
+  })
+
+  it('does not expose the technical stack or the demo accounts on the public page', async () => {
+    const { wrapper } = await mountAt(HomeView, '/')
+    const text = wrapper.text()
+    expect(text).not.toContain('Vue 3')
+    expect(text).not.toContain('admin@demo.example')
+    expect(text).not.toContain('Demo-Passw0rd!')
   })
 })

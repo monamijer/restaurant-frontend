@@ -14,59 +14,25 @@
           "eyebrow": "Reservations",
           "title": "Une table, quand vous voulez",
           "lead": "Choisissez une date, un nombre de convives et une table. Le restaurant confirme en une minute.",
-          "cta": "Reserver une table"
+          "cta": "Reserver une table",
+          "alt": "Une table dressee dans le restaurant"
         },
         "order": {
           "eyebrow": "Commande en ligne",
           "title": "Commandez, payez en un geste",
           "lead": "Parcourez la carte, ajoutez au panier et validez. Le suivi se met a jour tout seul.",
-          "cta": "Voir la carte"
+          "cta": "Voir la carte",
+          "alt": "Un plat servi, ou une main tenant le menu numerique"
         },
         "queue": {
           "eyebrow": "File d attente",
           "title": "Votre place dans la file, depuis votre telephone",
           "lead": "Rejoignez la file depuis n importe ou. Nous gardons votre place et vous appelons.",
-          "cta": "Rejoindre la file"
+          "cta": "Rejoindre la file",
+          "alt": "L entree du restaurant, ou un client qui attend sa table"
         }
       }
     },
-    "spaces": {
-      "title": "Un projet, trois experiences",
-      "lead": "Un portail client, un tableau staff et une console admin, sur la meme API.",
-      "items": {
-        "client": {
-          "title": "Pour les clients",
-          "lead": "Reserver, commander, suivre, payer, telecharger la facture.",
-          "cta": "Explorer la carte"
-        },
-        "staff": {
-          "title": "Pour la salle",
-          "lead": "Commandes, reservations, file et tables, mis a jour en direct.",
-          "cta": "Se connecter en staff"
-        },
-        "admin": {
-          "title": "Pour le bureau",
-          "lead": "Carte, utilisateurs, parametres, indicateurs et rapports CSV.",
-          "cta": "Se connecter en admin"
-        }
-      }
-    },
-    "stack": {
-      "title": "Construit avec la stack que vous choisiriez aujourd hui",
-      "lead": "Vue 3 en Options API, Django REST, authentification JWT et une suite de tests qui tourne a chaque changement."
-    },
-    "demo": {
-      "title": "Essayez avec les comptes de demonstration",
-      "lead": "Le mot de passe est le meme pour tous les comptes.",
-      "passwordHint": "Mot de passe : Demo-Passw0rd!",
-      "cta": "Ouvrir la demo",
-      "roles": {
-        "admin": "Admin",
-        "staff": "Personnel",
-        "client": "Client"
-      }
-    },
-
     "title": "Accueil",
     "eyebrow": "Table, file d'attente et commande en ligne",
     "heading": "Bienvenue chez {name}",
@@ -76,6 +42,33 @@
     "ctaSpace": "Accéder à mon espace",
     "hoursTitle": "Nous sommes ouverts",
     "serverDown": "Impossible de joindre le serveur du restaurant.",
-    "serverDownHint": "Vérifiez que le serveur est démarré, puis réessayez."
+    "serverDownHint": "Vérifiez que le serveur est démarré, puis réessayez.",
+    "how": {
+      "eyebrow": "Comment ca marche",
+      "title": "De la porte a la table, en trois etapes",
+      "lead": "Choisissez, commandez, suivez. Pas d appel, pas d attente au comptoir.",
+      "steps": {
+        "choose": {
+          "title": "Choisissez vos plats",
+          "lead": "Parcourez la carte, filtrez par categorie, consultez les allergenes et le temps de preparation.",
+          "cta": "Voir la carte"
+        },
+        "order": {
+          "title": "Commandez et payez",
+          "lead": "Validez en quelques gestes. Payez par carte, mobile money ou en especes sur place.",
+          "cta": "Ouvrir la carte"
+        },
+        "follow": {
+          "title": "Suivez la cuisine",
+          "lead": "La page se met a jour : en attente, en preparation, prete. La facture arrive au paiement.",
+          "cta": "Voir mes commandes"
+        }
+      }
+    },
+    "cta": {
+      "title": "Deja faim ?",
+      "lead": "Commandez maintenant ou reservez une table pour ce soir.",
+      "reserve": "Reserver une table"
+    }
   }
 }

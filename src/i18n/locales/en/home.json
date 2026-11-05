@@ -14,59 +14,25 @@
           "eyebrow": "Table reservations",
           "title": "A table, whenever you want",
           "lead": "Pick a date, a party size and a table. The restaurant confirms in a minute.",
-          "cta": "Book a table"
+          "cta": "Book a table",
+          "alt": "A dressed table in the restaurant"
         },
         "order": {
           "eyebrow": "Online ordering",
           "title": "Order from the menu, pay in a tap",
           "lead": "Browse the menu, add to cart and check out. Order tracking updates itself.",
-          "cta": "See the menu"
+          "cta": "See the menu",
+          "alt": "A dish being served, or a hand holding the digital menu"
         },
         "queue": {
           "eyebrow": "Walk-in queue",
           "title": "Your place in line, from your phone",
           "lead": "Join the queue from anywhere. We hold your place and call you when ready.",
-          "cta": "Join the queue"
+          "cta": "Join the queue",
+          "alt": "The restaurant entrance, or a guest waiting to be seated"
         }
       }
     },
-    "spaces": {
-      "title": "One project, three experiences",
-      "lead": "A customer portal, a staff board and an admin console, all on the same API.",
-      "items": {
-        "client": {
-          "title": "For customers",
-          "lead": "Reserve, order, track, pay, download the invoice.",
-          "cta": "Explore the menu"
-        },
-        "staff": {
-          "title": "For the floor",
-          "lead": "Orders, reservations, queue and tables, updated live.",
-          "cta": "Sign in as staff"
-        },
-        "admin": {
-          "title": "For the office",
-          "lead": "Menu, users, settings, KPIs and CSV reports.",
-          "cta": "Sign in as admin"
-        }
-      }
-    },
-    "stack": {
-      "title": "Built with the stack you would choose today",
-      "lead": "Vue 3 with the Options API, Django REST, JWT authentication and a test suite that runs on every change."
-    },
-    "demo": {
-      "title": "Try it with the demo accounts",
-      "lead": "The password is the same for every account.",
-      "passwordHint": "Password: Demo-Passw0rd!",
-      "cta": "Open the demo",
-      "roles": {
-        "admin": "Admin",
-        "staff": "Staff",
-        "client": "Client"
-      }
-    },
-
     "title": "Home",
     "eyebrow": "Tables, queue and online ordering",
     "heading": "Welcome to {name}",
@@ -76,6 +42,33 @@
     "ctaSpace": "Go to my area",
     "hoursTitle": "We are open",
     "serverDown": "The restaurant's server cannot be reached.",
-    "serverDownHint": "Check that the server is running, then try again."
+    "serverDownHint": "Check that the server is running, then try again.",
+    "how": {
+      "eyebrow": "How it works",
+      "title": "From the door to the table, in three steps",
+      "lead": "Choose, order, follow. No phone call, no waiting at the counter.",
+      "steps": {
+        "choose": {
+          "title": "Pick your dishes",
+          "lead": "Browse the menu, filter by category, see the allergens and the preparation time.",
+          "cta": "See the menu"
+        },
+        "order": {
+          "title": "Order and pay",
+          "lead": "Check out in a few taps. Pay by card, mobile money or cash on the spot.",
+          "cta": "Open the menu"
+        },
+        "follow": {
+          "title": "Follow the kitchen",
+          "lead": "The page updates itself: pending, preparing, ready. Your invoice arrives when you pay.",
+          "cta": "See my orders"
+        }
+      }
+    },
+    "cta": {
+      "title": "Hungry already?",
+      "lead": "Order now or book a table for tonight.",
+      "reserve": "Book a table"
+    }
   }
 }
