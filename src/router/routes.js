@@ -177,8 +177,20 @@ const routes = [
   {
     path: '/admin/menu',
     name: 'admin-menu',
-    component: () => import('@/views/AreaPlaceholderView.vue'),
+    component: () => import('@/views/admin/AdminMenuView.vue'),
     meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.menu.title' },
+  },
+  {
+    path: '/admin/menu/new',
+    name: 'admin-menu-item-new',
+    component: () => import('@/views/admin/AdminMenuItemNewView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.menu.form.newTitle' },
+  },
+  {
+    path: '/admin/menu/:id(\\d+)/edit',
+    name: 'admin-menu-item-edit',
+    component: () => import('@/views/admin/AdminMenuItemEditView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.menu.form.editTitle' },
   },
   {
     path: '/forbidden',

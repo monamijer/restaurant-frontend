@@ -43,7 +43,55 @@
       }
     },
     "menu": {
-      "title": "Menu"
+      "title": "Menu",
+      "subtitle": "Create, edit and retire dishes.",
+      "create": "New dish",
+      "edit": "Edit",
+      "enable": "Show on the menu",
+      "disable": "Remove from the menu",
+      "available": "On the menu",
+      "unavailable": "Off the menu",
+      "updated": "Menu updated.",
+      "empty": "No dish yet.",
+      "failed": "Could not load the menu.",
+      "minutes": "{count} min",
+      "filters": {
+        "category": "Category",
+        "search": "Search",
+        "all": "All",
+        "apply": "Apply",
+        "clear": "Clear"
+      },
+      "form": {
+        "newTitle": "New dish",
+        "newSubtitle": "Add a dish to the menu.",
+        "editTitle": "Edit dish",
+        "editSubtitle": "Change the details of the dish.",
+        "loading": "Loading the dish",
+        "loadFailed": "Could not load this dish.",
+        "saved": "Dish saved.",
+        "name": "Name",
+        "description": "Description",
+        "category": "Category",
+        "categoryPlaceholder": "Select a category",
+        "price": "Price",
+        "preparationTime": "Preparation time (minutes)",
+        "calories": "Calories",
+        "allergens": "Allergens",
+        "allergensHint": "Separate the allergens with commas.",
+        "isFeatured": "Highlight on the menu",
+        "image": "Picture",
+        "imageHint": "JPEG, PNG or WebP, 2 MB maximum.",
+        "imageTooBig": "The picture must not exceed 2 MB.",
+        "validation": {
+          "name": "A name is required.",
+          "category": "A category is required.",
+          "price": "A positive price is required.",
+          "preparationTime": "The preparation time must be a positive whole number.",
+          "calories": "The calories must be a positive whole number.",
+          "allergens": "At most {max} allergens are allowed."
+        }
+      }
     }
   }
 }

@@ -43,7 +43,55 @@
       }
     },
     "menu": {
-      "title": "Menu"
+      "title": "Menu",
+      "subtitle": "Creer, modifier et retirer les plats.",
+      "create": "Nouveau plat",
+      "edit": "Modifier",
+      "enable": "Afficher sur le menu",
+      "disable": "Retirer du menu",
+      "available": "Sur le menu",
+      "unavailable": "Hors du menu",
+      "updated": "Menu mis a jour.",
+      "empty": "Aucun plat pour le moment.",
+      "failed": "Impossible de charger le menu.",
+      "minutes": "{count} min",
+      "filters": {
+        "category": "Categorie",
+        "search": "Rechercher",
+        "all": "Tous",
+        "apply": "Appliquer",
+        "clear": "Effacer"
+      },
+      "form": {
+        "newTitle": "Nouveau plat",
+        "newSubtitle": "Ajouter un plat au menu.",
+        "editTitle": "Modifier le plat",
+        "editSubtitle": "Changer les details du plat.",
+        "loading": "Chargement du plat",
+        "loadFailed": "Impossible de charger ce plat.",
+        "saved": "Plat enregistre.",
+        "name": "Nom",
+        "description": "Description",
+        "category": "Categorie",
+        "categoryPlaceholder": "Choisir une categorie",
+        "price": "Prix",
+        "preparationTime": "Temps de preparation (minutes)",
+        "calories": "Calories",
+        "allergens": "Allergenes",
+        "allergensHint": "Separez les allergenes par des virgules.",
+        "isFeatured": "Mettre en avant sur le menu",
+        "image": "Image",
+        "imageHint": "JPEG, PNG ou WebP, 2 Mo maximum.",
+        "imageTooBig": "L image ne doit pas depasser 2 Mo.",
+        "validation": {
+          "name": "Un nom est requis.",
+          "category": "Une categorie est requise.",
+          "price": "Un prix positif est requis.",
+          "preparationTime": "Le temps de preparation doit etre un nombre entier positif.",
+          "calories": "Les calories doivent etre un nombre entier positif.",
+          "allergens": "Au plus {max} allergenes sont autorises."
+        }
+      }
     }
   }
 }
