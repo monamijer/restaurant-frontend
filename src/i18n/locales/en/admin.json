@@ -6,7 +6,8 @@
       "categories": "Categories",
       "menu": "Menu",
       "settings": "Settings",
-      "users": "Users"
+      "users": "Users",
+      "dashboard": "Dashboard"
     },
     "home": {
       "title": "Administration",
@@ -186,6 +187,61 @@
       "validation": {
         "email": "A valid email is required.",
         "password": "A password is required."
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "The pulse of the restaurant.",
+      "loading": "Loading the dashboard",
+      "failed": "Could not load the dashboard.",
+      "daysCount": "{count} day | {count} days",
+      "kpisTitle": "Key numbers",
+      "todayTitle": "Right now",
+      "revenueTitle": "Revenue over time",
+      "ordersTitle": "Orders over time",
+      "topItemsTitle": "Top dishes",
+      "activityTitle": "Recent activity",
+      "emptySeries": "Nothing to show for this period.",
+      "noTopItems": "No dish was ordered in this period.",
+      "noActivity": "No activity yet.",
+      "noChange": "No comparison available",
+      "kpis": {
+        "revenue": "Revenue",
+        "orders": "Orders",
+        "average_order_value": "Average order value",
+        "new_customers": "New customers"
+      },
+      "today": {
+        "reservations": "Reservations today",
+        "pendingReservations": "Awaiting confirmation",
+        "queue": "Waiting in queue",
+        "ordersInProgress": "Orders in progress",
+        "pendingPayments": "Pending payments",
+        "occupancy": "Occupied tables"
+      },
+      "columns": {
+        "name": "Dish",
+        "quantity": "Quantity",
+        "revenue": "Revenue"
+      },
+      "activity": {
+        "types": {
+          "order": "Order",
+          "reservation": "Reservation",
+          "payment": "Payment"
+        }
+      },
+      "filters": {
+        "start": "From",
+        "end": "To",
+        "groupBy": "Group by",
+        "apply": "Apply",
+        "clear": "Clear"
+      },
+      "groupBy": {
+        "day": "Day",
+        "week": "Week",
+        "month": "Month"
       }
     }
   }

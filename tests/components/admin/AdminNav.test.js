@@ -6,12 +6,13 @@ describe('AdminNav', () => {
   it('renders the admin links in English', async () => {
     const { wrapper } = await mountAt(AdminNav, '/admin', { user: USERS.admin })
     const links = wrapper.findAll('a')
-    expect(links).toHaveLength(5)
+    expect(links).toHaveLength(6)
     expect(links[0].text()).toBe('Admin')
-    expect(links[1].text()).toBe('Categories')
-    expect(links[2].text()).toBe('Menu')
-    expect(links[3].text()).toBe('Settings')
-    expect(links[4].text()).toBe('Users')
+    expect(links[1].text()).toBe('Dashboard')
+    expect(links[2].text()).toBe('Categories')
+    expect(links[3].text()).toBe('Menu')
+    expect(links[4].text()).toBe('Settings')
+    expect(links[5].text()).toBe('Users')
   })
 
   it('marks the active route', async () => {

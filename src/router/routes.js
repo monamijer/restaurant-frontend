@@ -169,6 +169,12 @@ const routes = [
     meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.home.title' },
   },
   {
+    path: '/admin/dashboard',
+    name: 'admin-dashboard',
+    component: () => import('@/views/admin/AdminDashboardView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.dashboard.title' },
+  },
+  {
     path: '/admin/categories',
     name: 'admin-categories',
     component: () => import('@/views/admin/AdminCategoriesView.vue'),

@@ -21,6 +21,7 @@ export default {
     return {
       items: [
         { name: 'admin-home', labelKey: 'admin.nav.home' },
+        { name: 'admin-dashboard', labelKey: 'admin.nav.dashboard' },
         { name: 'admin-categories', labelKey: 'admin.nav.categories' },
         { name: 'admin-menu', labelKey: 'admin.nav.menu' },
         { name: 'admin-settings', labelKey: 'admin.nav.settings' },

@@ -6,7 +6,8 @@
       "categories": "Categories",
       "menu": "Menu",
       "settings": "Parametres",
-      "users": "Utilisateurs"
+      "users": "Utilisateurs",
+      "dashboard": "Tableau de bord"
     },
     "home": {
       "title": "Administration",
@@ -186,6 +187,61 @@
       "validation": {
         "email": "Un email valide est requis.",
         "password": "Un mot de passe est requis."
+      }
+    },
+    "dashboard": {
+      "title": "Tableau de bord",
+      "subtitle": "Le pouls du restaurant.",
+      "loading": "Chargement du tableau de bord",
+      "failed": "Impossible de charger le tableau de bord.",
+      "daysCount": "{count} jour | {count} jours",
+      "kpisTitle": "Chiffres cles",
+      "todayTitle": "En ce moment",
+      "revenueTitle": "Chiffre d affaires dans le temps",
+      "ordersTitle": "Commandes dans le temps",
+      "topItemsTitle": "Plats les plus commandes",
+      "activityTitle": "Activite recente",
+      "emptySeries": "Rien a afficher pour cette periode.",
+      "noTopItems": "Aucun plat commande sur cette periode.",
+      "noActivity": "Aucune activite pour le moment.",
+      "noChange": "Aucune comparaison disponible",
+      "kpis": {
+        "revenue": "Chiffre d affaires",
+        "orders": "Commandes",
+        "average_order_value": "Panier moyen",
+        "new_customers": "Nouveaux clients"
+      },
+      "today": {
+        "reservations": "Reservations du jour",
+        "pendingReservations": "En attente de confirmation",
+        "queue": "En attente dans la file",
+        "ordersInProgress": "Commandes en cours",
+        "pendingPayments": "Paiements en attente",
+        "occupancy": "Tables occupees"
+      },
+      "columns": {
+        "name": "Plat",
+        "quantity": "Quantite",
+        "revenue": "Chiffre d affaires"
+      },
+      "activity": {
+        "types": {
+          "order": "Commande",
+          "reservation": "Reservation",
+          "payment": "Paiement"
+        }
+      },
+      "filters": {
+        "start": "Du",
+        "end": "Au",
+        "groupBy": "Grouper par",
+        "apply": "Appliquer",
+        "clear": "Effacer"
+      },
+      "groupBy": {
+        "day": "Jour",
+        "week": "Semaine",
+        "month": "Mois"
       }
     }
   }
