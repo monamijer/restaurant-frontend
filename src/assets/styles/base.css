@@ -135,6 +135,50 @@ textarea {
   color: var(--color-accent-text);
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-block: var(--space-8);
+}
+
+.section--tinted {
+  background: var(--color-surface-sunken);
+}
+
+.section--white {
+  background: var(--color-surface);
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.section__lead {
+  max-width: 40rem;
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
+
+/* Elements with v-reveal start slightly offset; the directive adds the visible class. */
+.reveal {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition:
+    opacity var(--duration-slow) var(--ease-out),
+    transform var(--duration-slow) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: none;
+}
+
 /* Page transition used by the layouts. */
 .page-enter-active,
 .page-leave-active {

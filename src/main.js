@@ -7,6 +7,7 @@ import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createWebHistory } from 'vue-router'
 import App from './App.vue'
+import { reveal } from './directives/reveal'
 import { i18n, translate } from './i18n'
 import { createAppRouter } from './router'
 import { sessionExpiredHandler } from './router/expiry'
@@ -16,6 +17,7 @@ import { useToastStore } from './store/toasts'
 import { useUiStore } from './store/ui'
 
 const app = createApp(App)
+app.directive('reveal', reveal)
 app.use(createPinia())
 app.use(i18n)
 
