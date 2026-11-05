@@ -1,3 +1,4 @@
+import admin from './admin.json'
 import auth from './auth.json'
 import billing from './billing.json'
 import cart from './cart.json'
@@ -15,6 +16,7 @@ import styleguide from './styleguide.json'
 
 export default {
   ...common,
+  ...admin,
   ...layout,
   ...home,
   ...auth,

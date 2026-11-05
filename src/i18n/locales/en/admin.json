@@ -1,0 +1,49 @@
+{
+  "admin": {
+    "nav": {
+      "ariaLabel": "Administration navigation",
+      "home": "Admin",
+      "categories": "Categories",
+      "menu": "Menu"
+    },
+    "home": {
+      "title": "Administration",
+      "subtitle": "Manage the menu, the categories and the restaurant.",
+      "shortcutsTitle": "Shortcuts",
+      "shortcuts": {
+        "categories": "Categories",
+        "categoriesHint": "Create and rename the menu sections.",
+        "menu": "Menu",
+        "menuHint": "Create, edit and retire dishes."
+      }
+    },
+    "categories": {
+      "title": "Categories",
+      "subtitle": "Sections of the menu.",
+      "create": "New category",
+      "createTitle": "New category",
+      "editTitle": "Edit category",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteTitle": "Delete the category?",
+      "deleteMessage": "Delete \"{name}\"? A category with dishes cannot be deleted.",
+      "deleteConfirm": "Yes, delete",
+      "saved": "Category saved.",
+      "deleted": "Category deleted.",
+      "loading": "Loading categories",
+      "failed": "Could not load the categories.",
+      "empty": "No category yet.",
+      "fields": {
+        "name": "Name",
+        "slug": "Slug",
+        "slugHint": "Used in the menu URL. Leave empty to generate it."
+      },
+      "validation": {
+        "name": "A name is required."
+      }
+    },
+    "menu": {
+      "title": "Menu"
+    }
+  }
+}

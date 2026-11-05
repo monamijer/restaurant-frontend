@@ -165,8 +165,20 @@ const routes = [
   {
     path: '/admin',
     name: 'admin-home',
+    component: () => import('@/views/admin/AdminHomeView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.home.title' },
+  },
+  {
+    path: '/admin/categories',
+    name: 'admin-categories',
+    component: () => import('@/views/admin/AdminCategoriesView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.categories.title' },
+  },
+  {
+    path: '/admin/menu',
+    name: 'admin-menu',
     component: () => import('@/views/AreaPlaceholderView.vue'),
-    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'area.adminTitle' },
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.menu.title' },
   },
   {
     path: '/forbidden',

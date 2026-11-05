@@ -1,0 +1,49 @@
+{
+  "admin": {
+    "nav": {
+      "ariaLabel": "Navigation de l administration",
+      "home": "Admin",
+      "categories": "Categories",
+      "menu": "Menu"
+    },
+    "home": {
+      "title": "Administration",
+      "subtitle": "Gerer le menu, les categories et le restaurant.",
+      "shortcutsTitle": "Raccourcis",
+      "shortcuts": {
+        "categories": "Categories",
+        "categoriesHint": "Creer et renommer les sections du menu.",
+        "menu": "Menu",
+        "menuHint": "Creer, modifier et retirer les plats."
+      }
+    },
+    "categories": {
+      "title": "Categories",
+      "subtitle": "Sections du menu.",
+      "create": "Nouvelle categorie",
+      "createTitle": "Nouvelle categorie",
+      "editTitle": "Modifier la categorie",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "deleteTitle": "Supprimer la categorie ?",
+      "deleteMessage": "Supprimer \"{name}\" ? Une categorie avec des plats ne peut pas etre supprimee.",
+      "deleteConfirm": "Oui, supprimer",
+      "saved": "Categorie enregistree.",
+      "deleted": "Categorie supprimee.",
+      "loading": "Chargement des categories",
+      "failed": "Impossible de charger les categories.",
+      "empty": "Aucune categorie pour le moment.",
+      "fields": {
+        "name": "Nom",
+        "slug": "Slug",
+        "slugHint": "Utilise dans l URL du menu. Laisser vide pour le generer."
+      },
+      "validation": {
+        "name": "Un nom est requis."
+      }
+    },
+    "menu": {
+      "title": "Menu"
+    }
+  }
+}
