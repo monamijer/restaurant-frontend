@@ -5,7 +5,8 @@
       "home": "Admin",
       "categories": "Categories",
       "menu": "Menu",
-      "settings": "Settings"
+      "settings": "Settings",
+      "users": "Users"
     },
     "home": {
       "title": "Administration",
@@ -119,6 +120,72 @@
         "taxRate": "The tax rate must be between 0 and 100.",
         "closingAfterOpening": "The closing time must be after the opening time.",
         "reservationBounds": "The minimum duration cannot exceed the maximum."
+      }
+    },
+    "users": {
+      "title": "Users",
+      "subtitle": "Staff see customers; administrators see every account.",
+      "newTitle": "New user",
+      "newSubtitle": "Create an account and pick its role.",
+      "editTitle": "Edit user",
+      "loading": "Loading the user",
+      "loadFailed": "Could not load this user.",
+      "create": "New user",
+      "edit": "Edit",
+      "saved": "User saved.",
+      "created": "User created.",
+      "toggled": "Account updated.",
+      "passwordSaved": "Password updated. The user was signed out everywhere.",
+      "active": "Active",
+      "inactive": "Inactive",
+      "empty": "No user matches these filters.",
+      "failed": "Could not load the users.",
+      "changePassword": "Change the password",
+      "securityTitle": "Security",
+      "deactivate": "Deactivate",
+      "activate": "Reactivate",
+      "deactivateTitle": "Deactivate this account?",
+      "deactivateMessage": "The user is signed out everywhere and cannot sign in until reactivated.",
+      "deactivateConfirm": "Yes, deactivate",
+      "activateTitle": "Reactivate this account?",
+      "activateMessage": "The user will be able to sign in again.",
+      "activateConfirm": "Yes, reactivate",
+      "selfRoleHint": "You cannot change your own role.",
+      "selfDeactivateHint": "You cannot deactivate your own account.",
+      "filters": {
+        "role": "Role",
+        "search": "Search",
+        "activeOnly": "Active only",
+        "all": "All",
+        "apply": "Apply",
+        "clear": "Clear"
+      },
+      "columns": {
+        "name": "Name",
+        "email": "Email",
+        "role": "Role",
+        "status": "Status",
+        "orders": "Orders",
+        "spent": "Spent"
+      },
+      "roles": {
+        "client": "Client",
+        "staff": "Staff",
+        "admin": "Administrator"
+      },
+      "fields": {
+        "email": "Email",
+        "password": "Password",
+        "newPassword": "New password",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "phone": "Phone",
+        "address": "Address",
+        "role": "Role"
+      },
+      "validation": {
+        "email": "A valid email is required.",
+        "password": "A password is required."
       }
     }
   }

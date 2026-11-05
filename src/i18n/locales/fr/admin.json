@@ -5,7 +5,8 @@
       "home": "Admin",
       "categories": "Categories",
       "menu": "Menu",
-      "settings": "Parametres"
+      "settings": "Parametres",
+      "users": "Utilisateurs"
     },
     "home": {
       "title": "Administration",
@@ -119,6 +120,72 @@
         "taxRate": "Le taux de taxe doit etre compris entre 0 et 100.",
         "closingAfterOpening": "L heure de fermeture doit etre posterieure a l ouverture.",
         "reservationBounds": "La duree minimale ne peut pas depasser la maximale."
+      }
+    },
+    "users": {
+      "title": "Utilisateurs",
+      "subtitle": "Le personnel voit les clients ; les administrateurs voient tous les comptes.",
+      "newTitle": "Nouvel utilisateur",
+      "newSubtitle": "Creer un compte et choisir son role.",
+      "editTitle": "Modifier l utilisateur",
+      "loading": "Chargement de l utilisateur",
+      "loadFailed": "Impossible de charger cet utilisateur.",
+      "create": "Nouvel utilisateur",
+      "edit": "Modifier",
+      "saved": "Utilisateur enregistre.",
+      "created": "Utilisateur cree.",
+      "toggled": "Compte mis a jour.",
+      "passwordSaved": "Mot de passe mis a jour. L utilisateur a ete deconnecte partout.",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "empty": "Aucun utilisateur ne correspond a ces filtres.",
+      "failed": "Impossible de charger les utilisateurs.",
+      "changePassword": "Changer le mot de passe",
+      "securityTitle": "Securite",
+      "deactivate": "Desactiver",
+      "activate": "Reactiver",
+      "deactivateTitle": "Desactiver ce compte ?",
+      "deactivateMessage": "L utilisateur est deconnecte partout et ne peut plus se connecter tant qu il n est pas reactive.",
+      "deactivateConfirm": "Oui, desactiver",
+      "activateTitle": "Reactiver ce compte ?",
+      "activateMessage": "L utilisateur pourra se connecter de nouveau.",
+      "activateConfirm": "Oui, reactiver",
+      "selfRoleHint": "Vous ne pouvez pas changer votre propre role.",
+      "selfDeactivateHint": "Vous ne pouvez pas desactiver votre propre compte.",
+      "filters": {
+        "role": "Role",
+        "search": "Rechercher",
+        "activeOnly": "Actifs uniquement",
+        "all": "Tous",
+        "apply": "Appliquer",
+        "clear": "Effacer"
+      },
+      "columns": {
+        "name": "Nom",
+        "email": "Email",
+        "role": "Role",
+        "status": "Statut",
+        "orders": "Commandes",
+        "spent": "Depense"
+      },
+      "roles": {
+        "client": "Client",
+        "staff": "Personnel",
+        "admin": "Administrateur"
+      },
+      "fields": {
+        "email": "Email",
+        "password": "Mot de passe",
+        "newPassword": "Nouveau mot de passe",
+        "firstName": "Prenom",
+        "lastName": "Nom",
+        "phone": "Telephone",
+        "address": "Adresse",
+        "role": "Role"
+      },
+      "validation": {
+        "email": "Un email valide est requis.",
+        "password": "Un mot de passe est requis."
       }
     }
   }

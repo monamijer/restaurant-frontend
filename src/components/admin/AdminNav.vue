@@ -24,6 +24,7 @@ export default {
         { name: 'admin-categories', labelKey: 'admin.nav.categories' },
         { name: 'admin-menu', labelKey: 'admin.nav.menu' },
         { name: 'admin-settings', labelKey: 'admin.nav.settings' },
+        { name: 'admin-users', labelKey: 'admin.nav.users' },
       ],
     }
   },

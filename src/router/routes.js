@@ -187,6 +187,24 @@ const routes = [
     meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.settings.title' },
   },
   {
+    path: '/admin/users',
+    name: 'admin-users',
+    component: () => import('@/views/admin/AdminUsersView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.users.title' },
+  },
+  {
+    path: '/admin/users/new',
+    name: 'admin-user-new',
+    component: () => import('@/views/admin/AdminUserNewView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.users.newTitle' },
+  },
+  {
+    path: '/admin/users/:id(\\d+)/edit',
+    name: 'admin-user-edit',
+    component: () => import('@/views/admin/AdminUserEditView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.users.editTitle' },
+  },
+  {
     path: '/admin/menu/new',
     name: 'admin-menu-item-new',
     component: () => import('@/views/admin/AdminMenuItemNewView.vue'),
