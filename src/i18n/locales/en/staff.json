@@ -4,7 +4,8 @@
       "ariaLabel": "Staff area navigation",
       "home": "Dashboard",
       "orders": "Orders",
-      "newOrder": "New order"
+      "newOrder": "New order",
+      "reservations": "Reservations"
     },
     "common": {
       "refresh": "Refresh",
@@ -128,6 +129,30 @@
         "orderType": "Choose an order type.",
         "table": "A table is required for dine-in.",
         "items": "Add at least one dish."
+      }
+    },
+    "reservations": {
+      "title": "Reservations",
+      "subtitle": "Confirm requests and close the day.",
+      "loading": "Loading reservations",
+      "failed": "Could not load reservations.",
+      "empty": "No reservation matches these filters.",
+      "countLabel": "{count} reservations",
+      "customer": "Customer",
+      "updated": "Reservation updated.",
+      "filters": {
+        "date": "Date",
+        "status": "Status",
+        "all": "All",
+        "apply": "Apply",
+        "clear": "Clear"
+      },
+      "actions": {
+        "confirm": "Confirm",
+        "reject": "Reject",
+        "complete": "Complete",
+        "noShow": "No-show",
+        "cancel": "Cancel"
       }
     }
   }

@@ -133,15 +133,21 @@ const routes = [
     meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'staff.orders.title' },
   },
   {
+    path: '/staff/reservations',
+    name: 'staff-reservations',
+    component: () => import('@/views/staff/StaffReservationsView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'staff.reservations.title' },
+  },
+  {
     path: '/staff/orders/new',
     name: 'staff-order-new',
-    component: () => import('@/views/AreaPlaceholderView.vue'),
+    component: () => import('@/views/staff/StaffOrderNewView.vue'),
     meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'staff.newOrder.title' },
   },
   {
     path: '/staff/orders/:id(\\d+)',
     name: 'staff-order',
-    component: () => import('@/views/AreaPlaceholderView.vue'),
+    component: () => import('@/views/staff/StaffOrderView.vue'),
     meta: { layout: 'main', requiresAuth: true, roles: [...STAFF_ROLES], titleKey: 'staff.order.title' },
   },
   {

@@ -23,6 +23,7 @@ export default {
         { name: 'staff-home', labelKey: 'staff.nav.home' },
         { name: 'staff-orders', labelKey: 'staff.nav.orders' },
         { name: 'staff-order-new', labelKey: 'staff.nav.newOrder' },
+        { name: 'staff-reservations', labelKey: 'staff.nav.reservations' },
       ],
     };
   },

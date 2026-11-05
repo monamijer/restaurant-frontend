@@ -4,7 +4,8 @@
       "ariaLabel": "Navigation de l espace personnel",
       "home": "Tableau de bord",
       "orders": "Commandes",
-      "newOrder": "Nouvelle commande"
+      "newOrder": "Nouvelle commande",
+      "reservations": "Reservations"
     },
     "common": {
       "refresh": "Rafraichir",
@@ -128,6 +129,30 @@
         "orderType": "Choisissez un type de commande.",
         "table": "Une table est requise pour une commande sur place.",
         "items": "Ajoutez au moins un plat."
+      }
+    },
+    "reservations": {
+      "title": "Reservations",
+      "subtitle": "Confirmer les demandes et cloturer la journee.",
+      "loading": "Chargement des reservations",
+      "failed": "Impossible de charger les reservations.",
+      "empty": "Aucune reservation ne correspond a ces filtres.",
+      "countLabel": "{count} reservations",
+      "customer": "Client",
+      "updated": "Reservation mise a jour.",
+      "filters": {
+        "date": "Date",
+        "status": "Statut",
+        "all": "Toutes",
+        "apply": "Appliquer",
+        "clear": "Effacer"
+      },
+      "actions": {
+        "confirm": "Confirmer",
+        "reject": "Refuser",
+        "complete": "Terminer",
+        "noShow": "Absent",
+        "cancel": "Annuler"
       }
     }
   }

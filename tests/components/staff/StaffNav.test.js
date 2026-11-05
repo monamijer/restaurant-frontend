@@ -6,10 +6,11 @@ describe('StaffNav', () => {
   it('renders the staff links in English', async () => {
     const { wrapper } = await mountAt(StaffNav, '/staff', { user: USERS.staff })
     const links = wrapper.findAll('a')
-    expect(links).toHaveLength(3)
+    expect(links).toHaveLength(4)
     expect(links[0].text()).toBe('Dashboard')
     expect(links[1].text()).toBe('Orders')
     expect(links[2].text()).toBe('New order')
+    expect(links[3].text()).toBe('Reservations')
   })
 
   it('marks the active route', async () => {
