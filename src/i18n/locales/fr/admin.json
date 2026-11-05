@@ -4,7 +4,8 @@
       "ariaLabel": "Navigation de l administration",
       "home": "Admin",
       "categories": "Categories",
-      "menu": "Menu"
+      "menu": "Menu",
+      "settings": "Parametres"
     },
     "home": {
       "title": "Administration",
@@ -91,6 +92,33 @@
           "calories": "Les calories doivent etre un nombre entier positif.",
           "allergens": "Au plus {max} allergenes sont autorises."
         }
+      }
+    },
+    "settings": {
+      "title": "Parametres",
+      "subtitle": "Le nom, les horaires, la taxe et les regles de reservation.",
+      "loading": "Chargement des parametres",
+      "failed": "Impossible de charger les parametres.",
+      "saved": "Parametres enregistres.",
+      "fields": {
+        "name": "Nom du restaurant",
+        "timezone": "Fuseau horaire",
+        "timezoneHint": "Nom IANA, par exemple Africa/Bujumbura.",
+        "taxRate": "Taux de taxe (pourcent)",
+        "openingTime": "Heure d ouverture",
+        "closingTime": "Heure de fermeture",
+        "slotStep": "Pas des creneaux (minutes)",
+        "pendingExpiry": "Duree de maintien d une demande (minutes)",
+        "minReservation": "Duree minimale de reservation (minutes)",
+        "maxReservation": "Duree maximale de reservation (minutes)",
+        "queueMinutes": "Minutes d attente par groupe"
+      },
+      "validation": {
+        "name": "Un nom est requis.",
+        "timezone": "Un fuseau horaire est requis.",
+        "taxRate": "Le taux de taxe doit etre compris entre 0 et 100.",
+        "closingAfterOpening": "L heure de fermeture doit etre posterieure a l ouverture.",
+        "reservationBounds": "La duree minimale ne peut pas depasser la maximale."
       }
     }
   }

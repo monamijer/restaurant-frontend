@@ -181,6 +181,12 @@ const routes = [
     meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.menu.title' },
   },
   {
+    path: '/admin/settings',
+    name: 'admin-settings',
+    component: () => import('@/views/admin/AdminSettingsView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.settings.title' },
+  },
+  {
     path: '/admin/menu/new',
     name: 'admin-menu-item-new',
     component: () => import('@/views/admin/AdminMenuItemNewView.vue'),

@@ -6,4 +6,10 @@ export const settingsService = {
     const { data } = await api.get('/settings/', { skipAuth: true, skipRefresh: true })
     return data
   },
+
+  /** Update the restaurant configuration. Admin only; the server validates every field. */
+  async update(payload) {
+    const { data } = await api.patch('/settings/', payload)
+    return data
+  },
 }

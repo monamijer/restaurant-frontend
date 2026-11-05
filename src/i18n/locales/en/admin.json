@@ -4,7 +4,8 @@
       "ariaLabel": "Administration navigation",
       "home": "Admin",
       "categories": "Categories",
-      "menu": "Menu"
+      "menu": "Menu",
+      "settings": "Settings"
     },
     "home": {
       "title": "Administration",
@@ -91,6 +92,33 @@
           "calories": "The calories must be a positive whole number.",
           "allergens": "At most {max} allergens are allowed."
         }
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "The name, the hours, the tax and the booking rules.",
+      "loading": "Loading the settings",
+      "failed": "Could not load the settings.",
+      "saved": "Settings saved.",
+      "fields": {
+        "name": "Restaurant name",
+        "timezone": "Timezone",
+        "timezoneHint": "IANA name, e.g. Africa/Bujumbura.",
+        "taxRate": "Tax rate (percent)",
+        "openingTime": "Opening time",
+        "closingTime": "Closing time",
+        "slotStep": "Booking slot step (minutes)",
+        "pendingExpiry": "Pending booking hold (minutes)",
+        "minReservation": "Minimum booking duration (minutes)",
+        "maxReservation": "Maximum booking duration (minutes)",
+        "queueMinutes": "Wait minutes per party"
+      },
+      "validation": {
+        "name": "A name is required.",
+        "timezone": "A timezone is required.",
+        "taxRate": "The tax rate must be between 0 and 100.",
+        "closingAfterOpening": "The closing time must be after the opening time.",
+        "reservationBounds": "The minimum duration cannot exceed the maximum."
       }
     }
   }
