@@ -1,4 +1,4 @@
-import api from './api';
+import { api } from './api';
 
 /**
  * Staff-side payment operations. Only cash payments can be confirmed by
