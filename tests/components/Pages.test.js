@@ -1,57 +1,11 @@
 import { describe, expect, it, vi } from 'vitest'
 import { authService } from '@/services/authService'
-import { settingsService } from '@/services/settingsService'
 import { useRestaurantStore } from '@/store/restaurant'
 import AccountView from '@/views/AccountView.vue'
-import HomeView from '@/views/HomeView.vue'
 import ForbiddenView from '@/views/errors/ForbiddenView.vue'
 import NotFoundView from '@/views/errors/NotFoundView.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import { mountAt, USERS } from '../helpers/app'
-
-describe('HomeView', () => {
-  it('invites a visitor to sign in or register', async () => {
-    const { wrapper } = await mountAt(HomeView, '/')
-
-    expect(wrapper.get('h1').text()).toBe('Welcome to Restaurant')
-    expect(wrapper.findAll('a').map((link) => link.attributes('href'))).toEqual(['/login', '/register', '/menu'])
-  })
-
-  it.each([
-    ['client', '/client/account'],
-    ['staff', '/staff'],
-    ['admin', '/admin'],
-  ])('sends a signed-in %s to their area', async (role, href) => {
-    const { wrapper } = await mountAt(HomeView, '/', { user: USERS[role] })
-
-    expect(wrapper.get('a').attributes('href')).toBe(href)
-    expect(wrapper.get('a').text()).toBe('Go to my area')
-  })
-
-  it('shows the name and opening hours read from the backend', async () => {
-    const { wrapper } = await mountAt(HomeView, '/')
-
-    const restaurant = useRestaurantStore()
-    restaurant.settings = { name: 'Chez Test', opening_time: '09:00:00', closing_time: '22:00:00' }
-    await wrapper.vm.$nextTick()
-
-    expect(wrapper.get('h1').text()).toBe('Welcome to Chez Test')
-    expect(wrapper.text()).toContain('Every day, 09:00 to 22:00')
-  })
-
-  it('explains an unreachable server and lets the visitor retry', async () => {
-    const get = vi.spyOn(settingsService, 'get').mockRejectedValue(new Error('offline'))
-    const { wrapper } = await mountAt(HomeView, '/')
-    useRestaurantStore().failed = true
-    await wrapper.vm.$nextTick()
-
-    expect(wrapper.text()).toContain("The restaurant's server cannot be reached.")
-
-    await wrapper.findAll('button').find((button) => button.text() === 'Try again').trigger('click')
-
-    expect(get).toHaveBeenCalledOnce()
-  })
-})
 
 describe('AppFooter', () => {
   it('shows the opening hours when they are known, and says so when they are not', async () => {

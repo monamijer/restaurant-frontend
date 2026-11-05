@@ -3,6 +3,7 @@ import { createPinia, setActivePinia } from 'pinia'
 import { afterEach } from 'vitest'
 import { createMemoryHistory } from 'vue-router'
 import { applyLocale, i18n } from '@/i18n'
+import { reveal } from '@/directives/reveal'
 import { createAppRouter } from '@/router'
 import { useAuthStore } from '@/store/auth'
 
@@ -37,7 +38,7 @@ export async function mountAt(component, path = '/', { user = null, props = {}, 
   const wrapper = mount(component, {
     props,
     attachTo: document.body,
-    global: { plugins: [pinia, i18n, router] },
+    global: { plugins: [pinia, i18n, router], directives: { reveal } },
   })
   const unmount = wrapper.unmount.bind(wrapper)
   wrapper.unmount = () => {
