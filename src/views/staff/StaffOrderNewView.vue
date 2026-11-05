@@ -60,6 +60,7 @@
                 :model-value="line.quantity"
                 :min="1"
                 :max="50"
+                :label="line.name"
                 @update:model-value="(q) => setQuantity(line.id, q)"
               />
               <BaseButton variant="ghost" size="sm" type="button" @click="removeLine(line.id)">
