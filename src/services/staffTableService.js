@@ -12,6 +12,25 @@ export const staffTableService = {
     return data
   },
 
+  async get(id) {
+    const { data } = await api.get(`/tables/${id}/`)
+    return data
+  },
+
+  async create(payload) {
+    const { data } = await api.post('/tables/', payload)
+    return data
+  },
+
+  async update(id, payload) {
+    const { data } = await api.patch(`/tables/${id}/`, payload)
+    return data
+  },
+
+  async remove(id) {
+    await api.delete(`/tables/${id}/`)
+  },
+
   async setStatus(id, status) {
     const { data } = await api.post(`/tables/${id}/set-status/`, { status })
     return data

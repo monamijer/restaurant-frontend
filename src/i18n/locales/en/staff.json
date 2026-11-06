@@ -219,6 +219,30 @@
         "occupied": "Occupied",
         "reserved": "Reserved",
         "cleaning": "Cleaning"
+      },
+      "new": "New table",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteTitle": "Delete this table?",
+      "deleteMessage": "Table {number} will be removed. This cannot be undone.",
+      "deleteConfirm": "Delete",
+      "deleted": "Table {number} deleted.",
+      "form": {
+        "newTitle": "New table",
+        "editTitle": "Edit table",
+        "subtitle": "Number and capacity are required.",
+        "loadFailed": "Could not load the table.",
+        "saved": "Table updated.",
+        "created": "Table created.",
+        "fields": {
+          "number": "Table number",
+          "capacity": "Capacity (seats)",
+          "location": "Location"
+        },
+        "validation": {
+          "number": "Enter a whole number of at least 1.",
+          "capacity": "Enter a capacity between 1 and {max}."
+        }
       }
     }
   }

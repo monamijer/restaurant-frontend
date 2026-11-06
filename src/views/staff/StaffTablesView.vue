@@ -16,6 +16,9 @@
       <BaseButton :loading="sheetLoading" :disabled="sheetLoading" @click="downloadSheet">
         {{ $t('staff.tables.sheet') }}
       </BaseButton>
+      <BaseButton v-if="isAdmin" variant="secondary" :to="{ name: 'admin-table-new' }">
+        {{ $t('staff.tables.new') }}
+      </BaseButton>
       <BaseButton variant="ghost" type="button" @click="fetchList">
         {{ $t('staff.common.refresh') }}
       </BaseButton>
@@ -93,6 +96,23 @@
             >
               {{ $t('staff.tables.regenerate') }}
             </BaseButton>
+            <template v-if="isAdmin">
+              <BaseButton
+                size="sm"
+                variant="secondary"
+                :to="{ name: 'admin-table-edit', params: { id: table.id } }"
+              >
+                {{ $t('staff.tables.edit') }}
+              </BaseButton>
+              <BaseButton
+                size="sm"
+                variant="danger"
+                :disabled="busyId === table.id"
+                @click="askDelete(table)"
+              >
+                {{ $t('staff.tables.delete') }}
+              </BaseButton>
+            </template>
           </div>
         </div>
       </li>
@@ -111,10 +131,23 @@
       @cancel="closeDialog"
       @confirm="regenerate"
     />
+
+    <ConfirmDialog
+      :open="deleteDialog.open"
+      danger
+      :title="$t('staff.tables.deleteTitle')"
+      :message="$t('staff.tables.deleteMessage', { number: deleteDialog.table?.number })"
+      :confirm-label="$t('staff.tables.deleteConfirm')"
+      :cancel-label="$t('common.cancel')"
+      :loading="busyId === deleteDialog.table?.id"
+      @cancel="closeDeleteDialog"
+      @confirm="removeTable"
+    />
   </div>
 </template>
 
 <script>
+import { mapState } from 'pinia'
 import BaseButton from '@/components/common/BaseButton.vue'
 import BasePagination from '@/components/common/BasePagination.vue'
 import BaseSkeleton from '@/components/common/BaseSkeleton.vue'
@@ -123,6 +156,7 @@ import EmptyState from '@/components/common/EmptyState.vue'
 import FormAlert from '@/components/common/FormAlert.vue'
 import StaffNav from '@/components/staff/StaffNav.vue'
 import { staffTableService } from '@/services/staffTableService'
+import { useAuthStore } from '@/store/auth'
 import { useToastStore } from '@/store/toasts'
 import { describeError } from '@/utils/errors'
 import { saveBlob } from '@/utils/download'
@@ -150,9 +184,11 @@ export default {
         location: this.$route.query.location || '',
       },
       dialog: { open: false, table: null },
+      deleteDialog: { open: false, table: null },
     }
   },
   computed: {
+    ...mapState(useAuthStore, ['isAdmin']),
     page() {
       const p = Number.parseInt(this.$route.query.page, 10)
       return Number.isInteger(p) && p >= 1 ? p : 1
@@ -265,6 +301,34 @@ export default {
         this.actionError = describeError(error, this.$t.bind(this))
       } finally {
         this.sheetLoading = false
+      }
+    },
+
+    askDelete(table) {
+      this.deleteDialog = { open: true, table }
+    },
+
+    closeDeleteDialog() {
+      this.deleteDialog = { open: false, table: null }
+    },
+
+    async removeTable() {
+      const table = this.deleteDialog.table
+      if (!table || this.busyId) return
+      this.busyId = table.id
+      this.busyKind = 'delete'
+      this.actionError = ''
+      try {
+        await staffTableService.remove(table.id)
+        useToastStore().success(this.$t('staff.tables.deleted', { number: table.number }))
+        this.closeDeleteDialog()
+        await this.fetchList()
+      } catch (error) {
+        this.closeDeleteDialog()
+        this.actionError = describeError(error, this.$t.bind(this))
+      } finally {
+        this.busyId = null
+        this.busyKind = null
       }
     },
 

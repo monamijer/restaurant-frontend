@@ -211,6 +211,18 @@ const routes = [
     meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'admin.users.title' },
   },
   {
+    path: '/admin/tables/new',
+    name: 'admin-table-new',
+    component: () => import('@/views/admin/AdminTableFormView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'staff.tables.form.newTitle' },
+  },
+  {
+    path: '/admin/tables/:id(\\d+)/edit',
+    name: 'admin-table-edit',
+    component: () => import('@/views/admin/AdminTableFormView.vue'),
+    meta: { layout: 'main', requiresAuth: true, roles: [ROLES.ADMIN], titleKey: 'staff.tables.form.editTitle' },
+  },
+  {
     path: '/admin/users/new',
     name: 'admin-user-new',
     component: () => import('@/views/admin/AdminUserNewView.vue'),

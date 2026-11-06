@@ -219,6 +219,30 @@
         "occupied": "Occupee",
         "reserved": "Reservee",
         "cleaning": "Nettoyage"
+      },
+      "new": "Nouvelle table",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "deleteTitle": "Supprimer cette table ?",
+      "deleteMessage": "La table {number} sera supprimée. Cette action est irréversible.",
+      "deleteConfirm": "Supprimer",
+      "deleted": "Table {number} supprimée.",
+      "form": {
+        "newTitle": "Nouvelle table",
+        "editTitle": "Modifier la table",
+        "subtitle": "Le numéro et la capacité sont obligatoires.",
+        "loadFailed": "Impossible de charger la table.",
+        "saved": "Table modifiée.",
+        "created": "Table créée.",
+        "fields": {
+          "number": "Numéro de table",
+          "capacity": "Capacité (places)",
+          "location": "Emplacement"
+        },
+        "validation": {
+          "number": "Saisissez un nombre entier supérieur ou égal à 1.",
+          "capacity": "Saisissez une capacité entre 1 et {max}."
+        }
       }
     }
   }
