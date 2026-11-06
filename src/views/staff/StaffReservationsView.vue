@@ -14,6 +14,11 @@
 
     <form class="filters cluster" @submit.prevent="applyFilters">
       <label class="field">
+        <span>{{ $t('staff.reservations.filters.search') }}</span>
+        <input v-model.trim="draft.search" type="search" class="control" maxlength="100" autocomplete="off" />
+      </label>
+
+      <label class="field">
         <span>{{ $t('staff.reservations.filters.date') }}</span>
         <input v-model="draft.date" type="date" class="control" />
       </label>
@@ -56,7 +61,7 @@
             {{ formatDay(r.date, locale) }} {{ r.time }} · {{ r.duration_minutes }} min
           </p>
           <p class="muted card__meta">
-            {{ $t('staff.reservations.customer') }}: {{ r.customer || '—' }}
+            {{ $t('staff.reservations.customer') }}: {{ r.customer_name || '—' }}
           </p>
         </div>
 
@@ -133,6 +138,7 @@ export default {
       draft: {
         date: this.$route.query.date || '',
         status: this.$route.query.status || '',
+        search: this.$route.query.search || '',
       },
     }
   },
@@ -149,6 +155,7 @@ export default {
       const q = { page: this.page, page_size: PAGE_SIZE }
       if (this.$route.query.status) q.status = this.$route.query.status
       if (this.$route.query.date) q.date = this.$route.query.date
+      if (this.$route.query.search) q.search = this.$route.query.search
       return q
     },
   },
@@ -180,6 +187,7 @@ export default {
     syncDraft() {
       this.draft.date = this.$route.query.date || ''
       this.draft.status = this.$route.query.status || ''
+      this.draft.search = this.$route.query.search || ''
     },
 
     async fetchList() {
@@ -207,12 +215,14 @@ export default {
       const query = {}
       if (this.draft.status) query.status = this.draft.status
       if (this.draft.date) query.date = this.draft.date
+      if (this.draft.search) query.search = this.draft.search
       this.$router.push({ name: 'staff-reservations', query })
     },
 
     clearFilters() {
       this.draft.date = ''
       this.draft.status = ''
+      this.draft.search = ''
       this.$router.push({ name: 'staff-reservations', query: {} })
     },
 

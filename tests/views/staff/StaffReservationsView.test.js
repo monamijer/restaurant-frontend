@@ -6,7 +6,8 @@ import { staffReservationService } from '../../../src/services/staffReservationS
 
 const PENDING = {
   id: 7,
-  customer: 'Ada',
+  customer: 1,
+  customer_name: 'Ada',
   table_number: '5',
   date: '2026-11-05',
   time: '19:00',

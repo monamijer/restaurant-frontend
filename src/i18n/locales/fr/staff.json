@@ -144,6 +144,7 @@
       "customer": "Client",
       "updated": "Reservation mise a jour.",
       "filters": {
+        "search": "Nom ou email du client",
         "date": "Date",
         "status": "Statut",
         "all": "Toutes",
