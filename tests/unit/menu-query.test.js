@@ -18,9 +18,9 @@ describe('parseMenuQuery', () => {
   })
 
   it('reads every filter from the address', () => {
-    const filters = parseMenuQuery({ q: ' fish ', category: 'mains', available: '1', ordering: '-price', page: '3' })
+    const filters = parseMenuQuery({ q: ' fish ', category: 'mains', available: '1', min_price: '5', max_price: '20.50', ordering: '-price', page: '3' })
 
-    expect(filters).toEqual({ search: 'fish', category: 'mains', availableOnly: true, ordering: '-price', page: 3 })
+    expect(filters).toEqual({ search: 'fish', category: 'mains', availableOnly: true, minPrice: '5', maxPrice: '20.50', ordering: '-price', page: 3 })
   })
 
   it('uses the first value when a parameter is repeated', () => {
@@ -50,6 +50,14 @@ describe('parseMenuQuery', () => {
   it('treats anything but 1 as "not only available"', () => {
     expect(parseMenuQuery({ available: 'true' }).availableOnly).toBe(false)
   })
+
+  it.each(['abc', '-1', '1e3', '1.234', '1234567'])('drops the invalid price %j', (value) => {
+    expect(parseMenuQuery({ min_price: value, max_price: value })).toMatchObject({ minPrice: '', maxPrice: '' })
+  })
+
+  it('sends valid prices to the backend', () => {
+    expect(toApiParams({ ...EMPTY_FILTERS, minPrice: '5', maxPrice: '20' })).toMatchObject({ min_price: '5', max_price: '20' })
+  })
 })
 
 describe('toRouteQuery', () => {
@@ -64,7 +72,7 @@ describe('toRouteQuery', () => {
   })
 
   it('round-trips through parseMenuQuery', () => {
-    const filters = { search: 'grillé', category: 'grillades', availableOnly: true, ordering: '-price', page: 4 }
+    const filters = { search: 'grillé', category: 'grillades', availableOnly: true, minPrice: '5', maxPrice: '20.5', ordering: '-price', page: 4 }
 
     expect(parseMenuQuery(toRouteQuery(filters))).toEqual(filters)
   })

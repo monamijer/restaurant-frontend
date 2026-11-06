@@ -16,6 +16,8 @@
       "prepAsc": "Les plus rapides"
     },
     "availableOnly": "Plats disponibles uniquement",
+    "priceMin": "Prix min",
+    "priceMax": "Prix max",
     "clearFilters": "Effacer les filtres",
     "results": "{count} plat | {count} plats",
     "loadingResults": "Chargement de la carte…",

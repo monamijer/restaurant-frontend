@@ -16,16 +16,24 @@ export const ORDERING_OPTIONS = [
 
 const ORDERINGS = ORDERING_OPTIONS.map((option) => option.value)
 const SLUG_PATTERN = /^[\w-]{1,100}$/
+const PRICE_PATTERN = /^\d{1,6}(\.\d{1,2})?$/
 
 export const EMPTY_FILTERS = Object.freeze({
   search: '',
   category: '',
   availableOnly: false,
+  minPrice: '',
+  maxPrice: '',
   ordering: DEFAULT_ORDERING,
   page: 1,
 })
 
 const first = (value) => (Array.isArray(value) ? value[0] : value)
+
+const price = (value) => {
+  const text = String(first(value) ?? '').trim()
+  return PRICE_PATTERN.test(text) ? text : ''
+}
 
 /** Read the filters from the address, ignoring anything unexpected. */
 export function parseMenuQuery(query = {}) {
@@ -38,6 +46,8 @@ export function parseMenuQuery(query = {}) {
     search,
     category: SLUG_PATTERN.test(category) ? category : '',
     availableOnly: first(query.available) === '1',
+    minPrice: price(query.min_price),
+    maxPrice: price(query.max_price),
     ordering: ORDERINGS.includes(ordering) ? ordering : DEFAULT_ORDERING,
     page: Number.isInteger(page) && page >= 1 ? Math.min(page, MAX_PAGE) : 1,
   }
@@ -49,6 +59,8 @@ export function toRouteQuery(filters) {
   if (filters.search) query.q = filters.search
   if (filters.category) query.category = filters.category
   if (filters.availableOnly) query.available = '1'
+  if (filters.minPrice) query.min_price = filters.minPrice
+  if (filters.maxPrice) query.max_price = filters.maxPrice
   if (filters.ordering !== DEFAULT_ORDERING) query.ordering = filters.ordering
   if (filters.page > 1) query.page = String(filters.page)
   return query
@@ -60,6 +72,8 @@ export function toApiParams(filters) {
   if (filters.search) params.search = filters.search
   if (filters.category) params.category_slug = filters.category
   if (filters.availableOnly) params.is_available = true
+  if (filters.minPrice) params.min_price = filters.minPrice
+  if (filters.maxPrice) params.max_price = filters.maxPrice
   if (filters.page > 1) params.page = filters.page
   return params
 }
@@ -70,5 +84,7 @@ export function totalPages(count) {
 
 /** True when something other than the sort order narrows the list. */
 export function hasActiveFilters(filters) {
-  return Boolean(filters.search || filters.category || filters.availableOnly)
+  return Boolean(
+    filters.search || filters.category || filters.availableOnly || filters.minPrice || filters.maxPrice,
+  )
 }

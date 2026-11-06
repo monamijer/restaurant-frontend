@@ -45,6 +45,17 @@
       </button>
     </div>
 
+    <div class="filters__prices">
+      <label class="filters__field">
+        <span class="filters__label">{{ $t('menu.priceMin') }}</span>
+        <input class="filters__select" type="number" min="0" step="0.01" inputmode="decimal" :value="filters.minPrice" @change="onPrice('minPrice', $event)" />
+      </label>
+      <label class="filters__field">
+        <span class="filters__label">{{ $t('menu.priceMax') }}</span>
+        <input class="filters__select" type="number" min="0" step="0.01" inputmode="decimal" :value="filters.maxPrice" @change="onPrice('maxPrice', $event)" />
+      </label>
+    </div>
+
     <div class="filters__bottom">
       <label class="filters__check">
         <input type="checkbox" :checked="filters.availableOnly" @change="onAvailability" />
@@ -105,6 +116,9 @@ export default {
     },
     onAvailability(event) {
       this.$emit('change', { availableOnly: event.target.checked })
+    },
+    onPrice(field, event) {
+      this.$emit('change', { [field]: event.target.value.trim() })
     },
   },
 }
@@ -174,6 +188,18 @@ export default {
   .chip:not(.chip--active):hover {
     background: var(--color-surface-sunken);
   }
+}
+
+.filters__prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.filters__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
 }
 
 .filters__bottom {

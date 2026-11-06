@@ -16,6 +16,8 @@
       "prepAsc": "Fastest to prepare"
     },
     "availableOnly": "Available dishes only",
+    "priceMin": "Min price",
+    "priceMax": "Max price",
     "clearFilters": "Clear filters",
     "results": "{count} dish | {count} dishes",
     "loadingResults": "Loading the menu…",
