@@ -8,7 +8,8 @@
       "reservations": "Reservations",
       "queue": "Queue",
       "tables": "Tables",
-      "payments": "Payments"
+      "payments": "Payments",
+      "menu": "Menu"
     },
     "common": {
       "refresh": "Refresh",
@@ -191,6 +192,18 @@
       "cancelTitle": "Cancel this ticket?",
       "cancelMessage": "The guest loses their place. This cannot be undone.",
       "cancelConfirm": "Yes, cancel it"
+    },
+    "menu": {
+      "title": "Menu availability",
+      "subtitle": "Mark dishes as available or sold out during service.",
+      "available": "On the menu",
+      "unavailable": "Off the menu",
+      "enable": "Show on the menu",
+      "disable": "Remove from the menu",
+      "updated": "Menu updated.",
+      "empty": "No dish found.",
+      "failed": "Could not load the menu.",
+      "filters": { "category": "Category", "all": "All", "search": "Search", "apply": "Apply", "clear": "Clear" }
     },
     "payments": {
       "title": "Payments",

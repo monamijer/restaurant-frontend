@@ -8,7 +8,8 @@
       "reservations": "Reservations",
       "queue": "File d attente",
       "tables": "Tables",
-      "payments": "Paiements"
+      "payments": "Paiements",
+      "menu": "Menu"
     },
     "common": {
       "refresh": "Rafraichir",
@@ -191,6 +192,18 @@
       "cancelTitle": "Annuler ce ticket ?",
       "cancelMessage": "Le client perd sa place. Cette action est definitive.",
       "cancelConfirm": "Oui, annuler"
+    },
+    "menu": {
+      "title": "Disponibilité du menu",
+      "subtitle": "Marquez les plats disponibles ou épuisés pendant le service.",
+      "available": "Au menu",
+      "unavailable": "Hors menu",
+      "enable": "Remettre au menu",
+      "disable": "Retirer du menu",
+      "updated": "Menu mis à jour.",
+      "empty": "Aucun plat trouvé.",
+      "failed": "Impossible de charger le menu.",
+      "filters": { "category": "Catégorie", "all": "Toutes", "search": "Recherche", "apply": "Appliquer", "clear": "Effacer" }
     },
     "payments": {
       "title": "Paiements",
