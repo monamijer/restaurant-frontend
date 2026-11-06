@@ -52,6 +52,13 @@ describe('StaffReservationsView', () => {
     expect(spy).toHaveBeenCalledWith({ page: 1, page_size: 20, status: 'confirmed', date: '2026-11-05' })
   })
 
+  it('passes the customer search to the service', async () => {
+    const spy = vi.spyOn(staffReservationService, 'list').mockResolvedValue(PAGE([]))
+    await mountAt(StaffReservationsView, '/staff/reservations?search=ada', { user: USERS.staff })
+    await flushPromises()
+    expect(spy).toHaveBeenCalledWith({ page: 1, page_size: 20, search: 'ada' })
+  })
+
   it('offers a retry when the list fails', async () => {
     vi.spyOn(staffReservationService, 'list').mockRejectedValue(new Error('boom'))
     const { wrapper } = await mountAt(StaffReservationsView, '/staff/reservations', { user: USERS.staff })
