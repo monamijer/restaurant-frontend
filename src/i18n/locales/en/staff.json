@@ -35,7 +35,8 @@
       "shortcuts": {
         "orders": "Open the order board",
         "newOrder": "Create a walk-in order"
-      }
+      },
+      "tablesChartTitle": "Table status today"
     },
     "orders": {
       "title": "Order board",

@@ -41,6 +41,11 @@
       </article>
     </div>
 
+    <section v-if="tableChart" class="tables-chart" aria-labelledby="tables-chart-title">
+      <h2 id="tables-chart-title">{{ $t('staff.home.tablesChartTitle') }}</h2>
+      <BaseChart type="doughnut" :data="tableChart" :label="$t('staff.home.tablesChartTitle')" />
+    </section>
+
     <section class="shortcuts">
       <h2>{{ $t('staff.home.shortcutsTitle') }}</h2>
       <div class="cluster">
@@ -56,6 +61,7 @@
 <script>
 import { mapState } from 'pinia'
 import BaseButton from '@/components/common/BaseButton.vue'
+import BaseChart from '@/components/common/BaseChart.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
 import StaffNav from '@/components/staff/StaffNav.vue'
 import { CURRENCY } from '@/config'
@@ -67,12 +73,19 @@ const DASH = '—'
 
 export default {
   name: 'StaffHomeView',
-  components: { BaseButton, EmptyState, StaffNav },
+  components: { BaseButton, BaseChart, EmptyState, StaffNav },
   data() {
     return { stats: null, loading: false, failed: false }
   },
   computed: {
     ...mapState(useUiStore, ['locale']),
+    tableChart() {
+      const t = this.stats?.today?.tables
+      if (!t || !t.total) return null
+      const keys = ['available', 'occupied', 'reserved', 'cleaning']
+      return { labels: keys.map((k) => this.$t(`admin.dashboard.tableStates.${k}`)),
+        datasets: [{ label: this.$t('staff.home.tablesChartTitle'), data: keys.map((k) => t[k] || 0) }] }
+    },
     tablesValue() { return this.stats?.today?.tables?.occupied ?? null },
     tablesTotal() { return this.stats?.today?.tables?.total ?? null },
     queueWaiting() { return this.stats?.today?.queue?.waiting ?? null },
@@ -141,6 +154,10 @@ export default {
 }
 
 .shortcuts h2 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-3);
+}
+.tables-chart h2 {
   font-size: var(--text-lg);
   margin-bottom: var(--space-3);
 }

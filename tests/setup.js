@@ -1,4 +1,14 @@
-import { afterEach } from 'vitest'
+import { afterEach, vi } from 'vitest'
+
+// jsdom has no canvas: the charting library is replaced by a stub.
+vi.mock('chart.js', () => {
+  class Chart {
+    constructor(canvas, config) { this.canvas = canvas; this.config = config }
+    destroy() {}
+    static register() {}
+  }
+  return { Chart, registerables: [] }
+})
 
 // Component tests run in jsdom; pure-logic tests opt into Node and have no `window` at all.
 if (typeof window !== 'undefined') {

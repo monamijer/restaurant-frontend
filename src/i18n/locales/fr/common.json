@@ -9,7 +9,11 @@
     "retry": "Réessayer",
     "showPassword": "Afficher",
     "hidePassword": "Masquer",
-    "optional": "facultatif"
+    "optional": "facultatif",
+    "chart": {
+      "showData": "Afficher les données sous forme de tableau",
+      "category": "Catégorie"
+    }
   },
   "theme": {
     "switchToDark": "Passer au thème sombre",

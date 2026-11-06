@@ -12,7 +12,7 @@ the menu, the users and the reports.
 
 - Vue 3.5, **Options API only** (`<script setup>`, `setup()`, `ref`/`reactive`/`computed`
   imports are rejected by ESLint)
-- Vite 8, Vue Router 5, Pinia 4 (options stores), Axios 1.20, vue-i18n 11
+- Vite 8, Vue Router 5, Pinia 4 (options stores), Axios 1.20, vue-i18n 11, Chart.js 4 (charts, via BaseChart)
 - Vitest 5 + @vue/test-utils + jsdom, ESLint 10
 - Self-hosted fonts (Fraunces for headings, Inter for text), design tokens in
   `src/assets/styles/tokens.css`, no UI framework

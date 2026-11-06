@@ -59,7 +59,9 @@
 
     <template v-else-if="!csvOnly">
       <EmptyState v-if="rows.length === 0" :title="$t('admin.reports.empty')" />
-      <div v-else class="table-wrap">
+      <BaseChart v-else-if="chart" :type="chart.type" :data="chart.data"
+        :label="$t('admin.reports.chartLabel', { name: $t(`admin.reports.names.${currentReport.key}`) })" />
+      <div v-if="rows.length > 0" class="table-wrap">
         <table class="table">
           <thead>
             <tr>
@@ -83,6 +85,7 @@
 import { mapState } from 'pinia'
 import AdminNav from '@/components/admin/AdminNav.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
+import BaseChart from '@/components/common/BaseChart.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
 import { CURRENCY } from '@/config'
 import { adminReportService } from '@/services/adminReportService'
@@ -154,7 +157,7 @@ const DATE_COLUMNS = ['created_at', 'paid_at']
 
 export default {
   name: 'AdminReportsView',
-  components: { AdminNav, BaseButton, EmptyState },
+  components: { AdminNav, BaseButton, BaseChart, EmptyState },
   data() {
     return {
       rows: [],
@@ -179,6 +182,18 @@ export default {
     },
     csvOnly() {
       return this.currentReport.csvOnly
+    },
+    chart() {
+      const rows = this.rows
+      const set = (key, field) => ({ label: this.$t(`admin.reports.series.${key}`), data: rows.map((r) => Number(r[field])) })
+      switch (this.draft.report) {
+        case 'revenue': return { type: 'line', data: { labels: rows.map((r) => r.period), datasets: [set('revenue', 'revenue')] } }
+        case 'order-volume': return { type: 'bar', data: { labels: rows.map((r) => r.period), datasets: [set('orders', 'total')] } }
+        case 'top-items': return { type: 'bar', data: { labels: rows.map((r) => r.name), datasets: [set('quantity', 'quantity')] } }
+        case 'peak-hours': return { type: 'bar', data: { labels: rows.map((r) => `${r.hour}h`), datasets: [set('orders', 'orders')] } }
+        case 'table-utilization': return { type: 'bar', data: { labels: rows.map((r) => String(r.number)), datasets: [set('utilisation', 'utilisation_percent')] } }
+        default: return null
+      }
     },
     supportsGroupBy() {
       return this.currentReport.supportsGroupBy

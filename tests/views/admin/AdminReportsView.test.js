@@ -18,7 +18,7 @@ describe('AdminReportsView', () => {
     vi.spyOn(adminReportService, 'revenue').mockResolvedValue(REVENUE)
     const { wrapper } = await mountAt(AdminReportsView, '/admin/reports', { user: USERS.admin })
     await flushPromises()
-    const rows = wrapper.findAll('tbody tr')
+    const rows = wrapper.findAll('.table-wrap tbody tr')
     expect(rows).toHaveLength(2)
     expect(wrapper.text()).toContain('$500.00')
     expect(wrapper.text()).toContain('$700.00')

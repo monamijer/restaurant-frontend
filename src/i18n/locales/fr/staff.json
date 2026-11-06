@@ -35,7 +35,8 @@
       "shortcuts": {
         "orders": "Ouvrir le tableau des commandes",
         "newOrder": "Creer une commande au comptoir"
-      }
+      },
+      "tablesChartTitle": "État des tables aujourd’hui"
     },
     "orders": {
       "title": "Tableau des commandes",

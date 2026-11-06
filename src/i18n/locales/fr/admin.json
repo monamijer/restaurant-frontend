@@ -243,6 +243,26 @@
         "day": "Jour",
         "week": "Semaine",
         "month": "Mois"
+      },
+      "occupancyTitle": "Occupation des tables",
+      "orderMixTitle": "Répartition des commandes",
+      "topItemsChartTitle": "Plats populaires (quantité)",
+      "series": {
+        "revenue": "Revenus",
+        "orders": "Commandes",
+        "quantity": "Quantité"
+      },
+      "tableStates": {
+        "available": "Libre",
+        "occupied": "Occupée",
+        "reserved": "Réservée",
+        "cleaning": "Nettoyage"
+      },
+      "orderTypes": {
+        "dine_in": "Sur place",
+        "takeaway": "À emporter",
+        "delivery": "Livraison",
+        "cancelled": "Annulée"
       }
     },
     "reports": {
@@ -303,6 +323,13 @@
         "day": "Jour",
         "week": "Semaine",
         "month": "Mois"
+      },
+      "chartLabel": "Graphique : {name}",
+      "series": {
+        "revenue": "Revenus",
+        "orders": "Commandes",
+        "quantity": "Quantité",
+        "utilisation": "Utilisation (%)"
       }
     }
   }

@@ -243,6 +243,26 @@
         "day": "Day",
         "week": "Week",
         "month": "Month"
+      },
+      "occupancyTitle": "Table occupancy",
+      "orderMixTitle": "Order mix",
+      "topItemsChartTitle": "Top dishes (quantity)",
+      "series": {
+        "revenue": "Revenue",
+        "orders": "Orders",
+        "quantity": "Quantity"
+      },
+      "tableStates": {
+        "available": "Available",
+        "occupied": "Occupied",
+        "reserved": "Reserved",
+        "cleaning": "Cleaning"
+      },
+      "orderTypes": {
+        "dine_in": "Dine-in",
+        "takeaway": "Takeaway",
+        "delivery": "Delivery",
+        "cancelled": "Cancelled"
       }
     },
     "reports": {
@@ -303,6 +323,13 @@
         "day": "Day",
         "week": "Week",
         "month": "Month"
+      },
+      "chartLabel": "Chart: {name}",
+      "series": {
+        "revenue": "Revenue",
+        "orders": "Orders",
+        "quantity": "Quantity",
+        "utilisation": "Utilisation (%)"
       }
     }
   }

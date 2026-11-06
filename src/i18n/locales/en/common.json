@@ -9,7 +9,11 @@
     "retry": "Try again",
     "showPassword": "Show",
     "hidePassword": "Hide",
-    "optional": "optional"
+    "optional": "optional",
+    "chart": {
+      "showData": "Show data as a table",
+      "category": "Category"
+    }
   },
   "theme": {
     "switchToDark": "Switch to dark theme",

@@ -75,18 +75,34 @@
 
       <section aria-labelledby="revenue-title">
         <h2 id="revenue-title" class="section-title">{{ $t('admin.dashboard.revenueTitle') }}</h2>
-        <BarsChart :points="revenueBars" :label="$t('admin.dashboard.revenueTitle')" value-kind="money" />
+        <EmptyState v-if="stats.revenue_over_time.length === 0" :title="$t('admin.dashboard.emptySeries')" />
+        <BaseChart v-else type="line" :data="revenueChart" :label="$t('admin.dashboard.revenueTitle')" />
       </section>
 
       <section aria-labelledby="orders-title">
         <h2 id="orders-title" class="section-title">{{ $t('admin.dashboard.ordersTitle') }}</h2>
-        <BarsChart :points="orderBars" :label="$t('admin.dashboard.ordersTitle')" value-kind="count" />
+        <EmptyState v-if="stats.orders_over_time.length === 0" :title="$t('admin.dashboard.emptySeries')" />
+        <BaseChart v-else type="bar" :data="ordersChart" :label="$t('admin.dashboard.ordersTitle')" />
       </section>
+
+      <div class="charts-pair">
+        <section aria-labelledby="mix-title">
+          <h2 id="mix-title" class="section-title">{{ $t('admin.dashboard.orderMixTitle') }}</h2>
+          <EmptyState v-if="orderMixTotal === 0" :title="$t('admin.dashboard.emptySeries')" />
+          <BaseChart v-else type="doughnut" :data="orderMixChart" :label="$t('admin.dashboard.orderMixTitle')" />
+        </section>
+        <section aria-labelledby="occupancy-title">
+          <h2 id="occupancy-title" class="section-title">{{ $t('admin.dashboard.occupancyTitle') }}</h2>
+          <EmptyState v-if="stats.today.tables.total === 0" :title="$t('admin.dashboard.emptySeries')" />
+          <BaseChart v-else type="doughnut" :data="occupancyChart" :label="$t('admin.dashboard.occupancyTitle')" />
+        </section>
+      </div>
 
       <section aria-labelledby="top-title">
         <h2 id="top-title" class="section-title">{{ $t('admin.dashboard.topItemsTitle') }}</h2>
         <EmptyState v-if="stats.top_items.length === 0" :title="$t('admin.dashboard.noTopItems')" />
-        <table v-else class="table">
+        <BaseChart v-if="stats.top_items.length > 0" type="bar" :data="topItemsChart" :options="{ indexAxis: 'y' }" :label="$t('admin.dashboard.topItemsChartTitle')" />
+        <table v-if="stats.top_items.length > 0"  class="table">
           <thead>
             <tr>
               <th>{{ $t('admin.dashboard.columns.name') }}</th>
@@ -124,8 +140,8 @@
 import { mapState } from 'pinia'
 import AdminNav from '@/components/admin/AdminNav.vue'
 import BaseButton from '@/components/common/BaseButton.vue'
+import BaseChart from '@/components/common/BaseChart.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
-import BarsChart from '@/views/admin/BarsChart.vue'
 import { CURRENCY } from '@/config'
 import { adminDashboardService } from '@/services/adminDashboardService'
 import { useUiStore } from '@/store/ui'
@@ -135,7 +151,7 @@ const KPI_KEYS = ['revenue', 'orders', 'average_order_value', 'new_customers']
 
 export default {
   name: 'AdminDashboardView',
-  components: { AdminNav, BaseButton, BarsChart, EmptyState },
+  components: { AdminNav, BaseButton, BaseChart, EmptyState },
   data() {
     return {
       stats: null,
@@ -161,13 +177,9 @@ export default {
         }
       })
     },
-    revenueBars() {
-      if (!this.stats) return []
-      return this.stats.revenue_over_time.map((row) => ({
-        label: row.period,
-        value: Number(row.revenue),
-        display: this.money(row.revenue),
-      }))
+    revenueChart() {
+      return { labels: this.stats.revenue_over_time.map((r) => r.period),
+        datasets: [{ label: this.$t('admin.dashboard.series.revenue'), data: this.stats.revenue_over_time.map((r) => Number(r.revenue)) }] }
     },
     periodStart() {
       if (!this.stats) return ''
@@ -177,13 +189,27 @@ export default {
       if (!this.stats) return ''
       return formatDay(this.stats.period.end, this.locale)
     },
-    orderBars() {
-      if (!this.stats) return []
-      return this.stats.orders_over_time.map((row) => ({
-        label: row.period,
-        value: row.total,
-        display: String(row.total),
-      }))
+    ordersChart() {
+      return { labels: this.stats.orders_over_time.map((r) => r.period),
+        datasets: [{ label: this.$t('admin.dashboard.series.orders'), data: this.stats.orders_over_time.map((r) => r.total) }] }
+    },
+    orderMixTotals() {
+      return ['dine_in', 'takeaway', 'delivery', 'cancelled'].map((k) => this.stats.orders_over_time.reduce((n, r) => n + (r[k] || 0), 0))
+    },
+    orderMixTotal() { return this.orderMixTotals.reduce((n, v) => n + v, 0) },
+    orderMixChart() {
+      return { labels: ['dine_in', 'takeaway', 'delivery', 'cancelled'].map((k) => this.$t(`admin.dashboard.orderTypes.${k}`)),
+        datasets: [{ label: this.$t('admin.dashboard.series.orders'), data: this.orderMixTotals }] }
+    },
+    occupancyChart() {
+      const keys = ['available', 'occupied', 'reserved', 'cleaning']
+      const t = this.stats.today.tables
+      return { labels: keys.map((k) => this.$t(`admin.dashboard.tableStates.${k}`)),
+        datasets: [{ label: this.$t('admin.dashboard.occupancyTitle'), data: keys.map((k) => t[k] || 0) }] }
+    },
+    topItemsChart() {
+      return { labels: this.stats.top_items.map((i) => i.name),
+        datasets: [{ label: this.$t('admin.dashboard.series.quantity'), data: this.stats.top_items.map((i) => i.quantity) }] }
     },
   },
   watch: {
@@ -423,5 +449,10 @@ export default {
 
 .activity__type {
   font-weight: 700;
+}
+.charts-pair {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 </style>
