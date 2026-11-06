@@ -8,13 +8,13 @@ describe('TermsOfServiceView', () => {
     const text = wrapper.text()
     expect(text).toContain('Terms of service')
     expect(text).toContain('1. The service')
-    expect(text).toContain('6. Applicable law')
-    expect(text).toContain('Vue.js exam project')
+    expect(text).toContain('8. Applicable law')
+    expect(text).toContain('academic course')
   })
 
   it('has exactly six section headings and one page heading', async () => {
     const { wrapper } = await mountAt(TermsOfServiceView, '/terms')
-    expect(wrapper.findAll('h2')).toHaveLength(6)
+    expect(wrapper.findAll('h2')).toHaveLength(9)
     expect(wrapper.findAll('h1')).toHaveLength(1)
   })
 })

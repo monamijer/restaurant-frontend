@@ -8,14 +8,14 @@ describe('PrivacyPolicyView', () => {
     const text = wrapper.text()
     expect(text).toContain('Privacy policy')
     expect(text).toContain('1. Data we collect')
-    expect(text).toContain('6. Your rights')
-    expect(text).toContain('Vue.js exam project')
+    expect(text).toContain('7. Your rights')
+    expect(text).toContain('academic course')
     expect(text).toContain('hello@maisha.example')
   })
 
   it('has exactly six section headings and one page heading', async () => {
     const { wrapper } = await mountAt(PrivacyPolicyView, '/privacy')
-    expect(wrapper.findAll('h2')).toHaveLength(6)
+    expect(wrapper.findAll('h2')).toHaveLength(9)
     expect(wrapper.findAll('h1')).toHaveLength(1)
   })
 })
