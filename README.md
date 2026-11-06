@@ -4,6 +4,7 @@
 ![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)
 ![Tests](https://img.shields.io/badge/tests-Vitest-6e9f18?logo=vitest&logoColor=white)
 ![i18n](https://img.shields.io/badge/i18n-EN%20%7C%20FR-blue)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Vue 3 single-page application for the restaurant **table, queue and online ordering** system. It talks to the Django REST API of the [`restaurant-backend`](https://github.com/monamijer/restaurant-backend) repository.
 
