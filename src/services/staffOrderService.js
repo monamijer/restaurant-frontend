@@ -1,4 +1,4 @@
-import { api } from './api';
+import { api } from './api'
 
 /**
  * Staff-side order operations. Wraps the same backend endpoints as
@@ -11,14 +11,14 @@ const staffOrderService = {
    * Query: { status, order_type, table, active, ordering, page, page_size }
    */
   async list(query = {}) {
-    const response = await api.get('/orders/', { params: query });
-    return response.data;
+    const response = await api.get('/orders/', { params: query })
+    return response.data
   },
 
   /** Fetch a single order by id (staff sees any order). */
   async get(id) {
-    const response = await api.get(`/orders/${id}/`);
-    return response.data;
+    const response = await api.get(`/orders/${id}/`)
+    return response.data
   },
 
   /**
@@ -26,8 +26,8 @@ const staffOrderService = {
    * The server enforces the transitions and returns the updated order.
    */
   async updateStatus(id, status) {
-    const response = await api.post(`/orders/${id}/update-status/`, { status });
-    return response.data;
+    const response = await api.post(`/orders/${id}/update-status/`, { status })
+    return response.data
   },
 
   /**
@@ -35,8 +35,8 @@ const staffOrderService = {
    * answers with a CONFLICT or VALIDATION error, mapped by `api.js`.
    */
   async cancel(id) {
-    const response = await api.post(`/orders/${id}/cancel/`);
-    return response.data;
+    const response = await api.post(`/orders/${id}/cancel/`)
+    return response.data
   },
 
   /**
@@ -44,9 +44,9 @@ const staffOrderService = {
    * Body: { order_type, table?, contact_phone?, notes?, items: [...] }
    */
   async create(payload) {
-    const response = await api.post('/orders/', payload);
-    return response.data;
+    const response = await api.post('/orders/', payload)
+    return response.data
   },
-};
+}
 
-export default staffOrderService;
+export default staffOrderService

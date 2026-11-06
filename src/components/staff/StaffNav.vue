@@ -30,9 +30,9 @@ export default {
         { name: 'staff-menu', labelKey: 'staff.nav.menu' },
         { name: 'staff-customers', labelKey: 'staff.nav.customers' },
       ],
-    };
+    }
   },
-};
+}
 </script>
 
 <style scoped>

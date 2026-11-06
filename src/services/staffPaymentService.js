@@ -1,4 +1,4 @@
-import { api } from './api';
+import { api } from './api'
 
 /**
  * Staff-side payment operations. Only cash payments can be confirmed by
@@ -12,14 +12,14 @@ const staffPaymentService = {
   async listForOrder(orderId, query = {}) {
     const response = await api.get('/payments/', {
       params: { order: orderId, ordering: '-created_at', ...query },
-    });
-    return response.data;
+    })
+    return response.data
   },
 
   /** One page of payments. Filters: status, method, search (reference), page, page_size. */
   async list(params = {}) {
-    const response = await api.get('/payments/', { params: { ordering: '-created_at', ...params } });
-    return response.data;
+    const response = await api.get('/payments/', { params: { ordering: '-created_at', ...params } })
+    return response.data
   },
 
   /**
@@ -27,9 +27,9 @@ const staffPaymentService = {
    * (status becomes `paid`). Non-cash payments are rejected by the server.
    */
   async confirm(id) {
-    const response = await api.post(`/payments/${id}/confirm/`);
-    return response.data;
+    const response = await api.post(`/payments/${id}/confirm/`)
+    return response.data
   },
-};
+}
 
-export default staffPaymentService;
+export default staffPaymentService

@@ -1,7 +1,7 @@
 import { api } from './api'
 
 /**
- * Admin category CRUD. The public `menuService.categories()` reads the list;
+ * Admin category CRUD. The public `menuService.categories()` reads the list
  * this service only adds the write operations reserved for admins.
  */
 export const adminCategoryService = {
