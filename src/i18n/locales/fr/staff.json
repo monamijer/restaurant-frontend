@@ -9,7 +9,8 @@
       "queue": "File d attente",
       "tables": "Tables",
       "payments": "Paiements",
-      "menu": "Menu"
+      "menu": "Menu",
+      "customers": "Clients"
     },
     "common": {
       "refresh": "Rafraichir",
@@ -204,6 +205,17 @@
       "empty": "Aucun plat trouvé.",
       "failed": "Impossible de charger le menu.",
       "filters": { "category": "Catégorie", "all": "Toutes", "search": "Recherche", "apply": "Appliquer", "clear": "Effacer" }
+    },
+    "customers": {
+      "title": "Clients",
+      "subtitle": "Liste en lecture seule des comptes clients et de leur activité.",
+      "countLabel": "{count} clients",
+      "failed": "Impossible de charger les clients.",
+      "empty": "Aucun client trouvé.",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "filters": { "search": "Recherche par nom, email ou téléphone", "apply": "Appliquer", "clear": "Effacer" },
+      "columns": { "name": "Nom", "email": "Email", "phone": "Téléphone", "orders": "Commandes", "spent": "Total dépensé", "lastOrder": "Dernière commande", "status": "Statut" }
     },
     "payments": {
       "title": "Paiements",

@@ -28,6 +28,7 @@ export default {
         { name: 'staff-tables', labelKey: 'staff.nav.tables' },
         { name: 'staff-payments', labelKey: 'staff.nav.payments' },
         { name: 'staff-menu', labelKey: 'staff.nav.menu' },
+        { name: 'staff-customers', labelKey: 'staff.nav.customers' },
       ],
     };
   },

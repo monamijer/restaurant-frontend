@@ -9,7 +9,8 @@
       "queue": "Queue",
       "tables": "Tables",
       "payments": "Payments",
-      "menu": "Menu"
+      "menu": "Menu",
+      "customers": "Customers"
     },
     "common": {
       "refresh": "Refresh",
@@ -204,6 +205,17 @@
       "empty": "No dish found.",
       "failed": "Could not load the menu.",
       "filters": { "category": "Category", "all": "All", "search": "Search", "apply": "Apply", "clear": "Clear" }
+    },
+    "customers": {
+      "title": "Customers",
+      "subtitle": "Read-only list of customer accounts and their activity.",
+      "countLabel": "{count} customers",
+      "failed": "Could not load customers.",
+      "empty": "No customers found.",
+      "active": "Active",
+      "inactive": "Inactive",
+      "filters": { "search": "Search by name, email or phone", "apply": "Apply", "clear": "Clear" },
+      "columns": { "name": "Name", "email": "Email", "phone": "Phone", "orders": "Orders", "spent": "Total spent", "lastOrder": "Last order", "status": "Status" }
     },
     "payments": {
       "title": "Payments",
