@@ -102,22 +102,24 @@
         <h2 id="top-title" class="section-title">{{ $t('admin.dashboard.topItemsTitle') }}</h2>
         <EmptyState v-if="stats.top_items.length === 0" :title="$t('admin.dashboard.noTopItems')" />
         <BaseChart v-if="stats.top_items.length > 0" type="bar" :data="topItemsChart" :options="{ indexAxis: 'y' }" :label="$t('admin.dashboard.topItemsChartTitle')" />
-        <table v-if="stats.top_items.length > 0"  class="table">
-          <thead>
-            <tr>
-              <th>{{ $t('admin.dashboard.columns.name') }}</th>
-              <th class="num">{{ $t('admin.dashboard.columns.quantity') }}</th>
-              <th class="num">{{ $t('admin.dashboard.columns.revenue') }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in stats.top_items" :key="item.menu_item">
-              <td>{{ item.name }}</td>
-              <td class="num">{{ item.quantity }}</td>
-              <td class="num">{{ money(item.revenue) }}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div v-if="stats.top_items.length > 0" class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>{{ $t('admin.dashboard.columns.name') }}</th>
+                <th class="num">{{ $t('admin.dashboard.columns.quantity') }}</th>
+                <th class="num">{{ $t('admin.dashboard.columns.revenue') }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="item in stats.top_items" :key="item.menu_item">
+                <td>{{ item.name }}</td>
+                <td class="num">{{ item.quantity }}</td>
+                <td class="num">{{ money(item.revenue) }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section aria-labelledby="activity-title">
@@ -400,6 +402,10 @@ export default {
   font-family: var(--font-display);
   font-size: var(--text-xl);
   font-weight: 600;
+}
+
+.table-wrap {
+  overflow-x: auto;
 }
 
 .table {
