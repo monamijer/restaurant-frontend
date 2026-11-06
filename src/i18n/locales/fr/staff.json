@@ -7,7 +7,8 @@
       "newOrder": "Nouvelle commande",
       "reservations": "Reservations",
       "queue": "File d attente",
-      "tables": "Tables"
+      "tables": "Tables",
+      "payments": "Paiements"
     },
     "common": {
       "refresh": "Rafraichir",
@@ -190,6 +191,17 @@
       "cancelTitle": "Annuler ce ticket ?",
       "cancelMessage": "Le client perd sa place. Cette action est definitive.",
       "cancelConfirm": "Oui, annuler"
+    },
+    "payments": {
+      "title": "Paiements",
+      "subtitle": "Paiements espèces et carte, avec confirmation des espèces en attente.",
+      "countLabel": "{count} paiements",
+      "failed": "Impossible de charger les paiements.",
+      "empty": "Aucun paiement trouvé.",
+      "confirm": "Confirmer les espèces",
+      "confirmed": "Paiement en espèces confirmé.",
+      "filters": { "search": "Référence", "status": "Statut", "method": "Méthode", "all": "Tous", "apply": "Appliquer", "clear": "Effacer" },
+      "columns": { "reference": "Référence", "order": "Commande", "method": "Méthode", "amount": "Montant", "status": "Statut", "date": "Date", "actions": "Actions" }
     },
     "tables": {
       "title": "Tables",

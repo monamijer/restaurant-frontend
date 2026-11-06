@@ -26,6 +26,7 @@ export default {
         { name: 'staff-reservations', labelKey: 'staff.nav.reservations' },
         { name: 'staff-queue', labelKey: 'staff.nav.queue' },
         { name: 'staff-tables', labelKey: 'staff.nav.tables' },
+        { name: 'staff-payments', labelKey: 'staff.nav.payments' },
       ],
     };
   },

@@ -7,7 +7,8 @@
       "newOrder": "New order",
       "reservations": "Reservations",
       "queue": "Queue",
-      "tables": "Tables"
+      "tables": "Tables",
+      "payments": "Payments"
     },
     "common": {
       "refresh": "Refresh",
@@ -190,6 +191,17 @@
       "cancelTitle": "Cancel this ticket?",
       "cancelMessage": "The guest loses their place. This cannot be undone.",
       "cancelConfirm": "Yes, cancel it"
+    },
+    "payments": {
+      "title": "Payments",
+      "subtitle": "Cash and card payments, with confirmation of pending cash.",
+      "countLabel": "{count} payments",
+      "failed": "Could not load payments.",
+      "empty": "No payments found.",
+      "confirm": "Confirm cash",
+      "confirmed": "Cash payment confirmed.",
+      "filters": { "search": "Reference", "status": "Status", "method": "Method", "all": "All", "apply": "Apply", "clear": "Clear" },
+      "columns": { "reference": "Reference", "order": "Order", "method": "Method", "amount": "Amount", "status": "Status", "date": "Date", "actions": "Actions" }
     },
     "tables": {
       "title": "Tables",

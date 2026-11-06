@@ -16,6 +16,12 @@ const staffPaymentService = {
     return response.data;
   },
 
+  /** One page of payments. Filters: status, method, search (reference), page, page_size. */
+  async list(params = {}) {
+    const response = await api.get('/payments/', { params: { ordering: '-created_at', ...params } });
+    return response.data;
+  },
+
   /**
    * Confirm a pending cash payment. The server returns the updated payment
    * (status becomes `paid`). Non-cash payments are rejected by the server.
