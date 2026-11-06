@@ -11,32 +11,33 @@
       "goTo": "Aller a la diapositive {index}",
       "slides": {
         "book": {
-          "eyebrow": "Reservations",
-          "title": "Une table, quand vous voulez",
-          "lead": "Choisissez une date, un nombre de convives et une table. Le restaurant confirme en une minute.",
-          "cta": "Reserver une table",
+          "eyebrow": "Réservations",
+          "title": "Votre table vous attend",
+          "lead": "Choisissez une date, un nombre de convives et un créneau libre. Pas besoin de téléphoner.",
+          "cta": "Réserver une table",
           "alt": "Une table dressee dans le restaurant"
         },
         "order": {
           "eyebrow": "Commande en ligne",
-          "title": "Commandez, payez en un geste",
-          "lead": "Parcourez la carte, ajoutez au panier et validez. Le suivi se met a jour tout seul.",
-          "cta": "Voir la carte",
+          "title": "Commandez à l’avance, mangez plus vite",
+          "lead": "Parcourez la carte, validez en quelques gestes et suivez votre commande de la cuisine à votre table.",
+          "cta": "Commander",
           "alt": "Un plat servi, ou une main tenant le menu numerique"
         },
         "queue": {
-          "eyebrow": "File d attente",
-          "title": "Votre place dans la file, depuis votre telephone",
-          "lead": "Rejoignez la file depuis n importe ou. Nous gardons votre place et vous appelons.",
+          "eyebrow": "File d’attente",
+          "title": "Fini l’attente à la porte",
+          "lead": "Rejoignez la file depuis votre téléphone, voyez votre position avancer et arrivez au bon moment.",
           "cta": "Rejoindre la file",
           "alt": "L entree du restaurant, ou un client qui attend sa table"
         }
-      }
+      },
+      "imageMissing": "Photo bientôt disponible"
     },
     "title": "Accueil",
     "eyebrow": "Table, file d'attente et commande en ligne",
     "heading": "Bienvenue chez {name}",
-    "lead": "Réservez votre table, rejoignez la file d'attente ou commandez en ligne, sans attendre.",
+    "lead": "Réservez une table, rejoignez la file d’attente ou commandez en ligne, sans attendre.",
     "ctaLogin": "Se connecter",
     "ctaRegister": "Créer un compte",
     "ctaSpace": "Accéder à mon espace",
@@ -44,31 +45,85 @@
     "serverDown": "Impossible de joindre le serveur du restaurant.",
     "serverDownHint": "Vérifiez que le serveur est démarré, puis réessayez.",
     "how": {
-      "eyebrow": "Comment ca marche",
-      "title": "De la porte a la table, en trois etapes",
-      "lead": "Choisissez, commandez, suivez. Pas d appel, pas d attente au comptoir.",
+      "eyebrow": "Comment ça marche",
+      "title": "De la porte à la table, en trois étapes",
+      "lead": "Choisissez, commandez, suivez. Pas d’appel et pas de file au comptoir.",
       "steps": {
         "choose": {
           "title": "Choisissez vos plats",
-          "lead": "Parcourez la carte, filtrez par categorie, consultez les allergenes et le temps de preparation.",
+          "lead": "Parcourez la carte, filtrez par catégorie et consultez les allergènes et le temps de préparation.",
           "cta": "Voir la carte"
         },
         "order": {
           "title": "Commandez et payez",
-          "lead": "Validez en quelques gestes. Payez par carte, mobile money ou en especes sur place.",
+          "lead": "Validez en quelques gestes. Payez par carte, mobile money ou en espèces sur place.",
           "cta": "Ouvrir la carte"
         },
         "follow": {
           "title": "Suivez la cuisine",
-          "lead": "La page se met a jour : en attente, en preparation, prete. La facture arrive au paiement.",
+          "lead": "La page se met à jour toute seule : en attente, en préparation, prête. La facture arrive au paiement.",
           "cta": "Voir mes commandes"
         }
       }
     },
     "cta": {
-      "title": "Deja faim ?",
-      "lead": "Commandez maintenant ou reservez une table pour ce soir.",
-      "reserve": "Reserver une table"
+      "title": "Déjà faim ?",
+      "lead": "Commandez maintenant ou réservez une table pour ce soir.",
+      "reserve": "Réserver une table",
+      "guestTitle": "Prêt à passer à table ?",
+      "guestLead": "Créez un compte gratuit pour commander, réserver une table et suivre vos repas.",
+      "register": "Créer un compte",
+      "orders": "Mes commandes"
+    },
+    "value": {
+      "label": "Pourquoi nous choisir",
+      "hours": {
+        "title": "Horaires d’ouverture",
+        "text": "Ouvert de {opens} à {closes}"
+      },
+      "payment": {
+        "title": "Payez comme vous voulez",
+        "text": "Carte, mobile money ou espèces"
+      },
+      "queue": {
+        "title": "Informez-vous avant de venir",
+        "text": "Consultez la file avant de quitter la maison"
+      },
+      "languages": {
+        "title": "Deux langues",
+        "text": "Français et anglais, en un geste"
+      }
+    },
+    "features": {
+      "eyebrow": "Ce que vous pouvez faire",
+      "title": "Tout pour votre repas, au même endroit",
+      "lead": "Que vous prévoyiez à l’avance ou que vous arriviez sans réservation, un seul compte couvre la table, la file et la cuisine.",
+      "book": {
+        "title": "Réserver une table",
+        "lead": "Choisissez une date, un nombre de convives et un créneau libre. Un imprévu ? Annulez depuis vos réservations.",
+        "cta": "Réserver"
+      },
+      "queue": {
+        "title": "Rejoindre la file",
+        "lead": "Vous arrivez sans réservation ? Ajoutez votre groupe à la file et suivez votre position.",
+        "cta": "Voir la file"
+      },
+      "order": {
+        "title": "Commander en ligne",
+        "lead": "Remplissez votre panier, choisissez sur place, à emporter ou livraison, et payez par carte, mobile money ou espèces.",
+        "cta": "Ouvrir la carte"
+      },
+      "track": {
+        "title": "Suivre chaque commande",
+        "lead": "Suivez chaque étape, de « en attente » à « prête ». Votre facture est disponible dès le paiement.",
+        "cta": "Mes commandes"
+      }
+    },
+    "categories": {
+      "eyebrow": "À la carte",
+      "title": "Explorez par catégorie",
+      "lead": "Allez directement aux plats qui vous font envie.",
+      "all": "Voir toute la carte"
     }
   }
 }

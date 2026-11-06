@@ -11,27 +11,28 @@
       "goTo": "Go to slide {index}",
       "slides": {
         "book": {
-          "eyebrow": "Table reservations",
-          "title": "A table, whenever you want",
-          "lead": "Pick a date, a party size and a table. The restaurant confirms in a minute.",
+          "eyebrow": "Reservations",
+          "title": "Your table is waiting",
+          "lead": "Choose a date, a party size and a free time slot. No phone call needed.",
           "cta": "Book a table",
           "alt": "A dressed table in the restaurant"
         },
         "order": {
           "eyebrow": "Online ordering",
-          "title": "Order from the menu, pay in a tap",
-          "lead": "Browse the menu, add to cart and check out. Order tracking updates itself.",
-          "cta": "See the menu",
+          "title": "Order ahead, eat sooner",
+          "lead": "Browse the menu, check out in a few taps and follow your order from the kitchen to your table.",
+          "cta": "Order now",
           "alt": "A dish being served, or a hand holding the digital menu"
         },
         "queue": {
           "eyebrow": "Walk-in queue",
-          "title": "Your place in line, from your phone",
-          "lead": "Join the queue from anywhere. We hold your place and call you when ready.",
+          "title": "No more waiting at the door",
+          "lead": "Join the queue from your phone, watch your position move up and arrive when it suits you.",
           "cta": "Join the queue",
           "alt": "The restaurant entrance, or a guest waiting to be seated"
         }
-      }
+      },
+      "imageMissing": "Photo coming soon"
     },
     "title": "Home",
     "eyebrow": "Tables, queue and online ordering",
@@ -46,11 +47,11 @@
     "how": {
       "eyebrow": "How it works",
       "title": "From the door to the table, in three steps",
-      "lead": "Choose, order, follow. No phone call, no waiting at the counter.",
+      "lead": "Choose, order, follow. No phone call and no queue at the counter.",
       "steps": {
         "choose": {
           "title": "Pick your dishes",
-          "lead": "Browse the menu, filter by category, see the allergens and the preparation time.",
+          "lead": "Browse the menu, filter by category and check the allergens and the preparation time.",
           "cta": "See the menu"
         },
         "order": {
@@ -68,7 +69,61 @@
     "cta": {
       "title": "Hungry already?",
       "lead": "Order now or book a table for tonight.",
-      "reserve": "Book a table"
+      "reserve": "Book a table",
+      "guestTitle": "Ready to eat?",
+      "guestLead": "Create a free account to order, reserve a table and follow your meals.",
+      "register": "Create an account",
+      "orders": "My orders"
+    },
+    "value": {
+      "label": "Why choose us",
+      "hours": {
+        "title": "Opening hours",
+        "text": "Open from {opens} to {closes}"
+      },
+      "payment": {
+        "title": "Pay your way",
+        "text": "Card, mobile money or cash"
+      },
+      "queue": {
+        "title": "Know before you go",
+        "text": "Check the queue before leaving home"
+      },
+      "languages": {
+        "title": "Two languages",
+        "text": "English and French, one tap away"
+      }
+    },
+    "features": {
+      "eyebrow": "What you can do",
+      "title": "Everything for your meal, in one place",
+      "lead": "Whether you plan ahead or walk in, one account covers the table, the queue and the kitchen.",
+      "book": {
+        "title": "Reserve a table",
+        "lead": "Pick a date, a party size and a free time slot. Plans changed? Cancel from your reservations.",
+        "cta": "Book now"
+      },
+      "queue": {
+        "title": "Join the queue",
+        "lead": "Arriving without a booking? Add your party to the queue and follow your position.",
+        "cta": "See the queue"
+      },
+      "order": {
+        "title": "Order online",
+        "lead": "Fill your cart, choose dine-in, takeaway or delivery, and pay by card, mobile money or cash.",
+        "cta": "Open the menu"
+      },
+      "track": {
+        "title": "Track every order",
+        "lead": "Follow each step from pending to ready. Your invoice is available once you have paid.",
+        "cta": "My orders"
+      }
+    },
+    "categories": {
+      "eyebrow": "On the menu",
+      "title": "Explore by category",
+      "lead": "Jump straight to the dishes you feel like.",
+      "all": "View the full menu"
     }
   }
 }

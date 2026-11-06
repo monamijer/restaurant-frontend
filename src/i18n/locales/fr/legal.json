@@ -1,65 +1,97 @@
 {
   "legal": {
-    "lastUpdated": "Derniere mise a jour le {date}",
-    "notice": "Ceci est un projet d examen Vue.js. Ce n est pas un avis juridique : les textes ci-dessous decrivent les donnees reellement stockees par cette application.",
-    "contactLine": "Questions sur ce document :",
+    "lastUpdated": "Dernière mise à jour : {date}",
+    "notice": "Ce projet de démonstration a été réalisé pour un cours universitaire (Bachelor 2). Il ne constitue pas un avis juridique : les textes ci-dessous décrivent le fonctionnement réel de cette application.",
+    "contactLine": "Une question sur ce document ?",
+    "summaryTitle": "En bref",
+    "contentsTitle": "Sur cette page",
     "privacy": {
-      "eyebrow": "Confidentialite",
-      "title": "Politique de confidentialite",
+      "eyebrow": "Confidentialité",
+      "title": "Politique de confidentialité",
+      "intro": "Cette page explique quelles données personnelles l’application conserve, pourquoi, qui peut les voir et comment vous gardez la maîtrise.",
+      "summary": {
+        "a": "Nous ne conservons que ce dont le service a besoin pour fonctionner.",
+        "b": "Nous ne vendons jamais vos données et ne les utilisons jamais pour de la publicité.",
+        "c": "Nous n’utilisons aucun cookie de suivi.",
+        "d": "Vous pouvez modifier vos informations et demander la désactivation de votre compte."
+      },
       "sections": {
         "data": {
-          "title": "1. Donnees collectees",
-          "body": "A la creation d un compte, nous stockons votre adresse email, votre prenom, votre nom, votre telephone et, si vous le souhaitez, une adresse postale. Lors d une commande ou d une reservation, nous stockons aussi ce que vous avez commande, quand et a quelle table."
+          "title": "1. Données collectées",
+          "body": "À la création du compte, nous conservons votre adresse e-mail, votre prénom, votre nom, votre numéro de téléphone et, facultativement, une adresse postale. Quand vous commandez, réservez une table ou rejoignez la file, nous conservons aussi ce que vous avez commandé, la date et l’heure, la table et la taille de votre groupe."
         },
         "purpose": {
           "title": "2. Pourquoi nous les collectons",
-          "body": "Uniquement pour faire fonctionner le service : vous connecter, prendre et suivre une commande, confirmer une reservation, vous placer dans la file et emettre une facture. Nous ne vendons aucune donnee et nous ne l utilisons pas pour la publicite."
+          "body": "Uniquement pour faire fonctionner le service : vous connecter, prendre et suivre une commande, confirmer une réservation, garder votre place dans la file et émettre une facture. Nous ne vendons jamais de données et ne les utilisons ni pour la publicité ni pour le profilage."
         },
         "retention": {
-          "title": "3. Combien de temps nous les gardons",
-          "body": "Votre compte et ses commandes restent en base pendant la duree de la demonstration. Les donnees de demonstration peuvent etre reinitialisees a tout moment avec la commande de seed du backend."
+          "title": "3. Durée de conservation",
+          "body": "Votre compte et vos commandes restent dans la base de données pendant toute la durée de la démonstration. Les données de démonstration peuvent être réinitialisées à tout moment avec la commande de remplissage du serveur."
         },
         "access": {
           "title": "4. Qui peut les voir",
-          "body": "Vous voyez vos propres donnees. Le personnel voit les clients et les commandes du restaurant. L administrateur voit tous les comptes, en tant que responsable du systeme."
+          "body": "Vous voyez vos propres données. Le personnel voit les clients, les commandes, les réservations et la file du restaurant. L’administrateur voit tous les comptes, en tant que responsable du système."
         },
         "cookies": {
-          "title": "5. Cookies et stockage",
-          "body": "Nous n utilisons pas de cookies de suivi. Le navigateur ne stocke que ce qui est necessaire pour rester connecte (un jeton de rafraichissement rotatif) et pour memoriser le theme et la langue."
+          "title": "5. Cookies et stockage du navigateur",
+          "body": "Nous ne déposons aucun cookie de suivi. Votre navigateur ne stocke que ce dont l’application a besoin : un jeton de renouvellement qui vous garde connecté, votre panier, la table scannée, ainsi que vos choix de thème et de langue. Effacer les données du navigateur supprime tout cela."
+        },
+        "security": {
+          "title": "6. Comment nous les protégeons",
+          "body": "Les mots de passe ne sont jamais stockés en clair : le serveur ne conserve qu’une empreinte. Votre session utilise un jeton d’accès de courte durée gardé en mémoire et un jeton de renouvellement remplacé à chaque utilisation. La déconnexion invalide le jeton de renouvellement, et le serveur revérifie votre rôle à chaque requête."
         },
         "rights": {
-          "title": "6. Vos droits",
-          "body": "Vous pouvez modifier votre nom et vos coordonnees depuis la page profil, changer votre mot de passe depuis la page mot de passe, et demander a l administrateur de desactiver votre compte. La desactivation vous deconnecte partout."
+          "title": "7. Vos droits",
+          "body": "Vous pouvez modifier votre nom et vos coordonnées depuis la page de profil, changer votre mot de passe depuis la page dédiée et demander à l’administrateur de désactiver votre compte. La désactivation vous déconnecte partout."
+        },
+        "changes": {
+          "title": "8. Modifications de cette politique",
+          "body": "Si l’application commence à conserver de nouveaux types de données, cette page sera mise à jour en premier. La date en haut indique la dernière révision."
         }
       }
     },
     "terms": {
       "eyebrow": "Conditions",
-      "title": "Conditions d utilisation",
+      "title": "Conditions d’utilisation",
+      "intro": "Ces conditions décrivent ce que vous pouvez attendre de l’application et ce que nous vous demandons lorsque vous l’utilisez.",
+      "summary": {
+        "a": "L’application est une démonstration : aucun argent réel n’est prélevé.",
+        "b": "Gardez votre mot de passe secret et ne partagez pas votre compte.",
+        "c": "Les prix sont fixés par le restaurant ; le panier n’affiche qu’une estimation.",
+        "d": "Utilisez le service pour ce qu’il est et respectez les autres utilisateurs."
+      },
       "sections": {
         "service": {
           "title": "1. Le service",
-          "body": "Maisha est une application de table, file d attente et commande en ligne. Elle permet aux clients de consulter la carte, reserver une table, rejoindre la file, passer une commande, la payer et telecharger une facture."
+          "body": "Maisha est une application de gestion des tables, de la file d’attente et des commandes en ligne. Elle permet de consulter la carte, réserver une table, rejoindre la file, passer et payer une commande, et consulter ses factures."
         },
         "account": {
           "title": "2. Votre compte",
-          "body": "Gardez votre mot de passe prive. Ne partagez pas votre compte. La desactivation est le seul moyen de fermer un compte : les donnees restent pendant la duree de la demonstration."
+          "body": "Gardez votre mot de passe secret et ne partagez pas votre compte. La désactivation est le seul moyen de fermer un compte, et les données sont conservées pendant la durée de la démonstration."
         },
         "orders": {
           "title": "3. Commandes et paiements",
-          "body": "Les prix sont calcules par le restaurant et affiches dans le panier a titre estimatif. Les paiements par carte et mobile money sont simules dans cette demonstration : aucun argent reel n est debite."
+          "body": "Les prix sont fixés et calculés par le serveur du restaurant ; le panier affiche une estimation. Les paiements par carte et par mobile money sont simulés dans cette démonstration et aucun argent réel n’est prélevé. Les paiements en espèces sont confirmés par un membre du personnel."
+        },
+        "reservations": {
+          "title": "4. Réservations et file d’attente",
+          "body": "Une réservation dépend des créneaux libres affichés au moment de réserver, et vous pouvez l’annuler depuis votre page de réservations. Vous pouvez quitter la file à tout moment. Le personnel peut ajuster les réservations et les tickets de la file lorsque le restaurant est très fréquenté."
+        },
+        "conduct": {
+          "title": "5. Utilisation acceptable",
+          "body": "Utilisez le service pour son usage prévu. N’essayez pas d’accéder aux données d’autrui, de surcharger le service ni de contourner sa sécurité."
         },
         "ip": {
-          "title": "4. Propriete intellectuelle",
-          "body": "Le code a ete ecrit pour ce projet. Les noms et descriptions de plats proviennent des donnees de demonstration."
+          "title": "6. Propriété intellectuelle",
+          "body": "Le code a été écrit pour ce projet. Les noms et descriptions des plats proviennent des données de démonstration."
         },
         "liability": {
-          "title": "5. Responsabilite",
-          "body": "Ceci est une demonstration academique. Le service est fourni tel quel, sans garantie de disponibilite ininterrompue."
+          "title": "7. Responsabilité",
+          "body": "Il s’agit d’une démonstration universitaire. Le service est fourni tel quel, sans garantie de disponibilité continue."
         },
         "law": {
-          "title": "6. Droit applicable",
-          "body": "A titre indicatif, le projet est realise au Burundi. Ce texte n a pas de valeur juridique : il decrit le fonctionnement de la demonstration."
+          "title": "8. Droit applicable",
+          "body": "À titre indicatif, le projet est réalisé au Burundi. Ce texte n’a aucune valeur juridique : il décrit le fonctionnement de la démonstration."
         }
       }
     }
